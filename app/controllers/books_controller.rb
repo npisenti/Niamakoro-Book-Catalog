@@ -2,10 +2,13 @@ class BooksController < ApplicationController
 
   def new
     @book = Book.new
+    @book.authors = [Author.new]
   end
 
   def create
     @book = Book.create(params[:book])
+    @author = Author.find_or_create_by_first_and_last(params[:author])
+    @book.authors = [@author]
 
     if @book.save
       redirect_to @book

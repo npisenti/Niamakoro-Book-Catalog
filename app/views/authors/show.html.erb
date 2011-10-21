@@ -1,6 +1,7 @@
 <h1>Author Page</h1>
 <ul>
-  <li><b>First: </b><%= @author.first %></l1>
-  <li><b>Last: </b><%= @author.last %></l1>
+  <li><b>First: </b><%= @author.first %></li>
+  <li><b>Last: </b><%= @author.last %></li>
+<li><b>Books: </b><% @author.books.each do |b| %><%= "#{b.title}; " %><% end %></li>
 </ul>
 
