@@ -1,6 +1,6 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :books, :authors
+  resources :books, :authors, :subjects
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
