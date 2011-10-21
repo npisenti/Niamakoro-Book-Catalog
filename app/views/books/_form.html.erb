@@ -10,16 +10,20 @@
       </div>
 
       <%= fields_for @book.authors.first do |author_form| %>
-        <div class="clearfix">
-          <%= author_form.label :last %>
-          <div class="input">
-            <%= author_form.text_field :last, {:class => "xlarge" } %>
-          </div>
-        </div>
-        <div class="clearfix">
-          <%= author_form.label :first %>
-          <div class="input">
-            <%= author_form.text_field :first, {:class => "xlarge" } %>
+        <div class="row">
+          <div class="span10 offset1">
+            <div class="clearfix">
+              <%= author_form.label :last, "Author Last" %>
+              <div class="input">
+                <%= author_form.text_field :last, {:class => "xlarge" } %>
+              </div>
+            </div>
+            <div class="clearfix">
+              <%= author_form.label :first, "Author First" %>
+              <div class="input">
+                <%= author_form.text_field :first, {:class => "xlarge" } %>
+              </div>
+            </div>
           </div>
         </div>
       <% end %>
@@ -38,6 +42,16 @@
           <%= f.text_field :genre,  {:class => "xlarge" } %>
         </div>
       </div>
+
+      <%= fields_for @book.subjects.first do |subject_form| %>
+        <div class="clearfix">
+          <%= subject_form.label :name, "Subject" %>
+          <div class="input">
+            <%= subject_form.text_field :name, {:class => "xlarge" } %>
+          </div>
+        </div>
+      <% end %>
+
 
 
       <div class="clearfix">
