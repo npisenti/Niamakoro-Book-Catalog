@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021115152) do
+ActiveRecord::Schema.define(:version => 20111021115407) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -36,6 +36,17 @@ ActiveRecord::Schema.define(:version => 20111021115152) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "subject_tags", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "subject_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "subject_tags", ["book_id", "subject_id"], :name => "index_subject_tags_on_book_id_and_subject_id", :unique => true
+  add_index "subject_tags", ["book_id"], :name => "index_subject_tags_on_book_id"
+  add_index "subject_tags", ["subject_id"], :name => "index_subject_tags_on_subject_id"
 
   create_table "subjects", :force => true do |t|
     t.string   "name"
