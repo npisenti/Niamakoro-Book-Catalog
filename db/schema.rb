@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111020131828) do
+ActiveRecord::Schema.define(:version => 20111021105550) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -19,7 +19,22 @@ ActiveRecord::Schema.define(:version => 20111020131828) do
     t.datetime "updated_at"
   end
 
+  add_index "authors", ["first", "last"], :name => "index_authors_on_first_and_last", :unique => true
   add_index "authors", ["first"], :name => "index_authors_on_first"
   add_index "authors", ["last"], :name => "index_authors_on_last"
+
+  create_table "books", :force => true do |t|
+    t.string   "title"
+    t.integer  "pub_year"
+    t.string   "genre"
+    t.string   "age_group"
+    t.integer  "num_pages"
+    t.integer  "num_copies"
+    t.string   "series_title"
+    t.integer  "series_number"
+    t.text     "summary"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
