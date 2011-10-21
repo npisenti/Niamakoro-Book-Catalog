@@ -1,0 +1,14 @@
+<h1>Book: <%= @book.title %></h1>
+<ul>
+  <li><b>Title: </b><%= @book.title %></li>
+<li><b>Author(s): </b><% @book.authors.each do |a| %><%= "#{a.last}, #{a.first}; "  %><% end %></li>
+  <li><b>pub_year: </b><%= @book.pub_year %></li>
+<li><b>Subject(s): </b><% @book.subjects.each do |a| %><%= "#{a.name}; "  %><% end %></li>
+  <li><b>genre: </b><%= @book.genre %></li>
+  <li><b>age_group: </b><%= @book.age_group %></li>
+  <li><b>num_pages: </b><%= @book.num_pages %></li>
+  <li><b>num_copies: </b><%= @book.num_copies %></li>
+  <li><b>series_title: </b><%= @book.series_title %></li>
+  <li><b>series_number: </b><%= @book.series_number %></li>
+  <li><b>summary: </b><%= @book.summary %></li>
+</ul>
