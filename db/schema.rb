@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111021105550) do
+ActiveRecord::Schema.define(:version => 20111021105905) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -36,5 +36,16 @@ ActiveRecord::Schema.define(:version => 20111021105550) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "writings", :force => true do |t|
+    t.integer  "book_id"
+    t.integer  "author_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "writings", ["author_id"], :name => "index_writings_on_author_id"
+  add_index "writings", ["book_id", "author_id"], :name => "index_writings_on_book_id_and_author_id", :unique => true
+  add_index "writings", ["book_id"], :name => "index_writings_on_book_id"
 
 end
