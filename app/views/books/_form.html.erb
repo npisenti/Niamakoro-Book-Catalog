@@ -1,0 +1,78 @@
+<div class="span12">
+  <%= form_for(@book) do |f| %>
+    <fieldset>
+
+      <div class="clearfix">
+        <%= f.label :title %>
+        <div class="input">
+          <%= f.text_field :title,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :pub_year %>
+        <div class="input">
+          <%= f.text_field :pub_year,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :genre %>
+        <div class="input">
+          <%= f.text_field :genre,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :age_group %>
+        <div class="input">
+          <%= f.text_field :age_group,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :num_pages %>
+        <div class="input">
+          <%= f.text_field :num_pages,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :num_copies %>
+        <div class="input">
+          <%= f.text_field :num_copies,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :series_title %>
+        <div class="input">
+          <%= f.text_field :series_title,  {:class => "xlarge" } %>
+        </div>
+      </div>
+ 
+      <div class="clearfix">
+        <%= f.label :series_number %>
+        <div class="input">
+          <%= f.text_field :series_number,  {:class => "xlarge" } %>
+        </div>
+      </div>
+ 
+      <div class="clearfix">
+        <%= f.label :summary %>
+        <div class="input">
+          <%= f.text_area :summary,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+    <div class="actions">
+      <%= f.submit({ :class => "btn primary" }) %>
+    </div>
+  </fieldset>
+  <% end %>
+
+</div>
