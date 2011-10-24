@@ -40,4 +40,13 @@ class BooksController < ApplicationController
   def index
     @books = Book.all
   end
+
+  def search_bar
+    @books = Book.all
+    output_json = @books.map { |b| { :value => b.title } }
+
+    respond_to do |format|
+      format.json { render :json => output_json.to_json }
+    end
+  end
 end
