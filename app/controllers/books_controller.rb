@@ -22,11 +22,13 @@ class BooksController < ApplicationController
 
   def edit
     @book = Book.find(params[:id])
+    @subject_list = @book.subjects
   end
 
   def update
     @book = Book.find(params[:id])
-    if @book.update_attributes(params[:book])
+    subjects = params[:subject].map { |f| Subject.find_or_create_by_name(f[1]["name"]) }
+    if @book.update_attributes(params[:book].merge(:subjects => subjects))
       redirect_to @book
     else
       render 'edit'
