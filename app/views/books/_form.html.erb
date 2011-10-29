@@ -9,26 +9,24 @@
         </div>
       </div>
 
-      <% @book.authors.each do |author| %>
-        <%= fields_for author do |author_form| %>
-          <div class="row">
-            <div class="span10 offset1">
-              <div class="clearfix">
-                <%= author_form.label :last, "Author Last" %>
-                <div class="input">
-                  <%= author_form.text_field :last, {:class => "xlarge" } %>
-                </div>
+      <% @author_list.each_index do |i| %>
+        <div class="row">
+          <div class="span10 offset1">
+            <div class="clearfix">
+              <%= label "authors[#{i}]", :last, "Author Last" %>
+              <div class="input">
+                <%= text_field "authors[#{i}]", :last, {:class => "xlarge", :value => @author_list[i].last } %>
               </div>
-              <div class="clearfix">
-                <%= author_form.label :first, "Author First" %>
-                <div class="input">
-                  <%= author_form.text_field :first, {:class => "xlarge" } %>
-                </div>
+            </div>
+            <div class="clearfix">
+              <%= label "authors[#{i}]", :first, "Author First" %>
+              <div class="input">
+                <%= text_field "authors[#{i}]", :first, {:class => "xlarge", :value => @author_list[i].first } %>
               </div>
             </div>
           </div>
-        <% end %>
-      <% end %>
+        </div>
+      <% end %> 
 
       <div class="clearfix">
         <%= f.label :pub_year %>
@@ -45,17 +43,15 @@
         </div>
       </div>
 
-      <% for @subject in @subject_list %>
-      <%= fields_for "subject[]" do |subject_fields| %>
-        
-          <div class="clearfix">
-            <%= subject_fields.label :name, "Subject" %>
-            <div class="input">
-              <%= subject_fields.text_field :name, {:class => "xlarge" } %>
-            </div>
+      <% @subject_list.each_index do |i| %>
+        <div class="clearfix">
+          <%= label "subjects[#{i}]", :name, "Subject" %>
+          <div class="input">
+            <%= text_field "subjects[#{i}]", :name, {:class => "xlarge", :value =>  @subject_list[i].name} %>
           </div>
+        </div>
       <% end %>
-      <% end %>
+      <a id="new-subject">new sub</a>
 
 
 

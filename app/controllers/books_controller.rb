@@ -1,17 +1,16 @@
 class BooksController < ApplicationController
 
+  
   def new
     @book = Book.new
-    @book.authors = [Author.new]
-    @book.subjects = [Subject.new]
+    @subject_list = [Subject.new]
+    @author_list = [Author.new]
   end
 
   def create
-    @book = Book.create(params[:book])
-    @author = Author.find_or_create_by_first_and_last(params[:author])
-    @book.authors = [@author]
-    @subject = Subject.find_or_create_by_name(params[:subject])
-    @book.subjects = [@subject]
+
+    @book = Book.new
+    @book.generate(params)
 
     if @book.save
       redirect_to @book
@@ -23,12 +22,15 @@ class BooksController < ApplicationController
   def edit
     @book = Book.find(params[:id])
     @subject_list = @book.subjects
+    @author_list = @book.authors
   end
 
   def update
+
     @book = Book.find(params[:id])
-    subjects = params[:subject].map { |f| Subject.find_or_create_by_name(f[1]["name"]) }
-    if @book.update_attributes(params[:book].merge(:subjects => subjects))
+    @book.generate(params)
+
+    if @book.save
       redirect_to @book
     else
       render 'edit'
