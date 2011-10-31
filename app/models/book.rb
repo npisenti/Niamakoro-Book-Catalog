@@ -11,6 +11,9 @@ class Book < ActiveRecord::Base
 
 
   def generate(params)
+    logger.debug("the params: ")
+    logger.debug(params)
+    logger.debug(params['book'])
     self.attributes=(params['book'])
     self.subject_fields=(params['subjects'])
     self.author_fields=(params['authors'])
@@ -21,6 +24,7 @@ class Book < ActiveRecord::Base
   end
 
   def subject_fields=(subjects_hash)
+    logger.debug(subjects_hash)
     self.subjects = subjects_hash.values.map { |s| Subject.find_or_create_by_name(s["name"]) }
   end
 
