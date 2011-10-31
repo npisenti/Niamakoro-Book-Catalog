@@ -2,7 +2,7 @@ BookCatalogue::Application.routes.draw do
 
   resources :books, :authors, :subjects
   match '/search_bar', :to => 'books#search_bar'
-  root :to => "pages#home"
+  root :to => "pages#home", :as => "home"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
