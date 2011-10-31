@@ -3,48 +3,50 @@
 
 $(document).ready(function(){
     $.getJSON('/search_bar.json', function(data){ 
-     $("#search").autocomplete({
-source: data, //"search.php",
-    minLength: 2,
-    select: function( event, ui ) {
+        $("#search").autocomplete({
+          source: data, 
+          minLength: 1,
+          select: function( event, ui ) {
     /*    log( ui.item ?
           "Selected: " + ui.item.value + " aka " + ui.item.id :
           "Nothing selected, input was " + this.value );*/
-    console.log(event);
-    console.log(ui);
-    }
+          }
+        });
+    }); 
+
+
+
+// FOR BOOK FORM
+
+  $('#new-subject').click(function(){
+    var i = parseInt($('#subject-inputs').attr('data-counter')) + 1;
+    var new_node = '<div class="clearfix"><label for="subjects_' + i + '_name">Subject</label><div class="input"><input class="xlarge" id="subjects_' + i + '_name" name="subjects[' + i + '][name]" size="30" type="text" value=""><a href="#" class="close" id="close-subject-' + i + '">×</a></div></div>'
+      $(new_node).appendTo('#subject-inputs');
+
+      $('#close-subject-' + i).click(function(){ $(this).parentsUntil($('#subject-inputs'), '.clearfix').remove();
+       return false;
+       });
+
+      $('#subject-inputs').attr('data-counter', i);
+      return false;
     });
-     }); 
 
+  $('#new-author').click(function(){
+    var i = parseInt($('#author-inputs').attr('data-counter')) + 1;
+    var new_node = '<div class="row" id="author-number-' + i + '"><div class="span10 offset1"><div class="clearfix"><label for="authors_' + i + '_last">Author Last</label><div class="input"><input class="xlarge" id="authors_' + i + '_last" name="authors[' + i + '][last]" size="30" type="text"><a href="#" class="close" id="close-author-' + i + '">×</a></div></div><div class="clearfix"><label for="authors_' + i + '_first">Author First</label><div class="input"><input class="xlarge" id="authors_' + i + '_first" name="authors[' + i + '][first]" size="30" type="text"></div></div></div></div>'
 
+    $(new_node).appendTo('#author-inputs');
+  
+      $('#close-author-' + i).click(function(){ $(this).parentsUntil($('#author-inputs'), '.row').remove();
+       return false;
+       });
 
+      $('#author-inputs').attr('data-counter', i);
+      return false;
 
-    $('#new-subject').click(function(){
-      var i = parseInt($('#subject-inputs').attr('data-counter')) + 1;
-      var new_node = '<div class="clearfix"><label for="subjects_' + i + '_name">Subject</label><div class="input"><input class="xlarge" id="subjects_' + i + '_name" name="subjects[' + i + '][name]" size="30" type="text" value=""><a href="#" class="close" id="close-subject-' + i + '">×</a></div></div>'
-        $(new_node).appendTo('#subject-inputs');
-
-        $('#close-subject-' + i).click(function(){ $(this).parentsUntil($('#subject-inputs'), '.clearfix').remove();
-         return false;
-         });
-
-        $('#subject-inputs').attr('data-counter', i);
-        return false;
-      });
-
-    $('#new-author').click(function(){
-      var i = parseInt($('#author-inputs').attr('data-counter')) + 1;
-      var new_node = '<div class="row" id="author-number-' + i + '"><div class="span10 offset1"><div class="clearfix"><label for="authors_' + i + '_last">Author Last</label><div class="input"><input class="xlarge" id="authors_' + i + '_last" name="authors[' + i + '][last]" size="30" type="text"><a href="#" class="close" id="close-author-' + i + '">×</a></div></div><div class="clearfix"><label for="authors_' + i + '_first">Author First</label><div class="input"><input class="xlarge" id="authors_' + i + '_first" name="authors[' + i + '][first]" size="30" type="text"></div></div></div></div>'
-
-      $(new_node).appendTo('#author-inputs');
-      
-        $('#close-author-' + i).click(function(){ $(this).parentsUntil($('#author-inputs'), '.row').remove();
-         return false;
-         });
-
-        $('#author-inputs').attr('data-counter', i);
-        return false;
-
-    });
+  });
+  ///////
+  
+  
 });
 

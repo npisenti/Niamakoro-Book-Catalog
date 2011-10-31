@@ -47,7 +47,9 @@ class BooksController < ApplicationController
 
   def search_bar
     @books = Book.all
-    output_json = @books.map { |b| { :value => b.title } }
+    # output_json = @books.map { |b| { :value => b.title } }
+    output_json = @books.map {|b| b.subjects.map { |s| { :value => s.name } } }.flatten
+
 
     respond_to do |format|
       format.json { render :json => output_json.to_json }
