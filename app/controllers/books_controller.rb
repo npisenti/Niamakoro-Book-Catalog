@@ -48,7 +48,6 @@ class BooksController < ApplicationController
   def search_bar
     output_json = SubjectTag.all.map { |st| { :label => "Sujet: #{st.subject.name}", :value => st.subject.name } }.uniq
 
-
     respond_to do |format|
       format.json { render :json => output_json.to_json }
     end

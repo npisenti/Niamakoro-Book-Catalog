@@ -1,4 +1,19 @@
 <div class="span10">
   <h1 class="center-text">Rechercher</h1>
-  <input id="search" class="full-width" data-source='<%= @test %>' />
+  <input id="search" class="full-width" data-source='<%= @test %>' value="<%= @search_query %>"/>
+  <div class="search-button-area">
+  <div id="search-button" class="btn primary">recherche</div>
+</div>
+<% if ! @books.nil? %>
+  <table class="zebra-striped">
+    <thead><tr><th>#</th><th>Titre</th><th>Sujet</th></thead>
+      <tbody>
+        <%= render @books %>
+        <% if @books.empty? %>
+          <tr><td></td><td>There were no results.</td></tr>
+        <% end %>
+
+      </tbody>
+    </table>
+  <% end %>
 </div>

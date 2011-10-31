@@ -9,3 +9,5 @@ form .close { line-height: 1;}
 
 .center-text { text-align: center;}
 .full-width { width: 100%; }
+
+.search-button-area { width: 87px; margin: auto; padding: 30px; }

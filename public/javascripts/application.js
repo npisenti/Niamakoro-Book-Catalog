@@ -13,6 +13,11 @@ $(document).ready(function(){
           }
         });
     }); 
+    
+    $("#search-button").click(function(){
+        window.location = "/?search=" + $("#search").attr("value");
+      
+    });
 
 
 
