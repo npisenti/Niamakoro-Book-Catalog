@@ -1,18 +1,21 @@
-<%= link_to "<- Rechercher", home_path %>
-<h1>Book: <%= @book.title %></h1>
+<ul class="breadcrumb">
+  <li><a href="#">← Rechercher</a> <span class="divider">/</span></li>
+  <li class="active"><%= @book.title %></li>
+</ul>
+<h1>Livre: <%= @book.title %></h1>
   <table class="zebra-striped">
     <thead><tr><th>#</th><th>Titre</th></thead>
       <tbody>
-  <tr><td>Title: </td><td><%= @book.title %></td></tr>
-<tr><td>Author(s): </td><td><% @book.authors.each do |a| %><%= "#{a.last}, #{a.first}; "  %><% end %></td></tr>
-  <tr><td>Date of Publication: </td><td><%= @book.pub_year %></td></tr>
-<tr><td>Subject(s): </td><td><% @book.subjects.each do |a| %><%= "#{a.name}; "  %><% end %></td></tr>
+  <tr><td>Titre: </td><td><%= @book.title %></td></tr>
+<tr><td>Auteur(s): </td><td><% @book.authors.each do |a| %><%= "#{a.last}, #{a.first}; "  %><% end %></td></tr>
+  <tr><td>Date de publication: </td><td><%= @book.pub_year %></td></tr>
+<tr><td>Sujet(s): </td><td><% @book.subjects.each do |a| %><%= "#{a.name}; "  %><% end %></td></tr>
   <tr><td>Genre: </td><td><%= @book.genre %></td></tr>
-  <tr><td>Age Group: </td><td><%= @book.age_group %></td></tr>
-  <tr><td>Number of Pages: </td><td><%= @book.num_pages %></td></tr>
-  <tr><td>Number of Copies: </td><td><%= @book.num_copies %></td></tr>
-  <tr><td>Series Title: </td><td><%= @book.series_title %></td></tr>
-  <tr><td>Number in Series: </td><td><%= @book.series_number %></td></tr>
-  <tr><td>Summary: </td><td><%= @book.summary %></td></tr>
+  <tr><td>Tranche d'âge: </td><td><%= @book.age_group %></td></tr>
+  <tr><td>Nombre de page: </td><td><%= @book.num_pages %></td></tr>
+  <tr><td>Nombre de copies: </td><td><%= @book.num_copies %></td></tr>
+  <tr><td>Titre de série: </td><td><%= @book.series_title %></td></tr>
+  <tr><td>Numéro de série: </td><td><%= @book.series_number %></td></tr>
+  <tr><td>Résumé: </td><td><%= @book.summary %></td></tr>
 </tbody>
 </table>

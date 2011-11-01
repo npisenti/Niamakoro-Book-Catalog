@@ -3,8 +3,9 @@ form .close { line-height: 1;}
 
 .multi-inputs { background-color: whitesmoke; padding-top: 15px; padding-bottom:3px; margin-bottom: 15px; }
 
-.header { padding: 20px; margin: 20px; }
+.header { padding: 5px; margin: 10px; }
 .footer { padding: 20px; margin: 20px; }
+.spacer { padding: 15px; margin: 10px; }
 
 .container { width: 600px; }
 
