@@ -3,4 +3,5 @@ class Subject < ActiveRecord::Base
   has_many :books, :through => :subject_tags
 
   attr_accessible :name, :description
+
 end

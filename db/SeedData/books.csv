@@ -1,28 +1,76 @@
-id,title,pub_year,genre,age_group,num_pages,num_copies,series_title,series_number,notes,author_1_last,author_1_first,author_2_last,author_2_first,subjects
-1,"Houni, Bâtiseur de Pyramide",2001,Fiction,youth,243,1,,,,Surget,Alain,,,Egypt
-2,"Tamit, l'enfant du Nil",2004,Fiction,youth,63,1,,,,Flores,Hervé,,,Egypt
-3,Les chats sacrés de Bubastis,2005,Fiction,youth,186,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"egypt, adventure"
-4,Cinq histoires vraies de chiens,1977,Fiction,youth,47,1,,,Short stories,Davidson,Margaret,,,"dogs, animals"
-5,Réglisse,2005,Fiction,youth,69,1,Mission: Adoption,,,Miles,Ellen,,,"dogs, animals"
-6,Sauvons les bébés lièvres,2004,Fiction,youth,76,1,,,,Hughes,Susan,,,"rabbits, animals"
-7,Segou: la terre en miettes,1985,Fiction,adult,415,1,,,,Condé,Maryse,,,"segou, mali"
-8,Contes choisis,1953,Fiction,youth,90,1,,,short stories,Andersen,,,,fairy tales
-9,Benjie Ream,1971,Fiction,youth,218,1,,,historical fiction,Hodges,Carl G.,,,"civil war, united states"
-10,Harry Potter à l'école des sorciers,1997,Fiction,youth,302,1,Harry Potter,1,,Rowling,J.K.,,,"fantasy, magic"
-11,L'or de Pizarre,1986,Fiction,youth,187,1,,,,Dujovne-Ortiz,Alicia,Berline,Jean-Claude,"incas, south america, exploration, adventure"
-12,Zorro: Le complot des émeraudes,1998,Fiction,youth,59,,Zorro,,,Flammarion,,,,"south america, adventure"
-13,Prisonniers de la pyramide,2004,Fiction,youth,94,1,Les enfants du nil,,,Surget,Alain,Parme,Fabrice,"egypt, adventure"
-14,"César, c'est qui?",2004,Fiction,youth,90,1,Les enfants du nil,,,Surget,Alain,Parme,Fabrice,"egypt, adventure"
-15,Le scarabée du cœur,2005,Fiction,youth,179,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"egypt, adventure"
-16,L'enfant qui parlait aux animaux,1949,Fiction,youth,86,1,,,,Dahl,Roald,,,animals
-17,"Bien joué, Clan des Sept",1958,Fiction,youth,182,1,,,,Blyton,Enid,,,adventure
-18,Contes et récits de la conquête de l'ouest,2000,Fiction,youth,178,1,,,,Lambert,Christophe,,,"adventure, legends of the southwest"
-19,Manuel de la Pampa,1974,Fiction,youth,215,1,,,historical fiction,Gor,Le,Dooz,Jena-Marie,"argentina, south america, historical fiction, friendship"
-20,Nés sous une mauvaise étoile,1999,Fiction,youth,142,1,Le funeste destin des Baudelaire,1,,Snicket,Lemony,,,adventure
-21,9 histoires pour mes 9 ans,2004,Fiction,youth,128,1,Mes histoires d'anniversaire,,,,,,,short stories
-22,Coup de gigot et autres histoires à faire peur,1948,Fiction,youth,116,1,,,short stories,Dahl,Roald,,,short stories
-23,Bouddah,2003,NonFiction,youth,59,1,,,,Labbé,Brigitte,Puech,Michel,"bouddha, religion, bouddhism, india"
-24,Minie Malakoff direction Port de la Chapelle,1983,Fiction,youth,44,1,,,,Schwartz,Irène,Gay,Michel,"adventure, animals, mice"
-25,La conspiration du harem,2005,Fiction,youth,180,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"egypt, adventure"
-26,Fantastique Fantômette,1978,Fiction,youth,149,1,,,,Chaulet,Georges,,,adventure
-27,Le petit frère,2001,Fiction,youth,,1,,,,Ponti,Claude,,,"children's book, picture book"
+id,title,pub_year,genre,age_group,num_pages,num_copies,series_title,series_number,notes,author_1_last,author_1_first,author_2_last,author_2_first,subjects,,(original)
+1,"Houni, Bâtiseur de Pyramide",2001,fiction,jeunesse,243,1,,,,Surget,Alain,,,Égypte,,Egypt
+2,"Tamit, l'enfant du Nil",2004,fiction,jeunesse,63,1,,,,Flores,Hervé,,,Égypte,,Egypt
+3,Les chats sacrés de Bubastis,2005,fiction,jeunesse,186,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"égypte, aventure",,"egypt, adventure"
+4,Cinq histoires vraies de chiens,1977,fiction,jeunesse,47,1,,,Short stories,Davidson,Margaret,,,"chiens, animaux",,"dogs, animals"
+5,Réglisse,2005,fiction,jeunesse,69,1,Mission: Adoption,,,Miles,Ellen,,,"chiens, animaux",,"dogs, animals"
+6,Sauvons les bébés lièvres,2004,fiction,jeunesse,76,1,,,,Hughes,Susan,,,"lapins, animaux",,"rabbits, animals"
+7,Segou: la terre en miettes,1985,fiction,adulte,415,1,,,,Condé,Maryse,,,"segou, mali",,"segou, mali"
+8,Contes choisis,1953,fiction,jeunesse,90,1,,,short stories,Andersen,,,,contes,,fairy tales
+9,Benjie Ream,1971,fiction,jeunesse,218,1,,,historical fiction,Hodges,Carl G.,,,"guerre civile, étas unis",,"civil war, united states"
+10,Harry Potter à l'école des sorciers,1997,fiction,jeunesse,302,1,Harry Potter,1,,Rowling,J.K.,,,"fantasie, magique",,"fantasy, magic"
+11,L'or de Pizarre,1986,fiction,jeunesse,187,1,,,,Dujovne-Ortiz,Alicia,Berline,Jean-Claude,"incas, amérique du sud, exploration, aventure",,"incas, south america, exploration, adventure"
+12,Zorro: Le complot des émeraudes,1998,fiction,jeunesse,59,,Zorro,,,Flammarion,,,,"amérique du sud, aventure",,"south america, adventure"
+13,Prisonniers de la pyramide,2004,fiction,jeunesse,94,1,Les enfants du nil,,,Surget,Alain,Parme,Fabrice,"égypte, aventure",,"egypt, adventure"
+14,"César, c'est qui?",2004,fiction,jeunesse,90,1,Les enfants du nil,,,Surget,Alain,Parme,Fabrice,"égypte, aventure",,"egypt, adventure"
+15,Le scarabée du cœur,2005,fiction,jeunesse,179,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"égypte, aventure",,"egypt, adventure"
+16,L'enfant qui parlait aux animaux,1949,fiction,jeunesse,86,1,,,,Dahl,Roald,,,animaux,,animals
+17,"Bien joué, Clan des Sept",1958,fiction,jeunesse,182,1,,,,Blyton,Enid,,,aventure,,adventure
+18,Contes et récits de la conquête de l'ouest,2000,fiction,jeunesse,178,1,,,,Lambert,Christophe,,,"aventure, contes du sud-oest des étas unis",,"adventure, legends of the southwest"
+19,Manuel de la Pampa,1974,fiction,jeunesse,215,1,,,historical fiction,Gor,Le,Dooz,Jena-Marie,"argentine, amérique du sud, fiction historique, amitié",,"argentina, south america, historical fiction, friendship"
+20,Nés sous une mauvaise étoile,1999,fiction,jeunesse,142,1,Le funeste destin des Baudelaire,1,,Snicket,Lemony,,,aventure,,adventure
+21,9 histoires pour mes 9 ans,2004,fiction,jeunesse,128,1,Mes histoires d'anniversaire,,,,,,,nouvelles,,short stories
+22,Coup de gigot et autres histoires à faire peur,1948,fiction,jeunesse,116,1,,,short stories,Dahl,Roald,,,nouvelles,,short stories
+23,Bouddah,2003,fiction,jeunesse,59,1,,,,Labbé,Brigitte,Puech,Michel,"bouddha, religion, bouddhisme, inde",,"bouddha, religion, bouddhism, india"
+24,Minie Malakoff direction Port de la Chapelle,1983,fiction,jeunesse,44,1,,,,Schwartz,Irène,Gay,Michel,"aventure, animaux, souris",,"adventure, animals, mice"
+25,La conspiration du harem,2005,fiction,jeunesse,180,1,Hori: scribe et détective,,,Égémar,Béatrice,,,"égypte, aventure",,"egypt, adventure"
+26,Fantastique Fantômette,1978,fiction,jeunesse,149,1,,,,Chaulet,Georges,,,aventure,,adventure
+27,Le petit frère,2001,fiction,jeunesse,,1,,,,Ponti,Claude,,,"livre d'enfants, livre d'images",,"children's book, picture book"
+28,Dictio: mots et jeux,1992,Documentaire,Jeunesse,123,1,Dictio,,,Guilloret,Florence,Beaumont,Émilie,"Alphabet, jeux, apprendre à lire",,
+29,"Moi aussi, je veux maman!",2001,Fiction,Jeunesse,,1,,,,Dubois,Claude,Stibane,,"Famille, hiver, écreuil",,
+30,Maxou mignon,1993,Fiction,Jeunesse,,1,,,,Nadja,,,,"Chien, rhyme",,
+31,Les Masques d'Auguste Soleil,1999,Documentaire,Jeunesse,,1,,,,Falda,Dominique,,,"Art, masques, Auguste Soleil, Photographie",,
+32,"pôle Nord, pôle Sud: un numéro pour tout comprendre",Mars 2007,Documentaire,Jeunesse,57,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, manchots, arctique, anarctique, Alaska, changement climatique, nature",,
+33,A la conquête de l'espace,Octobre 2007,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, sport, système solaire, rugby, Saint Louis, Sénégal, Organismes Génétiquement Modifiés, nature",,
+34,Mustang: fils du vent,Septembre 2007,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, sport géographie, cheval, Celtes, escrime, mondialisation, Royaume-Uni, nature",,
+35,Spécial: mer,Juillet 2007,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, sport, surf, pieuvre, pirates, île de la Réunion, nature",,
+36,Protéger les animaux,Février 2008,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, sport, snowboard, migration, Allemagne, Hannibal, Carthage, Environment, Biocarburant, WWF, nature",,
+37,Étonnantes fourmis,Août 2007,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, Sport, fourmis, photographie, Nouvelle-Zélande, hélicoptère, escalade, nature",,
+38,Cinéma: Le renard et l'enfant,Décembre 2008,Documentaire,Jeunesse,67,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, art, sport, Matisse, renard, jumping, Gandhi, Inde, nature",,
+39,Sur la piste de l'ours,Juin 2007,Documentaire,Jeunesse,59,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, géographie, sport, politique, ours, Égypte, tennis, Italie, commerce équitable, pyramide, nature",,
+40,Le Gâteau,2001,Fiction,Jeunesse,,1,,,,de Monfreid,Dorothée,,,"Animaux, gateau",,
+41,Un coquelicot pour se souvenir,2004,Documentaire,Jeunesse,30,1,,,,Patterson,Heather,Lightburn,Ron,"Histoire, Canada, Premièrre Guerre Mondiale, Histoire militaire",,
+42,Bill es Maboul,1980,Fiction,Jeunesse,46,1,Boule et Bill,,,Roba,,,,"Bande dessinée, humeur",,
+43,Petit Stuart,1945,Fiction,Jeunesse,133,1,,,,White,E.B.,,,"Souris, aventure",,
+44,Les Pirates du Silence et le Quick Super,1958,Fiction,Jeunesse,62,1,Aventures de Spirou et Fantasio,,,,,,,"Bande dessinée, humeur, crime",,
+45,Le Matin du Monde,1988,Fiction,Jeunesse,46,1,Yoko Tsuno,,,Leloup,Roger,,,"Bande dessinée, aventure, dinosaurs, Indonésie",,
+46,Racing Show,1985,Fiction,Jeunesse,47,1,Michel Vaillant,,,Graton,Jean,,,"Bande dessinée, voitures, aventure",,
+47,"Un ours, un singe...et un side-car",1979,Fiction,Jeunesse,46,1,Julie Wood,,,Graton,Jean,,,"Bande dessinée, motocyclette, voiture",,
+48,Stripcockeer,1984,Fiction,Jeunesse,46,1,Boule et Bill,,,Roba,,,,"Bande dessinée, humeur",,
+49,Route de Nuit,1994,Fiction,Jeunesse,64,1,Michel Vaillant,,,Graton,Jean,,,"Bande dessinée, aventure, voitures",,
+50,Le galérien,1980,Fiction,Jeunesse,48,1,Michel Vaillant,,,Graton,Jean,,,"Bande dessinée, aventure, voitures",,
+51,Le 8ieme Pilote,1997,Fiction,Jeunesse,64,1,Michel Vaillant,,,Graton,Jean,,,"Bande dessinée, aventure, voitures",,
+52,Les Faiseurs de Silence,1984,Fiction,Jeunesse,46,1,Aventures de Spirou et Fantasio,,,Nic,,Cauvin,,"Bande dessinée, humeurm crime",,
+53,Le Puits Aux Morts,1997,Fiction,Jeunesse,46,1,Le Roi Cyclope,,,Dethan,Isabelle,,,"Bande dessinée, horreur",,
+54,Globe Trotters,1982,Fiction,Jeunesse,46,1,Boule et Bill,,,Roba,,,,"Bande dessinée, humeur",,
+55,Mystérieux ptérosaures,Avril 2007,Documentaire,Jeunesse,57,1,ImagesDoc,,,,,,,"Sciences, animaux, histoire, nature, géographie, sport, politique, mare, ptérosaures, Mexique, président",,
+56,Comment ses amis délivrèrent la gazelle,2003,Fiction,Jeunesse,24,1,,,,Solet,Bertrand,,,"Conte traditionelle, Afghanistan, animaux,",,
+57,Les Disparus de l'Aéropostale,1999,Fiction,Jeunesse,37,1,,,,Grégroire,Fabaian,,,"Histoire, Afrique, avions, compagnie générale aéropostale",,
+58,Quartiers d'Orange,2005,Fiction,Jeunesse,,1,,,,Legendre,Françoise,Fortier,Natali,"Espagne, famille, le déces",,
+59,Kirikou et la Sorcière,1998,Fiction,Jeunesse,,1,,,,Ocelot,Michel,,,"Conte traditionelle, Afrique, magique, sorcière",,
+60,Everest L'incroyable conquête,Juin 2003,Documentaire,Jeunesse,55,1,Okapi,,,,,,,"Sciences, géographie, musique, danse, télévision, Everest",,
+61,Le jardin de mon enfance,2000,Fiction,Jeunesse,55,1,blaireau,,,Bogacki,Tomek,,,"Jardin, amitié, animaux",,
+62,100 Dates de l'histoire de France racontées aux enfants,2000,Documentaire,Jeunesse,32,1,,,,Buquet,Samuel,Volkman,Jean-Charles,"Histoire, histoire française",,
+63,"c'est le printemps, réveille-toi!",Avril 2003,Documentaire,Jeunesse,31,1,Wakou,,,,,,,"Animaux, nature, sciences, jardin, hibernation, plantes",,
+64,Australie: le pays des animaux bizarres,Janvier 2006,Documentaire,Jeunesse,40,1,Wakou,,,,,,,"sciences, géographie, Australie, animaux, nature, cuisine, manchots, chat, rhume",,
+65,Bravo Bravo,2001,Fiction,Jeunesse,,1,,,,Guettier,Bénédicte,,,"bébé, dormir",,
+66,"France: Canyons, déserts, cascades...Les prodiges de la nature",Septembre 2001,Documentaire,Adulte,162,1,Geo: Un nouveau monde:la Terre,,,,,,,"Géographie, nature, Chili, Mapuches, France, Inde, Rajasthan, Nigeria, scarification",,
+67,vive les vacances!,,Documentaire/Fiction,Jeunesse,35,1,Tobogan,,,,,,,"Contes, Jeux, activités",,
+68,Mon grand livre de chiffres,1989,Documentaire,Jeunesse,45,1,,,,Michaut,Valérie,,,"Chiffres, compter, vocabulaire",,
+69,Ratus découvre les livres,1996,Fiction,Jeunesse,192,1,,,,Guion,Jean,,,"Contes, apprendre à lire",,
+70,J'apprends à lire avec Pilou et Lalie,2001,Documentaire/Fiction,Jeunesse,95,1,,,,Demars,Françoise,,,"Apprendre à lire, alphabet, sons, jeux, loutres",,
+71,Let's Sing and Learn in French,1996,Ressources pour les Ensignants,Maitres,63,1,,,,Maxwell,Matt,,,"Apprendre français, chansons, musique",,
+72,Passeport (7-8ans),,Ressources pour les Ensignants,Maitres,61,1,Passeport,,,Bessières,Catherine,Knowles,Xavier,"Cahier vacances, exercises toutes matières",,
+73,Passeport (8-9ans),,Ressources pour les Ensignants,Maitres,56,1,Passeport,,,Bacon,Michèle,Hérété,Jean-Étienne,"Cahier vacances, exercises toutes matières",,
+74,DELF 1er Degré,1996,Ressources pour les Ensignants,Maitres,253,1,Objectif Réussite,,,,,,,"DELF, exercises français avec corrigés",,
+75,les Personnages célèbres par les mots croisés,2001,Ressources pour les Ensignants,Maitres,64,1,,,,Lamblin,Christian,,,Exercices amusantes pour reviser l'histoire,,
