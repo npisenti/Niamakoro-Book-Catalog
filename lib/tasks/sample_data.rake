@@ -8,14 +8,14 @@ namespace :db do
 
     BOOKS = File.join( File.dirname(__FILE__), '..', '..', 'db/SeedData/books.csv')
 
-    CSV.foreach(BOOKS, :return_headers => false, :headers => :first_row) do |row|
+    CSV.foreach(BOOKS, :encoding => 'UTF-8', :return_headers => false, :headers => :first_row) do |row|
       author_params = { "1" => { "last" => row['author_1_last'], "first" => row['author_1_first'] }, "2" => { "last" => row['author_2_last'], "first" => row['author_2_first'] } } 
       author_params.delete("2") if row['author_2_last'] == nil
       author_params.delete("1") if row['author_1_last'] == nil
 
       subjects = row['subjects'].split(', ')
       subject_params = {}
-      subjects.each_index{ |i| subject_params[i.to_s] = { "name" => subjects[i].downcase } }
+      subjects.each_index{ |i| subject_params[i.to_s] = { "name" => Unicode::downcase(subjects[i]) } }
       
       puts row['id']
       puts author_params
