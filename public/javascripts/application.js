@@ -16,8 +16,9 @@ $(document).ready(function(){
     
     $("#search-button").click(function(){
         window.location = "/?search=" + $("#search").attr("value");
-      
     });
+
+    $("#back-to-search").click(function(){ history.go(-1); return false; });
 
 
 
