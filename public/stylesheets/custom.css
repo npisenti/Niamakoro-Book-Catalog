@@ -13,3 +13,5 @@ form .close { line-height: 1;}
 .full-width { width: 100%; }
 
 .search-button-area { width: 87px; margin: auto; padding: 30px; }
+
+.ui-autocomplete { max-height: 500px; overflow: hidden; }
