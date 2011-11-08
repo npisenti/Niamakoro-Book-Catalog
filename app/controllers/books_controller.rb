@@ -46,6 +46,12 @@ class BooksController < ApplicationController
   end
 
   def search_bar
+    output = Subject.order("name ASC").map { |st| st.name }
+    output_json = Subject.order("name ASC").map { |st| {:value =>  st.name } }
+    render :json => output.to_json
+  end
+
+  def search_bar2
     #output_json = SubjectTag.all.map { |st| { :label => "Sujet: #{st.subject.name}", :value => st.subject.name } }.uniq
     output_json = Subject.order("name ASC").map { |st| {:label => "#{st.name} (Sujet)", :value => st.name } }
 

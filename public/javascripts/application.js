@@ -2,16 +2,24 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function(){
-    $.getJSON('/search_bar.json', function(data){ 
+
+    var autoData = [];
+    $.get('/search_bar', function(data){ 
+        autoData = $.makeArray(data);
+        });
+
         $("#search").autocomplete({
-          source: data, 
+          source: function(req, responseFn){
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp("^" + re, "i");
+            var a = $.grep(autoData, function(item, index){
+              return matcher.test(item);
+            });
+            responseFn(a); 
+          },
           minLength: 1,
           select: function( event, ui ) {
-    /*    log( ui.item ?
-          "Selected: " + ui.item.value + " aka " + ui.item.id :
-          "Nothing selected, input was " + this.value );*/
-          }
-        });
+      }
     }); 
     
     $("#search-button").click(function(){
