@@ -2,7 +2,8 @@
   <li><a id="back-to-search" href="#">← Chercher</a> <span class="divider">/</span></li>
   <li class="active"><%= @book.title %></li>
 </ul>
-<h1>Livre: <%= @book.title %></h1>
+<h1>Livre: <%= @book.title %> </h1>
+<p><%= link_to("(Edit)", edit_book_path(@book.id)) if current_user %></p>
   <table class="zebra-striped">
     <thead><tr><th>#</th><th>Titre</th></thead>
       <tbody>

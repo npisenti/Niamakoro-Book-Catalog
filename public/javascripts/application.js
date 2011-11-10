@@ -32,11 +32,39 @@ $(document).ready(function(){
 
 
 // FOR BOOK FORM
+$("#subjects_0_name").autocomplete({
+          source: function(req, responseFn){
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp("^" + re, "i");
+            var a = $.grep(autoData, function(item, index){
+              return matcher.test(item);
+            });
+            responseFn(a); 
+          },
+          minLength: 1,
+          select: function( event, ui ) {
+      }
+    }); 
+
 
   $('#new-subject').click(function(){
     var i = parseInt($('#subject-inputs').attr('data-counter')) + 1;
-    var new_node = '<div class="clearfix"><label for="subjects_' + i + '_name">Subject</label><div class="input"><input class="xlarge" id="subjects_' + i + '_name" name="subjects[' + i + '][name]" size="30" type="text" value=""><a href="#" class="close" id="close-subject-' + i + '">×</a></div></div>'
-      $(new_node).appendTo('#subject-inputs');
+    var new_node = '<div class="clearfix"><label for="subjects_' + i + '_name">Subject</label><div class="input"><input class="xlarge subject" id="subjects_' + i + '_name" name="subjects[' + i + '][name]" size="30" type="text" value=""><a href="#" class="close" id="close-subject-' + i + '">×</a></div></div>'
+
+    $(new_node).appendTo('#subject-inputs');
+    $("#subjects_" + i + "_name").autocomplete({
+          source: function(req, responseFn){
+            var re = $.ui.autocomplete.escapeRegex(req.term);
+            var matcher = new RegExp("^" + re, "i");
+            var a = $.grep(autoData, function(item, index){
+              return matcher.test(item);
+            });
+            responseFn(a); 
+          },
+          minLength: 1,
+          select: function( event, ui ) {
+      }
+    }); 
 
       $('#close-subject-' + i).click(function(){ $(this).parentsUntil($('#subject-inputs'), '.clearfix').remove();
        return false;

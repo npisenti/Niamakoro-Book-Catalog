@@ -56,7 +56,7 @@
             <div class="clearfix">
               <%= label "subjects[#{i}]", :name, "Subject" %>
               <div class="input">
-                <%= text_field "subjects[#{i}]", :name, {:class => "xlarge", :value =>  @subject_list[i].name} %>
+                <%= text_field "subjects[#{i}]", :name, {:class => "xlarge subject", :value =>  @subject_list[i].name} %>
               </div>
             </div>
           <% end %>

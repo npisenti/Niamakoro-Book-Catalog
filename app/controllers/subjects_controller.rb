@@ -33,7 +33,15 @@ class SubjectsController < ApplicationController
   end
 
   def index
-    @subjects = Subject.all
+    @subjects = Subject.order("name ASC")
+
+    @output_json = @subjects.map { |s| s.name }
+
+    respond_to do |format|
+      format.html
+      format.json { render :json => output_json.to_json } 
+    end
   end
 
+  
 end

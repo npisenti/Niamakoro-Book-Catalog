@@ -16,6 +16,8 @@
   <div class="container">
     <div class="header">
       <% if current_user %>
+        <%= link_to "Home page", :home %> |
+        <%= link_to "admin page", :admin %> |
         <%= link_to "Logout", :logout %>
       <% else %>
         <%= link_to "Login", :login %>
