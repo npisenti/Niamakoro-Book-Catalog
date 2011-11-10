@@ -1,5 +1,7 @@
 class SubjectsController < ApplicationController
 
+  before_filter :authenticate, :only => [:new, :create, :edit, :update ]
+
   def new
     @subject = Subject.new
   end

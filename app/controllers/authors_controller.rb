@@ -1,5 +1,7 @@
 class AuthorsController < ApplicationController
 
+  before_filter :authenticate, :only => [:new, :create, :edit, :update ]
+
   def new
     @author = Author.new
   end
