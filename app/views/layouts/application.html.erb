@@ -14,7 +14,13 @@
 <body>
 
   <div class="container">
-    <div class="header"></div>
+    <div class="header">
+      <% if current_user %>
+        <%= link_to "Logout", :logout %>
+      <% else %>
+        <%= link_to "Login", :login %>
+      <% end %>
+    </div>
 
     <div class="row">
       <%= yield %>

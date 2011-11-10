@@ -1,8 +1,11 @@
 BookCatalogue::Application.routes.draw do
 
   resources :books, :authors, :subjects
+  resources :user_sessions, :only => [ :new, :create, :destroy ]
   match '/search_bar', :to => 'books#search_bar'
   root :to => "pages#home", :as => "home"
+  match 'admin' => 'user_sessions#new', :as => :login
+  match 'logout' => 'user_sessions#destroy', :as => :logout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

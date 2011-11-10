@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111031123647) do
+ActiveRecord::Schema.define(:version => 20111110084827) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -57,6 +57,15 @@ ActiveRecord::Schema.define(:version => 20111031123647) do
   end
 
   add_index "subjects", ["name"], :name => "index_subjects_on_name"
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "writings", :force => true do |t|
     t.integer  "book_id"
