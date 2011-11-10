@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+  before_filter :authenticate, :only => [ :admin ]
 
   def home
     @search_query = ""
@@ -7,6 +8,9 @@ class PagesController < ApplicationController
       @books = @subject.nil? ? [] : @subject.books
       @search_query = params[:search]
     end
+  end
+
+  def admin
   end
 
 end

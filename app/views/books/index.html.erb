@@ -1,4 +1,8 @@
 <h1>List of books:</h1>
-<ul>
-  <%= render @books %>
-</ul>
+<table class="zebra-striped">
+  <thead><tr><th>#</th><th>Titre</th><th>Sujet</th></thead>
+    <tbody>
+
+      <%= render @books %>
+    </tbody>
+  </table>

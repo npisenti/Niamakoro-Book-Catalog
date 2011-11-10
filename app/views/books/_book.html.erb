@@ -1,1 +1,9 @@
-<tr><td><%= book.id %></td><td><%= link_to book.title, book_path(book.id) %></td><td><% book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == book.subjects.last %><% end %></td></tr>
+<tr>
+  <td><%= book.id %></td>
+  <td><%= link_to book.title, book_path(book.id) %> 
+    <% if current_user %>
+      | <%= link_to "Edit", edit_book_path(book.id) %>
+    <% end %>
+    </td>
+  <td><% book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == book.subjects.last %><% end %></td>
+</tr>
