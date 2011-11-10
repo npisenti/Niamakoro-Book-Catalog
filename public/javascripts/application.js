@@ -2,6 +2,7 @@
 // This file is automatically included by javascript_include_tag :defaults
 
 $(document).ready(function(){
+    $("#search").focus();
 
     var autoData = [];
     $.get('/search_bar', function(data){ 
