@@ -1,6 +1,6 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :books, :authors, :subjects
+  resources :books, :authors, :subjects, :checkout_items
   resources :user_sessions, :only => [ :new, :create, :destroy ]
 
   match '/search_bar', :to => 'books#search_bar'

@@ -42,6 +42,8 @@ class BooksController < ApplicationController
   def show
     @checkout = CheckoutItem.new
     @book = Book.find(params[:id])
+    @checkout_items = @book.checkout_items.open
+    @checkout_item = CheckoutItem.new
   end
 
   def index

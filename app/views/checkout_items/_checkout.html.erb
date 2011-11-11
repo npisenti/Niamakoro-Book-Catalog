@@ -1,0 +1,58 @@
+<div id="checkout-form" class="modal hide fade">
+  <div class="modal-header">
+    <h3>Retirer ce livre</h3>
+  </div>
+  <%= form_for @checkout do |f| %>
+    <fieldset>
+      <div class="clearfix">
+        <%= f.label :notes %>
+        <div class="input">
+          <%= f.text_field :notes,  {:class => "xlarge" } %>
+        <span class="help-block">Il reste <%= @book.checked_in %> copie(s).</span>
+        </div>
+      </div>
+
+      <%= f.hidden_field :book_id, { :value => @book.id } %>
+      <%= f.hidden_field :status, { :value => true } %>
+
+      <div class="actions">
+        <%= f.submit("Checkout", { :class => "btn primary" }) %>
+        <a href="#" class="btn secondary" id="checkout-form-cancel">Annuler</a>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+
+<div id="checkin-form" class="modal hide fade">
+  <div class="modal-header">
+    <h3>Inscrire ce livre</h3>
+  </div>
+
+  <%= form_for "checkout_item[]", :as => :checkout_item do |f| %>
+    <fieldset>
+      <div class="clearfix">
+        <label>Inscrire:</label>
+      <div class="input">
+      <ul class="inputs-list">
+        <% for @checkout_item in @checkout_items %>
+          <li>
+          <label>
+            <%= f.check_box :status, {:checked => false} %>
+            <span><%= " Notes: #{@checkout_item.notes}" %></span>
+          </label>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+    </div>
+
+      <%= f.hidden_field :book_id, { :value => @book.id } %>
+
+      <div class="actions">
+        <%= f.submit("Checkout", { :class => "btn primary" }) %>
+        <a href="#" class="btn secondary" id="checkin-form-cancel">Annuler</a>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+

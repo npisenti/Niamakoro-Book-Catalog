@@ -7,7 +7,7 @@ class AuthorsController < ApplicationController
   end
 
   def create
-    @author = Author.create(params[:id])
+    @author = Author.create(params[:author])
     if @author.save
       redirect_to @author
     else

@@ -3,6 +3,10 @@
   <li class="active"><%= @book.title %></li>
 </ul>
 <h1>Livre: <%= @book.title %></h1>
+<p>
+<a class="btn" data-controls-modal="checkout-form">Retirer le livre</a>
+<a class="btn" data-controls-modal="checkin-form">Inscrire le livre</a>
+</p>
   <table class="zebra-striped">
     <thead><tr><th>#</th><th>Titre</th></thead>
       <tbody>
@@ -21,4 +25,4 @@
 </table>
 <div id="edit-bar" class="pull-right"><%= link_to("Modifier", edit_book_path(@book.id)) if current_user %></div>
 
-<%= render 'checkout' %>
+<%= render 'checkout_items/checkout' %>

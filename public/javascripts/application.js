@@ -88,6 +88,26 @@ $("#subjects_0_name").autocomplete({
       return false;
 
   });
+
+  $("#checkout-form").modal({
+        keyboard: true,
+        backdrop: true
+        });
+  $("#checkout-form-cancel").click(function(){
+      $("#checkout-form").modal('hide');
+      $("#checkout-form #checkout_item_notes").attr('value', '');
+      });
+  $("#checkin-form").modal({
+        keyboard: true,
+        backdrop: true
+        });
+  $("#checkin-form-cancel").click(function(){
+      $("#checkin-form").modal('hide');
+      });
+
+
+
+
   ///////
   
   
