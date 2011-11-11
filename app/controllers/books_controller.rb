@@ -40,6 +40,7 @@ class BooksController < ApplicationController
   end
 
   def show
+    @checkout = CheckoutItem.new
     @book = Book.find(params[:id])
   end
 
