@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111110103246) do
+ActiveRecord::Schema.define(:version => 20111111111445) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -36,8 +36,18 @@ ActiveRecord::Schema.define(:version => 20111110103246) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.text     "notes"
-    t.boolean  "lent",          :default => false
   end
+
+  create_table "checkout_items", :force => true do |t|
+    t.integer  "book_id"
+    t.boolean  "status"
+    t.string   "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "checkout_items", ["book_id"], :name => "index_checkout_items_on_book_id"
+  add_index "checkout_items", ["status"], :name => "index_checkout_items_on_status"
 
   create_table "subject_tags", :force => true do |t|
     t.integer  "book_id"
