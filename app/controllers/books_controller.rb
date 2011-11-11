@@ -61,4 +61,10 @@ class BooksController < ApplicationController
       format.json { render :json => output_json.to_json }
     end
   end
+
+  def checkout
+    @book = Book.find(params[:id])
+    @book.lent = params[:lent]
+    @book.save
+  end
 end

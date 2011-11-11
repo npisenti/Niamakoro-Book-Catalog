@@ -3,7 +3,7 @@
     <fieldset>
 
       <div class="clearfix">
-        <%= f.label :title %>
+        <%= f.label :title, "Titre" %>
         <div class="input">
           <%= f.text_field :title,  {:class => "xlarge" } %>
         </div>
@@ -15,13 +15,13 @@
             <div class="row">
               <div class="span10 offset1">
                 <div class="clearfix">
-                  <%= label "authors[#{i}]", :last, "Author Last" %>
+                  <%= label "authors[#{i}]", :last, "Auter (Nom)" %>
                   <div class="input">
                     <%= text_field "authors[#{i}]", :last, {:class => "xlarge", :value => @author_list[i].last } %>
                   </div>
                 </div>
                 <div class="clearfix">
-                  <%= label "authors[#{i}]", :first, "Author First" %>
+                  <%= label "authors[#{i}]", :first, "Auter (Prenom)" %>
                   <div class="input">
                     <%= text_field "authors[#{i}]", :first, {:class => "xlarge", :value => @author_list[i].first } %>
                   </div>
@@ -36,7 +36,7 @@
         </div>
       </div> <!-- end .multi-inputs -->
       <div class="clearfix">
-        <%= f.label :pub_year %>
+        <%= f.label :pub_year, "Date de publication" %>
         <div class="input">
           <%= f.text_field :pub_year,  {:class => "xlarge" } %>
         </div>
@@ -54,7 +54,7 @@
         <div id="subject-inputs" data-counter="0">
           <% @subject_list.each_index do |i| %>
             <div class="clearfix">
-              <%= label "subjects[#{i}]", :name, "Subject" %>
+              <%= label "subjects[#{i}]", :name, "Sujet" %>
               <div class="input">
                 <%= text_field "subjects[#{i}]", :name, {:class => "xlarge subject", :value =>  @subject_list[i].name} %>
               </div>
@@ -68,7 +68,7 @@
       </div>
 
       <div class="clearfix">
-        <%= f.label :age_group %>
+        <%= f.label :age_group, "Tranche d'âge" %>
         <div class="input">
           <%= f.text_field :age_group,  {:class => "xlarge" } %>
         </div>
@@ -76,7 +76,7 @@
 
 
       <div class="clearfix">
-        <%= f.label :num_pages %>
+        <%= f.label :num_pages, "Nombre de page" %>
         <div class="input">
           <%= f.text_field :num_pages,  {:class => "xlarge" } %>
         </div>
@@ -84,30 +84,30 @@
 
 
       <div class="clearfix">
-        <%= f.label :num_copies %>
+        <%= f.label :num_copies, "Nombre de copies" %>
         <div class="input">
           <%= f.text_field :num_copies,  {:class => "xlarge" } %>
         </div>
       </div>
 
       <div class="clearfix">
-        <%= f.label :series_title %>
+        <%= f.label :series_title, "Titre de série" %>
         <div class="input">
           <%= f.text_field :series_title,  {:class => "xlarge" } %>
         </div>
       </div>
  
       <div class="clearfix">
-        <%= f.label :series_number %>
+        <%= f.label :series_number, "Numéro de série" %>
         <div class="input">
           <%= f.text_field :series_number,  {:class => "xlarge" } %>
         </div>
       </div>
  
       <div class="clearfix">
-        <%= f.label :summary %>
+        <%= f.label :summary, "Résumé" %>
         <div class="input">
-          <%= f.text_area :summary,  {:class => "xlarge" } %>
+          <%= f.text_area :summary,  {:class => "xxlarge" } %>
         </div>
       </div>
 
