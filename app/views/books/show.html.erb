@@ -4,8 +4,8 @@
 </ul>
 <h1>Livre: <%= @book.title %></h1>
 <p>
-<a class="btn" data-controls-modal="checkout-form">Retirer le livre</a>
-<a class="btn" data-controls-modal="checkin-form">Inscrire le livre</a>
+<a class="btn" data-controls-modal="checkout-form">Livre retiré</a>
+<a class="btn" data-controls-modal="checkin-form">Livre rendu</a>
 </p>
   <table class="zebra-striped">
     <thead><tr><th>#</th><th>Titre</th></thead>
@@ -16,7 +16,7 @@
 <tr><td>Sujet(s): </td><td><% @book.subjects.each do |a| %><%= "#{a.name}; "  %><% end %></td></tr>
   <tr><td>Genre: </td><td><%= @book.genre %></td></tr>
   <tr><td>Tranche d'âge: </td><td><%= @book.age_group %></td></tr>
-  <tr><td>Nombre de page: </td><td><%= @book.num_pages %></td></tr>
+  <tr><td>Nombre de pages: </td><td><%= @book.num_pages %></td></tr>
   <tr><td>Nombre de copies: </td><td><%= @book.num_copies %> |  <%= @book.checked_out %> copie(s) retiré(s)</td></tr>
   <tr><td>Titre de série: </td><td><%= @book.series_title %></td></tr>
   <tr><td>Numéro de série: </td><td><%= @book.series_number %></td></tr>
