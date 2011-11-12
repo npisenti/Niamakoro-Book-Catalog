@@ -65,9 +65,4 @@ class BooksController < ApplicationController
     end
   end
 
-  def checkout
-    @book = Book.find(params[:id])
-    @book.lent = params[:lent]
-    @book.save
-  end
 end
