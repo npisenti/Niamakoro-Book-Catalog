@@ -9,6 +9,7 @@ class Book < ActiveRecord::Base
   has_many :subject_tags
   has_many :subjects, :through => :subject_tags
 
+  scope :subject, lambda {|subject| Book.joins(:subjects).where(:subjects => {:name => subject} ) }
   
 
 
@@ -37,5 +38,11 @@ class Book < ActiveRecord::Base
 
   def as_csv
 
+  end
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['title LIKE ? OR summary LIKE ?', "%#{search}%", "%#{search}%"])
+    end
   end
 end

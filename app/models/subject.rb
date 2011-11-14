@@ -4,4 +4,12 @@ class Subject < ActiveRecord::Base
 
   attr_accessible :name, :description
 
+  
+
+  def self.search(search)
+    if search
+      find(:all, :conditions => ['name LIKE ? OR description LIKE ?', "%#{search}%", "%#{search}%"])
+    end
+  end
+
 end
