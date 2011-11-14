@@ -61,7 +61,7 @@ class BooksController < ApplicationController
           end
         end
         
-        render 'index' 
+        render :text => @csv_string
       }
     end
       
