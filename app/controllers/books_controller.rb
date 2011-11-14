@@ -50,6 +50,21 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    respond_to do |format|
+      format.html
+      format.csv { 
+        require 'csv'
+        @csv_string = CSV.generate do |csv|
+          csv << ["ID", "titre", "publication", "genre", "age", "nombre_pages", "nom_copies", "titre_serie", "nombre_serie", "resume", "notes", "auters", "sujets"]
+          @books.each do |b|
+            csv << b.csv_array
+          end
+        end
+        
+        render 'index' 
+      }
+    end
+      
   end
 
   def search_bar
@@ -62,5 +77,8 @@ class BooksController < ApplicationController
     render :json => output.to_json
   end
 
+  def csv
+  end
 
 end
+

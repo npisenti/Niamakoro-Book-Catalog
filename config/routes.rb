@@ -9,6 +9,7 @@ BookCatalogue::Application.routes.draw do
   resources :user_sessions, :only => [ :new, :create, :destroy ]
 
   match '/search_bar', :to => 'books#search_bar'
+  match '/csv', :to => 'books#csv'
 
   match '/checkout_items/checkin', :to => 'checkout_items#checkin', :as => 'checkin'
 

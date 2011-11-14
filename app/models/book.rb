@@ -36,7 +36,13 @@ class Book < ActiveRecord::Base
     self.num_copies - self.checkout_items.out.length
   end
 
-  def as_csv
+  def csv_array
+    authors_str = self.authors.map{|a| "#{a.last},#{a.first}"}.join(";")
+    subjects_str = self.subjects.map{|s| "#{s.name}"}.join(";")
+    authors_str = "" if authors_str.empty?
+    subjects_str = "" if subjects_str.empty?
+
+    [self.id.to_s, self.title.to_s, self.pub_year.to_s, self.genre.to_s, self.age_group.to_s, self.num_pages.to_s, self.num_copies.to_s, self.series_title.to_s, self.series_number.to_s, self.summary.to_s, self.notes.to_s, authors_str, subjects_str]
 
   end
 
