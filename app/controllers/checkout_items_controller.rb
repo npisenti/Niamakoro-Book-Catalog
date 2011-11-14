@@ -1,4 +1,5 @@
 class CheckoutItemsController < ApplicationController
+  before_filter :authenticate
 
   def new
     @checkout = CheckoutItem.new
