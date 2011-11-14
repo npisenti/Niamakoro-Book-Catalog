@@ -1,10 +1,12 @@
 <h1><%= @book.title %></h1>
+<% if current_user %>
 <div class="checkout-bar">
 <% if @book.checked_in > 0 %>
   <a class="btn" data-controls-modal="parent-checkout">Livre retiré</a>
 <% end %>
 <% if @book.checked_out > 0 %>
   <a class="btn" data-controls-modal="parent-checkin">Livre rendu</a>
+<% end %>
 <% end %>
 </div>
   <table class="zebra-striped">
