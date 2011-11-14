@@ -9,9 +9,10 @@
   <table class="zebra-striped">
     <thead><tr><th>#</th><th>Titre</th><th>Sujet</th></thead>
       <tbody>
-        <%= render @books %>
         <% if @books.empty? %>
           <tr><td></td><td>There were no results.</td><td></td></tr>
+        <% else %>
+          <%= render @books, :locals => { :search_query => @search_query } %>
         <% end %>
 
       </tbody>

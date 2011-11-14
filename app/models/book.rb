@@ -28,11 +28,11 @@ class Book < ActiveRecord::Base
   end
 
   def checked_out
-    self.checkout_items.open.length
+    self.checkout_items.out.length
   end
 
   def checked_in
-    self.num_copies - self.checkout_items.open.length
+    self.num_copies - self.checkout_items.out.length
   end
 
 end

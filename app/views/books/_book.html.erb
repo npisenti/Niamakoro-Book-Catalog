@@ -1,6 +1,6 @@
 <tr>
   <td><%= book.id %></td>
-  <td width="50%"><%= link_to book.title, book_path(book.id) %> 
+  <td width="50%"><%= link_to book.title, "#{book_path(book.id)}?search=#{@search_query}" %> 
     <% if current_user %>
       | <%= link_to "Edit", edit_book_path(book.id) %>
     <% end %>

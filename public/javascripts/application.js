@@ -12,7 +12,7 @@ $(document).ready(function(){
         $("#search").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
-            var matcher = new RegExp("^" + re, "i");
+            var matcher = new RegExp("(?:^| )" + re, "gi");
             var a = $.grep(autoData, function(item, index){
               return matcher.test(item);
             });
@@ -27,8 +27,14 @@ $(document).ready(function(){
         window.location = "/?search=" + $("#search").attr("value");
     });
 
-    $("#back-to-search").click(function(){ history.go(-1); return false; });
+   // $("#back-to-search").click(function(){ history.go(-1); return false; });
 
+    $("#checkout-form-submit").click(function(){
+        console.log('submitting...');
+        $("#checkout-item-form").submit();
+        return false;
+    });
+        
 
 
 // FOR BOOK FORM

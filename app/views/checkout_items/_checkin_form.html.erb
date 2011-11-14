@@ -3,7 +3,7 @@
     <h3>Inscrire ce livre</h3>
   </div>
 
-  <%= form_for "checkout_item[]", :as => :checkout_item do |f| %>
+  <%= form_for "checkout_item[]", :as => :checkout_item, :url => checkin_many_checkout_items_path, :html => { :method => :post } do |f| %>
     <fieldset>
       <div class="clearfix">
         <label>Inscrire:</label>
@@ -13,6 +13,7 @@
           <li>
           <label>
             <%= f.check_box :status, {:checked => false} %>
+            <%= f.hidden_field :book_id, { :value => @book.id } %>
             <span><%= " Notes: #{@checkout_item.notes}" %></span>
           </label>
           </li>
@@ -21,10 +22,9 @@
     </div>
     </div>
 
-      <%= f.hidden_field :book_id, { :value => @book.id } %>
 
       <div class="actions">
-        <%= f.submit("Checkout", { :class => "btn primary" }) %>
+        <%= f.submit("Inscrire", { :class => "btn primary" }) %>
         <a href="#" class="btn secondary" id="checkin-form-cancel">Annuler</a>
       </div>
     </fieldset>

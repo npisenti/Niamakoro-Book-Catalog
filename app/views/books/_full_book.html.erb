@@ -1,0 +1,27 @@
+<h1><%= @book.title %></h1>
+<div class="checkout-bar">
+<% if @book.checked_in > 0 %>
+  <a class="btn" data-controls-modal="checkout-form">Livre retiré</a>
+<% end %>
+<% if @book.checked_out > 0 %>
+  <a class="btn" data-controls-modal="checkin-form">Livre rendu</a>
+<% end %>
+</div>
+  <table class="zebra-striped">
+      <tbody>
+  <tr><td>Titre: </td><td><%= @book.title %></td></tr>
+<tr><td>Auteur(s): </td><td><% @book.authors.each do |a| %><%= "#{a.last}, #{a.first}; "  %><% end %></td></tr>
+  <tr><td>Date de publication: </td><td><%= @book.pub_year %></td></tr>
+<tr><td>Sujet(s): </td><td><% @book.subjects.each do |a| %><%= "#{a.name}; "  %><% end %></td></tr>
+  <tr><td>Genre: </td><td><%= @book.genre %></td></tr>
+  <tr><td>Tranche d'âge: </td><td><%= @book.age_group %></td></tr>
+  <tr><td>Nombre de pages: </td><td><%= @book.num_pages %></td></tr>
+  <tr><td>Nombre de copies: </td><td><%= @book.num_copies %>  <span style="color: red"> <big>[</big> <span id="copies-checked-out"><%= @book.checked_out %></span> copie(s) retiré(s) <big>]</big></span> </td></tr>
+  <tr><td>Titre de série: </td><td><%= @book.series_title %></td></tr>
+  <tr><td>Numéro de série: </td><td><%= @book.series_number %></td></tr>
+  <tr><td>Résumé: </td><td><%= @book.summary %></td></tr>
+</tbody>
+</table>
+<div id="edit-bar" class="pull-right"><%= link_to("Modifier", edit_book_path(@book.id)) if current_user %></div>
+
+

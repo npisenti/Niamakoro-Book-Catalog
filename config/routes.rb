@@ -1,9 +1,16 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :books, :authors, :subjects, :checkout_items
+  resources :books, :authors, :subjects
+
+  resources :checkout_items do
+    post 'checkin_many', :on => :collection
+  end
+  
   resources :user_sessions, :only => [ :new, :create, :destroy ]
 
   match '/search_bar', :to => 'books#search_bar'
+
+  match '/checkout_items/checkin', :to => 'checkout_items#checkin', :as => 'checkin'
 
   root :to => "pages#home", :as => "home"
   

@@ -2,7 +2,7 @@
   <div class="modal-header">
     <h3>Retirer ce livre</h3>
   </div>
-  <%= form_for @checkout do |f| %>
+  <%= form_for @checkout, :html => {:id => "checkout-item-form" } do |f| %>
     <fieldset>
       <div class="clearfix">
         <%= f.label :notes %>
@@ -16,7 +16,7 @@
       <%= f.hidden_field :status, { :value => true } %>
 
       <div class="actions">
-        <%= f.submit("Checkout", { :class => "btn primary" }) %>
+        <%= f.submit("Retirer", { :class => "btn primary", :id => "checkout-form-submit" }) %>
         <a href="#" class="btn secondary" id="checkout-form-cancel">Annuler</a>
       </div>
     </fieldset>

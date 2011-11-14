@@ -17,3 +17,4 @@ form .close { line-height: 1;}
 .ui-autocomplete { max-height: 500px; overflow: hidden; }
 
 #edit-bar { padding-right: 10px; }
+.checkout-bar { margin: 0 0 20px 20px; }
