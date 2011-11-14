@@ -3,7 +3,11 @@
   <li class="active"><%= @book.title %></li>
 </ul>
 <div id="full-book-container">
-<%= render 'books/full_book' %>
+  <%= render 'books/full_book' %>
 </div>
-<%= render 'checkout_items/checkout_form' %>
-<%= render 'checkout_items/checkin_form' %>
+<div id="parent-checkout" class="modal hide fade">
+  <%= render 'checkout_items/checkout_form' %>
+</div>
+<div id="parent-checkin" class="modal hide fade">
+  <%= render 'checkout_items/checkin_form' %>
+</div>

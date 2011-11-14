@@ -27,13 +27,7 @@ $(document).ready(function(){
         window.location = "/?search=" + $("#search").attr("value");
     });
 
-   // $("#back-to-search").click(function(){ history.go(-1); return false; });
-
-    $("#checkout-form-submit").click(function(){
-        console.log('submitting...');
-        $("#checkout-item-form").submit();
-        return false;
-    });
+    $("#back-to-search").click(function(){ history.go(-1); return false; });
         
 
 
@@ -95,27 +89,45 @@ $("#subjects_0_name").autocomplete({
 
   });
 
-  $("#checkout-form").modal({
-        keyboard: true,
-        backdrop: true
-        });
-  $("#checkout-form-cancel").click(function(){
-      $("#checkout-form").modal('hide');
-      $("#checkout-form #checkout_item_notes").attr('value', '');
-      });
-  $("#checkin-form").modal({
-        keyboard: true,
-        backdrop: true
-        });
-  $("#checkin-form-cancel").click(function(){
-      $("#checkin-form").modal('hide');
-      });
-
-
-
-
+make_checkout();
   ///////
   
   
 });
 
+
+var make_checkout = function(){
+
+  $("#parent-checkout").modal({
+        keyboard: true,
+        backdrop: true
+        });
+  $("#checkout-form-cancel").click(function(){
+      $("#parent-checkout").modal('hide');
+      $("#checkout-form #checkout_item_notes").attr('value', '');
+      });
+  $("#parent-checkin").modal({
+        keyboard: true,
+        backdrop: true
+        });
+  $("#checkin-form-cancel").click(function(){
+      $("#parent-checkin").modal('hide');
+      });
+
+
+
+  $("#checkout-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+
+  $("#checkin-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+
+
+
+};

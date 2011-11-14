@@ -4,6 +4,7 @@ gem 'rails', '3.0.9'
 gem 'seed-fu'
 gem 'unicode'
 gem 'authlogic'
+gem 'jquery-rails', '>= 1.0.12'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'

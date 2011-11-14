@@ -1,1 +1,21 @@
-console.log('aaaahhh');
+
+$("#parent-checkout").modal('hide');
+
+$("#full-book-container").html("<%= escape_javascript(render :partial => 'books/full_book') %>");
+
+$("#parent-checkout").html("<%= escape_javascript(render :partial => 'checkout_items/checkout_form') %>");
+$("#parent-checkin").html("<%= escape_javascript(render :partial => 'checkout_items/checkin_form') %>");
+
+
+  $("#checkin-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+
+  $("#checkout-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+

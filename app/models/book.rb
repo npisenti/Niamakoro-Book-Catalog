@@ -35,4 +35,7 @@ class Book < ActiveRecord::Base
     self.num_copies - self.checkout_items.out.length
   end
 
+  def as_csv
+
+  end
 end

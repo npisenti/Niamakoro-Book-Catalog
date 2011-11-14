@@ -5,10 +5,22 @@ class CheckoutItemsController < ApplicationController
   end
 
   def create
-    @checkout = CheckoutItem.create(params[:checkout_item])
+    @checkout_me = CheckoutItem.create(params[:checkout_item])
     @book = Book.find(params[:checkout_item]['book_id'])
-    if @checkout.save
-      render :text => "hello, this rendered"
+
+
+
+    @checkout = CheckoutItem.new
+    @checkout_items = @book.checkout_items.out
+    @checkout_item = CheckoutItem.new
+
+    if @checkout_me.save
+
+      respond_to do |format|
+        format.js {
+          render 'create'
+        }
+      end
     end
   end
 
@@ -17,11 +29,20 @@ class CheckoutItemsController < ApplicationController
   end
 
   def update
-    @checkout = CheckoutItem.find(params[:id])
-    if @checkout.update_attributes(params[:checkout_item])
-      redirect_to book_path(@checkout.book_id)
-    else
-      render 'edit'
+    @checkout_me = CheckoutItem.find(params[:id])
+    @book = @checkout_me.book 
+
+    @checkout = CheckoutItem.new
+    @checkout_items = @book.checkout_items.out
+    @checkout_item = CheckoutItem.new
+
+    if @checkout_me.update_attributes(params[:checkout_item])
+
+      respond_to do |format|
+        format.js {
+          render 'update'
+        }
+      end
     end
   end
 
@@ -42,6 +63,16 @@ class CheckoutItemsController < ApplicationController
         checkin.save!
       end
     end
-    redirect_to @book
+
+    @checkout = CheckoutItem.new
+    @checkout_items = @book.checkout_items.out
+    @checkout_item = CheckoutItem.new
+
+
+    respond_to do |format|
+      format.js {
+        render 'update'
+      }
+    end
   end
 end

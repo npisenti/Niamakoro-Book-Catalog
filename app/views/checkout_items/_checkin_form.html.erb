@@ -1,9 +1,9 @@
-<div id="checkin-form" class="modal hide fade">
+<div id="checkin-form" >
   <div class="modal-header">
     <h3>Inscrire ce livre</h3>
   </div>
 
-  <%= form_for "checkout_item[]", :as => :checkout_item, :url => checkin_many_checkout_items_path, :html => { :method => :post } do |f| %>
+  <%= form_for "checkout_item[]", :as => :checkout_item, :url => checkin_many_checkout_items_path, :html => { :method => :post, :id => "checkin-item-form" } do |f| %>
     <fieldset>
       <div class="clearfix">
         <label>Inscrire:</label>

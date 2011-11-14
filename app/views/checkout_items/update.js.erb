@@ -1,1 +1,23 @@
-$("#copies-checked-out").text("<%= escape_javascript(@text) %>");
+
+$("#parent-checkin").modal('hide');
+
+$("#full-book-container").html("<%= escape_javascript(render :partial => 'books/full_book') %>");
+
+$("#parent-checkout").html("<%= escape_javascript(render :partial => 'checkout_items/checkout_form') %>");
+$("#parent-checkin").html("<%= escape_javascript(render :partial => 'checkout_items/checkin_form') %>");
+
+
+
+
+  $("#checkout-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+
+  $("#checkin-item-form").submit(function(){
+      $.post($(this).attr('action'), $(this).serialize(), null, "script");
+      return false;
+
+      });
+
