@@ -2,7 +2,7 @@
   <td><%= book.id %></td>
   <td width="50%"><%= link_to book.title, "#{book_path(book.id)}?search=#{@search_query}" %> 
     <% if current_user %>
-      | <%= link_to "Edit", edit_book_path(book.id) %>
+      <!--      | <span class="label warning"><%= link_to "Edit", edit_book_path(book.id) %></span> -->
     <% end %>
     </td>
   <td><% book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == book.subjects.last %><% end %></td>
