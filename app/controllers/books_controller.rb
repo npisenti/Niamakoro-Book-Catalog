@@ -50,28 +50,20 @@ class BooksController < ApplicationController
 
   def index
     @books = Book.all
+    @filename = 'toutes-livres.csv'
+    @output_encoding = 'UTF-8'
+
     respond_to do |format|
       format.html
-      format.csv { 
-        require 'csv'
-        @csv_string = CSV.generate do |csv|
-          csv << ["ID", "titre", "publication", "genre", "age", "nombre_pages", "nom_copies", "titre_serie", "nombre_serie", "resume", "notes", "auters", "sujets"]
-          @books.each do |b|
-            csv << b.csv_array
-          end
-        end
-        
-        render :text => @csv_string
-      }
+      format.csv 
     end
-      
   end
+      
 
   def search_bar
-  #  output = Subject.order("name ASC").map { |st| st.name }
-  #  output_json = Subject.order("name ASC").map { |st| {:value =>  st.name } }
-    output = Book.order("title ASC").map { |bt| bt.title }
-    output.concat(Subject.order("name ASC").map { |st| st.name })
+    #output = Book.order("title ASC").map { |bt| bt.title }
+    #output.concat(Subject.order("name ASC").map { |st| st.name })
+    output = Book.search('pages').map{|bt| bt.title }
 
     
     render :json => output.to_json

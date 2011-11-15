@@ -9,28 +9,28 @@ namespace :db do
     BOOKS = File.join( File.dirname(__FILE__), '..', '..', 'db/SeedData/books.csv')
 
     CSV.foreach(BOOKS, :encoding => 'UTF-8', :return_headers => false, :headers => :first_row) do |row|
-      author_params = { "1" => { "last" => row['author_1_last'], "first" => row['author_1_first'] }, "2" => { "last" => row['author_2_last'], "first" => row['author_2_first'] } } 
-      author_params.delete("2") if row['author_2_last'] == nil
-      author_params.delete("1") if row['author_1_last'] == nil
+      authors = [[]] # Initializes incase there is no author...
+      authors = row['auters'].split(";").map{|e| e.split(",")} unless row['auters'] == nil
+      subjects = row['sujets'].split(";")
 
-      subjects = row['subjects'].split(', ')
       subject_params = {}
-      subjects.each_index{ |i| subject_params[i.to_s] = { "name" => Unicode::downcase(subjects[i]) } }
+      author_params = {}
+
+      authors.each_index{|i| author_params[i.to_s] = { "last" => authors[i][0], "first" => authors[i][1] } } unless row['auters'] == nil
+      subjects.each_index{ |i| subject_params[i.to_s] = { "name" => Unicode::downcase(subjects[i]) } } unless row['sujets'] == nil
       
-      puts row['id']
-      puts author_params
-      puts subject_params
 
       @book = Book.new
       @book.generate({ "book" => {
-        :title => row['title'], 
-        :pub_year => row['pub_year'], 
+        :title => Unicode::capitalize(row['titre']), 
+        :pub_year => row['publication'], 
         :genre => row['genre'], 
-        :age_group => row['age_group'], 
-        :num_pages => row['num_pages'], 
-        :num_copies => row['num_copies'], 
-        :series_title => row['series_title'], 
-        :series_number => row['series_number'], 
+        :age_group => Unicode::capitalize(row['age']), 
+        :num_pages => row['nombre_pages'], 
+        :num_copies => row['nombre_copies'], 
+        :series_title => row['titre_serie'], 
+        :series_number => row['nombre_serie'], 
+        :summary => row['resume'], 
         :notes => row['notes'] }, 
         "authors" => author_params,
         "subjects" => subject_params

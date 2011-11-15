@@ -7,6 +7,7 @@ $(document).ready(function(){
     var autoData = [];
     $.get('/search_bar', function(data){ 
         autoData = $.makeArray(data);
+        console.log(autoData);
         });
 
         $("#search").autocomplete({
@@ -18,7 +19,7 @@ $(document).ready(function(){
             });
             responseFn(a); 
           },
-          minLength: 1,
+          minLength: 2,
           select: function( event, ui ) {
       }
     }); 

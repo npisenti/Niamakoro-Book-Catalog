@@ -1,0 +1,4 @@
+csv << ["ID", "titre", "publication", "genre", "age", "nombre_pages", "nombre_copies", "titre_serie", "nombre_serie", "resume", "notes", "auters", "sujets", "nombre_retrir"]
+@books.each do |b|
+    csv << b.csv_array
+end

@@ -5,6 +5,7 @@ gem 'seed-fu'
 gem 'unicode'
 gem 'authlogic'
 gem 'jquery-rails', '>= 1.0.12'
+gem 'csv_builder'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
