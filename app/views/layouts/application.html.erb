@@ -13,18 +13,26 @@
   <%= csrf_meta_tag %>
 </head>
 <body>
+  <div class="topbar">
+    <div class="fill">
+      <div class="container">
+        <% if current_user %>
+          <ul class="nav">
+            <li><%= link_to "Acceuil", :home %></li>
+            <li><%= link_to "Administrateur", :admin %></li>
+            <li><%= link_to "Logout", :logout %></li>
+          </ul>
+        <% else %>
+          <ul>
+            <li><%= link_to "Login", :login %></li>
+          </ul>
+        <% end %>
+      </div>
+    </div>
+  </div>
 
   <div class="container">
-    <div class="header">
-      <% if current_user %>
-        <%= link_to "Home page", :home %> |
-        <%= link_to "admin page", :admin %> |
-        <%= link_to "Logout", :logout %>
-      <% else %>
-        <%= link_to "Login", :login %>
-      <% end %>
-    </div>
-
+    <div class="push"></div>
     <div class="row">
       <%= yield %>
     </div>
