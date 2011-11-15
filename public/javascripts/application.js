@@ -103,6 +103,10 @@ var make_checkout = function(){
         keyboard: true,
         backdrop: true
         });
+  $("#parent-checkout").bind('shown', function(){
+      $("#checkout-form #checkout_item_notes").focus();
+    });
+  
   $("#checkout-form-cancel").click(function(){
       $("#parent-checkout").modal('hide');
       $("#checkout-form #checkout_item_notes").attr('value', '');
