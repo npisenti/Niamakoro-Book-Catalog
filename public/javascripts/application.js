@@ -133,6 +133,10 @@ var make_checkout = function(){
 
       });
 
+  $("#close-current-checkouts").click(function(){
+      $("#parent-current-checkouts").modal('hide');
+      });
+
 
 
 };

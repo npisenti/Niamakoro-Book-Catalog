@@ -6,6 +6,7 @@ $("#full-book-container").html("<%= escape_javascript(render :partial => 'books/
 $("#parent-checkout").html("<%= escape_javascript(render :partial => 'checkout_items/checkout_form') %>");
 $("#parent-checkin").html("<%= escape_javascript(render :partial => 'checkout_items/checkin_form') %>");
 
+$("#parent-current-checkouts").html("<%= escape_javascript(render :partial => 'books/checkout_items') %>");
 
   $("#checkin-item-form").submit(function(){
       $.post($(this).attr('action'), $(this).serialize(), null, "script");
@@ -19,3 +20,6 @@ $("#parent-checkin").html("<%= escape_javascript(render :partial => 'checkout_it
 
       });
 
+  $("#close-current-checkouts").click(function(){
+      $("#parent-current-checkouts").modal('hide');
+      });
