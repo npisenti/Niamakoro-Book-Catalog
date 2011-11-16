@@ -5,6 +5,8 @@ $(document).ready(function(){
     $("#search").focus();
 
     var autoData = [];
+    var subjectData = [];
+
     $.get('/search_bar', function(data){ 
         autoData = $.makeArray(data);
         console.log(autoData);
@@ -23,12 +25,17 @@ $(document).ready(function(){
           select: function( event, ui ) {
       }
     }); 
+
+    $.get('/subjects.json', function(data){
+        subjectData = $.makeArray(data);
+        console.log(subjectData);
+        });
     
     $("#search-button").click(function(){
         window.location = "/?search=" + $("#search").attr("value");
     });
 
-    $("#back-to-search").click(function(){ history.go(-1); return false; });
+//    $("#back-to-search").click(function(){ history.go(-1); return false; });
         
 
 
@@ -36,8 +43,8 @@ $(document).ready(function(){
 $("#subjects_0_name").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
-            var matcher = new RegExp("^" + re, "i");
-            var a = $.grep(autoData, function(item, index){
+            var matcher = new RegExp("(?:^| )" + re, "ig");
+            var a = $.grep(subjectData, function(item, index){
               return matcher.test(item);
             });
             responseFn(a); 
@@ -57,7 +64,7 @@ $("#subjects_0_name").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
             var matcher = new RegExp("^" + re, "i");
-            var a = $.grep(autoData, function(item, index){
+            var a = $.grep(subjectData, function(item, index){
               return matcher.test(item);
             });
             responseFn(a); 

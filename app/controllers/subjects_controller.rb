@@ -39,7 +39,7 @@ class SubjectsController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => output_json.to_json } 
+      format.json { render :json => @output_json.to_json } 
     end
   end
 
