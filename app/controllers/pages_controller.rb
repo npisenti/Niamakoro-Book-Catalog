@@ -14,4 +14,10 @@ class PagesController < ApplicationController
   def admin
   end
 
+  def stats
+    @book_count = Book.count
+    @checkout_count = CheckoutItem.count
+    @popular = Book.popular(10)
+  end
+
 end

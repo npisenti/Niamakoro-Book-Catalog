@@ -20,6 +20,7 @@ BookCatalogue::Application.routes.draw do
   root :to => "pages#home", :as => "home"
   
   match 'admin' => 'pages#admin', :as => "admin"
+  match 'stats' => 'pages#stats', :as => "stats"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 

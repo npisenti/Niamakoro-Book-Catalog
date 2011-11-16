@@ -1,0 +1,17 @@
+
+<h1>Agregate Statistics</h1>
+  <table class="zebra-striped">
+      <tbody>
+            <tr><td>Number of Books:</td><td><%= @book_count %></td></tr>
+            <tr><td>Number of checkouts:</td><td><%= @checkout_count %></td></tr>
+            <tr><td>Popular Books:</td><td>
+                <ol>
+                  <% @popular.each do |b| %>
+                    <li><%= link_to b.title, book_path(b) %></li>
+                  <% end %>
+                </ol>
+              </td></tr>
+      </tbody>
+    </table>
+
+

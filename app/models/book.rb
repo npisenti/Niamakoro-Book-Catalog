@@ -3,6 +3,7 @@ class Book < ActiveRecord::Base
   require 'date/delta'
 
 
+
   has_many :checkout_items, :dependent => :destroy, :dependent => :destroy
 
   has_many :writings
@@ -12,6 +13,8 @@ class Book < ActiveRecord::Base
   has_many :subjects, :through => :subject_tags
 
   scope :subject, lambda {|subject| Book.joins(:subjects).where(:subjects => {:name => subject} ) }
+  
+
   
 
 
@@ -52,6 +55,10 @@ class Book < ActiveRecord::Base
     if search
       find(:all, :conditions => ['title LIKE ? OR summary LIKE ?', "%#{search}%", "%#{search}%"])
     end
+  end
+
+  def self.popular(limit)
+    Book.limit(limit).order('checkout_count DESC')
   end
 
   def stats
