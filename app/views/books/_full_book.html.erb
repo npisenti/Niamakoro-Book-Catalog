@@ -26,6 +26,10 @@
   <tr><td>Résumé: </td><td><%= @book.summary %></td></tr>
 </tbody>
 </table>
-<div id="edit-bar" class="pull-right"><%= link_to("Statistics", statistics_book_path(@book.id)) if current_user %> | <%= link_to("Modifier", edit_book_path(@book.id)) if current_user %></div>
+<% if current_user %>
+  <div id="edit-bar" class="pull-right"><%= link_to("Statistics", statistics_book_path(@book.id)) %> 
+    | <%= link_to("Modifier", edit_book_path(@book.id)) %>
+    | <span class="label important"><%= link_to '<<Surpremir>>', @book, :confirm => 'Are you sure?', :method => :delete,  :style => "color:white;" %></span>
+  </div>
 
-
+<% end %>

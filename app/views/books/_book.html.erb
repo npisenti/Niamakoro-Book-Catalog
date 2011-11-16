@@ -1,5 +1,5 @@
 <tr>
-  <td><%= book.id %><br /><span class="label important"><%= link_to '<<Surpremir>>', book, :confirm => 'Are you sure?', :method => :delete,  :style => "color:white;" if current_user %></span></td>
+  <td><%= book.id %></td>
   <td width="50%"><%= link_to book.title, book_path(book) %> 
     <% if current_user %>
       <!--      | <span class="label warning"><%= link_to "Edit", edit_book_path(book.id) %></span> -->

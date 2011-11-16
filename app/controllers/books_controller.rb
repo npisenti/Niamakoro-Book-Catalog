@@ -68,9 +68,9 @@ class BooksController < ApplicationController
       
 
   def search_bar
-    #output = Book.order("title ASC").map { |bt| bt.title }
-    #output.concat(Subject.order("name ASC").map { |st| st.name })
-    output = Book.search('pages').map{|bt| bt.title }
+    output = Book.order("title ASC").map { |bt| bt.title }
+    output.concat(Subject.order("name ASC").map { |st| st.name })
+    #output = Book.search('pages').map{|bt| bt.title }
 
     
     render :json => output.to_json
