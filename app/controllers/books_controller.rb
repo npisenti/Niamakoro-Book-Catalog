@@ -1,6 +1,6 @@
 class BooksController < ApplicationController
 
-  before_filter :authenticate, :only => [:new, :create, :edit, :update ]
+  before_filter :authenticate, :only => [:new, :create, :edit, :update, :destroy]
 
   
   def new
@@ -39,6 +39,13 @@ class BooksController < ApplicationController
     end
   end
 
+  def destroy
+    @book = Book.find(params[:id])
+    @book.destroy
+    flash[:notice] = "Book deleted!"
+    redirect_to books_path
+  end
+
   def show
     @search_term = params[:search]
 
@@ -49,7 +56,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.all
+    @books = Book.includes(:subjects).all
     @filename = 'toutes-livres.csv'
     @output_encoding = 'UTF-8'
 
