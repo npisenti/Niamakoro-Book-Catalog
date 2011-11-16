@@ -1,13 +1,13 @@
 <%= javascript_include_tag 'stats' %>
 
-<h1>Statistics</h1>
-<h2>Titre: <%= @book.title %></h2>
+<h2>Statistiques pour <u><%= @book.title %></u></h2>
+<br />
   <table class="zebra-striped">
       <tbody>
-        <tr><td>Times Checked Out:</td><td><%= @book.checkout_items.count %></td></tr>
+        <tr><td>Retrait:</td><td><%= @book.checkout_items.count %> fois</td></tr>
         <% if @book.checkout_items.count == 0 %>
-          <tr><td>First Checkout:</td><td>N/A</td></tr>
-          <tr><td>Most Recent Checkout:</td><td>N/A</td></tr>
+          <tr><td>Premier retrait:</td><td>N/A</td></tr>
+          <tr><td>Retrait le plus recent:</td><td>N/A</td></tr>
         <% else %>
           <tr><td>First Checkout:</td><td><%= @book.checkout_items[0].created_at.to_date %></td></tr>
           <tr><td>Most Recent Checkout:</td><td><%= @book.checkout_items[-1].created_at.to_date %></td></tr>
@@ -17,7 +17,7 @@
     </table>
 
 
-    <h3>Who has checked this out?</h3>
+    <h3>Qui a retiré(e) cet livre?</h3>
     <br />
   <table class="zebra-striped">
       <tbody>
@@ -31,4 +31,4 @@
       </tbody>
     </table>
 
-    <div id="edit-bar" class="pull-right"><%= link_to "Download as CSV", statistics_book_path(@book) + ".csv" %></div>
+    <div id="edit-bar" class="pull-right"><%= link_to "Télécharger comme CSV", statistics_book_path(@book) + ".csv" %></div>

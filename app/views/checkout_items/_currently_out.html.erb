@@ -1,11 +1,14 @@
 <div id="currently-out" >
   <div class="modal-header">
-    <h3>These books are checked out:</h3>
+    <h3>Ces livres sont retirés:</h3>
   </div>
   <div class="modal-body">
     <ul>
       <% @checkouts.each do |co| %>
         <li><%= link_to co.book.title, book_path(co.book) %> - <%= co.notes %></li>
+      <% end %>
+      <% if @checkouts.empty? %>
+        <li>Pas de livre.</li>
       <% end %>
     </ul>
     <div class="modal-footer">

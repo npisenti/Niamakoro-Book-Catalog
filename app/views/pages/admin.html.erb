@@ -1,9 +1,14 @@
 <h1>Tâches administratives</h1>
+<p><b>Gérer la collection:</b></p>
 <ul>
-  <li><%= link_to "Ajouter un livre", new_book_path %></li>
   <li><%= link_to "Liste des livres", books_path %></li>
   <li><%= link_to "Telecharger la liste des livres", "/books.csv" %></li>
+  <li><%= link_to "Ajouter un livre", new_book_path %></li>
+</ul>
+<p><b>Examiner quel'que statistiques sur la collection:</b></p>
+<ul>
   <li><a href="#" data-controls-modal="parent-currently-out">Liste de livre retirés</a></li>
+  <li><%= link_to "Statistiques general", stats_path %></li>
 </ul>
 
 <div id="parent-currently-out" class="modal hide fade">

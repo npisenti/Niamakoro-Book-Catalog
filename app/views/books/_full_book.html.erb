@@ -27,9 +27,9 @@
 </tbody>
 </table>
 <% if current_user %>
-  <div id="edit-bar" class="pull-right"><%= link_to("Statistics", statistics_book_path(@book.id)) %> 
+  <div id="edit-bar" class="pull-right"><%= link_to("Statistiques", statistics_book_path(@book.id)) %> 
     | <%= link_to("Modifier", edit_book_path(@book.id)) %>
-    | <span class="label important"><%= link_to '<<Surpremir>>', @book, :confirm => 'Are you sure?', :method => :delete,  :style => "color:white;" %></span>
+    | <span class="label important"><%= link_to 'Supprimer', @book, :confirm => "Est-ce que c'est vous êtes sûr que vous voulez supprimer cet livre?", :method => :delete,  :style => "color:white;" %></span>
   </div>
 
 <% end %>
