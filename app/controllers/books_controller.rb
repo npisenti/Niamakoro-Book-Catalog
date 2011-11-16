@@ -69,8 +69,14 @@ class BooksController < ApplicationController
     render :json => output.to_json
   end
 
-  def csv
+
+  def statistics
+    @book = Book.find(params[:id])
+
+    respond_to do |format|
+      format.html
+      format.js { render :json => @book.stats.to_json }
+      format.csv
+    end
   end
-
 end
-

@@ -1,6 +1,10 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :books, :authors, :subjects
+  resources :authors, :subjects
+
+  resources :books do
+    get 'statistics', :on => :member
+  end
 
   resources :checkout_items do
     post 'checkin_many', :on => :collection

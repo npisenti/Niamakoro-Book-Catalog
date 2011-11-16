@@ -1,4 +1,6 @@
 class Book < ActiveRecord::Base
+  require 'date'
+  require 'date/delta'
 
 
   has_many :checkout_items, :dependent => :destroy, :dependent => :destroy
@@ -50,5 +52,28 @@ class Book < ActiveRecord::Base
     if search
       find(:all, :conditions => ['title LIKE ? OR summary LIKE ?', "%#{search}%", "%#{search}%"])
     end
+  end
+
+  def stats
+    checkouts = self.checkout_items
+    offset = delta(checkouts[0].created_at, Time.now)
+    data = {} 
+    checkouts.each do |c|
+      time_ago = delta(c.created_at, Time.now) - offset
+      if data[time_ago] == nil
+        data[time_ago] = 1
+      else
+        data[time_ago] += 1
+      end
+    end
+
+    return data.to_a
+      
+  end
+
+
+  private
+  def delta(d1, d2)
+    Date::Delta.diff(d1.to_date, d2.to_date).days
   end
 end

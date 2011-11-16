@@ -1,5 +1,5 @@
 <ul class="breadcrumb">
-  <li><a id="back-to-search" href="<%= "/?search=#{@search_term}" %>">← Chercher</a> <span class="divider">/</span></li>
+  <li><%= link_to "← Chercher", :back %> <span class="divider">/</span></li>
   <li class="active"><%= @book.title %></li>
 </ul>
 <div id="full-book-container">

@@ -26,6 +26,6 @@
   <tr><td>Résumé: </td><td><%= @book.summary %></td></tr>
 </tbody>
 </table>
-<div id="edit-bar" class="pull-right"><%= link_to("Modifier", edit_book_path(@book.id)) if current_user %></div>
+<div id="edit-bar" class="pull-right"><%= link_to("Statistics", statistics_book_path(@book.id)) if current_user %> | <%= link_to("Modifier", edit_book_path(@book.id)) if current_user %></div>
 
 

@@ -1,0 +1,4 @@
+csv << ["checkout_date", "checkin_date", "notes", "", "", "Title:", @book.title]
+@book.checkout_items.each do |ci|
+    csv << [ci.created_at.to_date, ci.updated_at.to_date, ci.notes]
+end
