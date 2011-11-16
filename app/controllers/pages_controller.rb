@@ -12,6 +12,7 @@ class PagesController < ApplicationController
   end
 
   def admin
+    @checkouts = CheckoutItem.out
   end
 
   def stats

@@ -137,6 +137,12 @@ var make_checkout = function(){
       $("#parent-current-checkouts").modal('hide');
       });
 
+  $("#parent-currently-out").modal({ keyboard: true, backdrop: true });
+  $("#close-currently-out").click(function(){
+      $("#parent-currently-out").modal('hide');
+      });
+
+
 
 
 };
