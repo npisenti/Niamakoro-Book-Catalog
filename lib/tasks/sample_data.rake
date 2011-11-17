@@ -30,6 +30,8 @@ namespace :db do
         :num_copies => row['nombre_copies'], 
         :series_title => row['titre_serie'], 
         :series_number => row['nombre_serie'], 
+        :collection => row['collection'],
+        :language => row['langue'],
         :summary => row['resume'], 
         :notes => row['notes'] }, 
         "authors" => author_params,
@@ -39,6 +41,7 @@ namespace :db do
       @book.save
 
     end
+    @admin = User.create(:username => "admin", :password => "niamakoro", :password_confirmation => "niamakoro")
   end
 end
 
