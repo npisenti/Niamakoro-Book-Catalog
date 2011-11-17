@@ -1,146 +1,100 @@
-"ID","titre","publication","genre","age","nombre_pages","nombre_copies","titre_serie","nombre_serie","resume","notes","auters","sujets","nombre_retrir"
-1,"Houni, Bâtiseur de Pyramide",2001,"fiction","jeunesse",243,1,,,,,"Surget,Alain","égypte",
-2,"Tamit, l'enfant du Nil",2004,"fiction","jeunesse",63,1,,,,,"Flores,Hervé","égypte",
-3,"Les chats sacrés de Bubastis",2005,"fiction","jeunesse",186,1,"Hori: scribe et détective",,,,"Égémar,Béatrice","égypte;aventure",
-4,"Cinq histoires vraies de chiens",1977,"fiction","jeunesse",47,1,,,,"l'histoire court","Davidson,Margaret","chiens;animaux",
-5,"Réglisse",2005,"fiction","jeunesse",69,1,"Mission: Adoption",,,,"Miles,Ellen","chiens;animaux",
-6,"Sauvons les bébés lièvres",2004,"fiction","jeunesse",76,1,,,,,"Hughes,Susan","animaux;lapins",
-7,"Segou: la terre en miettes",1985,"fiction","adulte",415,1,,,,,"Condé,Maryse","segou;mali",
-8,"Contes choisis",1953,"fiction","jeunesse",90,1,,,,"l'histoire court","Andersen,","contes",
-9,"Benjie Ream",1971,"fiction","jeunesse",218,1,,,,"fiction historique","Hodges,Carl G.","guerre civile;étas unis",
-10,"Harry Potter à l'école des sorciers",1997,"fiction","jeunesse",302,1,"Harry Potter",1,,,"Rowling,J.K.","fantasie;magique",
-11,"L'or de Pizarre",1986,"fiction","jeunesse",187,1,,,,,"Dujovne-Ortiz,Alicia;Berline,Jean-Claude","aventure;incas;amérique du sud;exploration",
-12,"Zorro: Le complot des émeraudes",1998,"fiction","jeunesse",59,,"Zorro",,,,"Flammarion,","aventure;amérique du sud",
-13,"Prisonniers de la pyramide",2004,"fiction","jeunesse",94,1,"Les enfants du nil",,,,"Surget,Alain;Parme,Fabrice","égypte;aventure",
-14,"César, c'est qui?",2004,"fiction","jeunesse",90,1,"Les enfants du nil",,,,"Surget,Alain;Parme,Fabrice","égypte;aventure",
-15,"Le scarabée du cœur",2005,"fiction","jeunesse",179,1,"Hori: scribe et détective",,,,"Égémar,Béatrice","égypte;aventure",
-16,"L'enfant qui parlait aux animaux",1949,"fiction","jeunesse",86,1,,,,,"Dahl,Roald","animaux",
-17,"Bien joué, Clan des Sept",1958,"fiction","jeunesse",182,1,,,,,"Blyton,Enid","aventure",
-18,"Contes et récits de la conquête de l'ouest",2000,"fiction","jeunesse",178,1,,,,,"Lambert,Christophe","aventure;contes du sud-oest des étas unis",
-19,"Manuel de la Pampa",1974,"fiction","jeunesse",215,1,,,,"fiction historique","Gor,Le;Dooz,Jena-Marie","amérique du sud;argentine;fiction historique;amitié",
-20,"Nés sous une mauvaise étoile",1999,"fiction","jeunesse",142,1,"Le funeste destin des Baudelaire",1,,,"Snicket,Lemony","aventure",
-21,"9 histoires pour mes 9 ans",2004,"fiction","jeunesse",128,1,"Mes histoires d'anniversaire",,,,,"nouvelles",
-22,"Coup de gigot et autres histoires à faire peur",1948,"fiction","jeunesse",116,1,,,,"l'histoire court","Dahl,Roald","nouvelles",
-23,"Bouddah",2003,"fiction","jeunesse",59,1,,,,,"Labbé,Brigitte;Puech,Michel","bouddha;religion;bouddhisme;inde",
-24,"Minie Malakoff direction Port de la Chapelle",1983,"fiction","jeunesse",44,1,,,,,"Schwartz,Irène;Gay,Michel","aventure;animaux;souris",
-25,"La conspiration du harem",2005,"fiction","jeunesse",180,1,"Hori: scribe et détective",,,,"Égémar,Béatrice","égypte;aventure",
-26,"Fantastique Fantômette",1978,"fiction","jeunesse",149,1,,,,,"Chaulet,Georges","aventure",
-27,"Le petit frère",2001,"fiction","jeunesse",,1,,,,,"Ponti,Claude","livre d'enfants;livre d'images",
-28,"Dictio: mots et jeux",1992,"Documentaire","Jeunesse",123,1,"Dictio",,,,"Guilloret,Florence;Beaumont,Émilie","alphabet;jeux;apprendre à lire",
-29,"Moi aussi, je veux maman!",2001,"Fiction","Jeunesse",,1,,,,,"Dubois,Claude;Stibane,","famille;hiver;écreuil",
-30,"Maxou mignon",1993,"Fiction","Jeunesse",,1,,,,,"Nadja,","chien;rhyme",
-31,"Les Masques d'Auguste Soleil",1999,"Documentaire","Jeunesse",,1,,,,,"Falda,Dominique","art;masques;auguste soleil;photographie",
-32,"pôle Nord, pôle Sud: un numéro pour tout comprendre",,"Documentaire","Jeunesse",57,1,"ImagesDoc",,,,,"animaux;sciences;histoire;géographie;manchots;arctique;anarctique;alaska;changement climatique;nature",
-33,"A la conquête de l'espace",,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"animaux;sciences;histoire;géographie;nature;sport;système solaire;rugby;saint louis;sénégal;organismes génétiquement modifiés",
-34,"Mustang: fils du vent",,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"animaux;sciences;histoire;nature;sport géographie;cheval;celtes;escrime;mondialisation;royaume-uni",
-35,"Spécial: mer",,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"animaux;sciences;histoire;géographie;nature;sport;surf;pieuvre;pirates;île de la réunion",
-36,"Protéger les animaux",,"Documentaire","Jeunesse",59,3,"ImagesDoc",,,,,"animaux;sciences;histoire;géographie;nature;sport;snowboard;migration;allemagne;hannibal;carthage;environment;biocarburant;wwf",
-37,"Étonnantes fourmis",,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"animaux;photographie;sciences;histoire;géographie;nature;sport;fourmis;nouvelle-zélande;hélicoptère;escalade",
-38,"Cinéma: Le renard et l'enfant",,"Documentaire","Jeunesse",67,1,"ImagesDoc",,,,,"animaux;inde;art;sciences;histoire;géographie;nature;sport;matisse;renard;jumping;gandhi",
-39,"Sur la piste de l'ours",,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"égypte;animaux;sciences;histoire;géographie;nature;sport;politique;ours;tennis;italie;commerce équitable;pyramide",
-40,"Le Gâteau",2001,"Fiction","Jeunesse",,1,,,,,"de Monfreid,Dorothée","animaux;gateau",
-41,"Un coquelicot pour se souvenir",2004,"Documentaire","Jeunesse",30,1,,,,,"Patterson,Heather;Lightburn,Ron","histoire;canada;premièrre guerre mondiale;histoire militaire",
-42,"Bill es Maboul",1980,"Fiction","Jeunesse",46,1,"Boule et Bill",,,,"Roba,","bande dessinée;humeur",
-43,"Petit Stuart",1945,"Fiction","Jeunesse",133,1,,,,,"White,E.B.","aventure;souris",
-44,"Les Pirates du Silence et le Quick Super",1958,"Fiction","Jeunesse",62,1,"Aventures de Spirou et Fantasio",,,,,"bande dessinée;humeur;crime",
-45,"Le Matin du Monde",1988,"Fiction","Jeunesse",46,1,"Yoko Tsuno",,,,"Leloup,Roger","aventure;bande dessinée;dinosaurs;indonésie",
-46,"Racing Show",1985,"Fiction","Jeunesse",47,1,"Michel Vaillant",,,,"Graton,Jean","aventure;bande dessinée;voitures",
-47,"Un ours, un singe...et un side-car",1979,"Fiction","Jeunesse",46,1,"Julie Wood",,,,"Graton,Jean","bande dessinée;motocyclette;voiture",
-48,"Stripcockeer",1984,"Fiction","Jeunesse",46,1,"Boule et Bill",,,,"Roba,","bande dessinée;humeur",
-49,"Route de Nuit",1994,"Fiction","Jeunesse",64,1,"Michel Vaillant",,,,"Graton,Jean","aventure;bande dessinée;voitures",
-50,"Le galérien",1980,"Fiction","Jeunesse",48,1,"Michel Vaillant",,,,"Graton,Jean","aventure;bande dessinée;voitures",
-51,"Le 8ieme Pilote",1997,"Fiction","Jeunesse",64,1,"Michel Vaillant",,,,"Graton,Jean","aventure;bande dessinée;voitures",
-52,"Les Faiseurs de Silence",1984,"Fiction","Jeunesse",46,1,"Aventures de Spirou et Fantasio",,,,"Nic,;Cauvin,","bande dessinée;humeurm crime",
-53,"Le Puits Aux Morts",1997,"Fiction","Jeunesse",46,1,"Le Roi Cyclope",,,,"Dethan,Isabelle","bande dessinée;horreur",
-54,"Globe Trotters",1982,"Fiction","Jeunesse",46,1,"Boule et Bill",,,,"Roba,","bande dessinée;humeur",
-55,"Mystérieux ptérosaures",0,"Documentaire","Jeunesse",57,1,"ImagesDoc",,,,,"animaux;sciences;histoire;géographie;nature;sport;politique;mare;ptérosaures;mexique;président",
-56,"Comment ses amis délivrèrent la gazelle",2003,"Fiction","Jeunesse",24,1,,,,,"Solet,Bertrand","conte traditionelle;afghanistan;animaux,",
-57,"Les Disparus de l'Aéropostale",1999,"Fiction","Jeunesse",37,1,,,,,"Grégroire,Fabaian","histoire;afrique;avions;compagnie générale aéropostale",
-58,"Quartiers d'Orange",2005,"Fiction","Jeunesse",,1,,,,,"Legendre,Françoise;Fortier,Natali","famille;espagne;le déces",
-59,"Kirikou et la Sorcière",1998,"Fiction","Jeunesse",,1,,,,,"Ocelot,Michel","magique;conte traditionelle;afrique;sorcière",
-60,"Everest L'incroyable conquête",,"Documentaire","Jeunesse",55,1,"Okapi",,,,,"sciences;géographie;musique;danse;télévision;everest",
-61,"Le jardin de mon enfance",2000,"Fiction","Jeunesse",55,1,"blaireau",,,,"Bogacki,Tomek","animaux;amitié;jardin",
-62,"100 Dates de l'histoire de France racontées aux enfants",2000,"Documentaire","Jeunesse",32,1,,,,,"Buquet,Samuel;Volkman,Jean-Charles","histoire;histoire française",
-63,"C'est le printemps, réveille-toi!",,"Documentaire","Jeunesse",31,1,"Wakou",,,,,"animaux;sciences;nature;jardin;hibernation;plantes",
-64,"Australie: le pays des animaux bizarres",,"Documentaire","Jeunesse",40,1,"Wakou",,,,,"animaux;sciences;géographie;manchots;nature;australie;cuisine;chat;rhume",
-65,"Bravo Bravo",2001,"Fiction","Jeunesse",,1,,,,,"Guettier,Bénédicte","bébé;dormir",
-66,"France: Canyons, déserts, cascades...Les prodiges de la nature",,"Documentaire","Adulte",162,1,"Geo: Un nouveau monde:la Terre",,,,,"inde;géographie;nature;chili;mapuches;france;rajasthan;nigeria;scarification",
-67,"Vive les vacances!",,"Documentaire/Fiction","Jeunesse",35,1,"Tobogan",,,,,"contes;jeux;activités",
-68,"Mon grand livre de chiffres",1989,"Documentaire","Jeunesse",45,1,,,,,"Michaut,Valérie","chiffres;compter;vocabulaire",
-69,"Ratus découvre les livres",1996,"Fiction","Jeunesse",192,1,,,,,"Guion,Jean","contes;apprendre à lire",
-70,"J'apprends à lire avec Pilou et Lalie",2001,"Documentaire/Fiction","Jeunesse",95,1,,,,,"Demars,Françoise","alphabet;jeux;apprendre à lire;sons;loutres",
-71,"Let's Sing and Learn in French",1996,"Ressources pour les Ensignants","Maitres",63,1,,,,,"Maxwell,Matt","musique;apprendre français;chansons",
-72,"Passeport (7-8ans)",,"Ressources pour les Ensignants","Maitres",61,1,"Passeport",,,,"Bessières,Catherine;Knowles,Xavier","cahier vacances;exercises toutes matières",
-73,"Passeport (8-9ans)",,"Ressources pour les Ensignants","Maitres",56,1,"Passeport",,,,"Bacon,Michèle;Hérété,Jean-Étienne","cahier vacances;exercises toutes matières",
-74,"DELF 1er Degré",1996,"Ressources pour les Ensignants","Maitres",253,1,"Objectif Réussite",,,,,"delf;exercises français avec corrigés",
-75,"Les personnages célèbres par les mots croisés",2001,"Ressources pour les Ensignants","Maitres",64,1,,,,"exercices amusantes pour reviser l'histoire","Lamblin,Christian","l'histoire;exercices",
-,"Dictio: mots et jeux",1992,"Documentaire","Jeunesse",123,1,"Dictio",,,,"Guilloret,Florence;Beaumont,Émilie","Alphabet;jeux;apprendre à lire",
-,"Moi aussi, je veux maman!",2001,"Fiction","Jeunesse",,1,,,,,"Dubois,Claude;Stibane,","Famille;hiver;écreuil",
-,"Maxou mignon",1993,"Fiction","Jeunesse",,1,,,,,"Nadja,","Chien;rhyme",
-,"Les Masques d'Auguste Soleil",1999,"Documentaire","Jeunesse",,1,,,,,"Falda,Dominique","Art;masques;Auguste Soleil;Photographie",
-,"pôle Nord, pôle Sud: un numéro pour tout comprendre",2007,"Documentaire","Jeunesse",57,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;manchots;arctique;anarctique;Alaska;changement climatique;nature",
-,"A la conquête de l'espace",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;sport;système solaire;rugby;Saint Louis;Sénégal;Organismes Génétiquement Modifiés;nature",
-,"Mustang: fils du vent",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;sport géographie;cheval;Celtes;escrime;mondialisation;Royaume-Uni;nature",
-,"Spécial: mer",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;sport;surf;pieuvre;pirates;île de la Réunion;nature",
-,"Protéger les animaux",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;sport;snowboard;migration;Allemagne;Hannibal;Carthage;Environment;Biocarburant;WWF;nature",
-,"Étonnantes fourmis",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;Sport;fourmis;photographie;Nouvelle-Zélande;hélicoptère;escalade;nature",
-,"Cinéma: Le renard et l'enfant",2007,"Documentaire","Jeunesse",67,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;art;sport;Matisse;renard;jumping;Gandhi;Inde;nature",
-,"Sur la piste de l'ours",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;géographie;sport;politique;ours;Égypte;tennis;Italie;commerce équitable;pyramide;nature",
-,"Le Gâteau",2001,"Fiction","Jeunesse",,1,,,,,"de Monfreid,Dorothée","Animaux;gateau",
-,"Un coquelicot pour se souvenir",2004,"Documentaire","Jeunesse",30,1,,,,,"Patterson,Heather;Lightburn,Ron","Histoire;Canada;Premièrre Guerre Mondiale;Histoire militaire",
-,"Bill es Maboul",1980,"Fiction","Jeunesse",46,1,"Boule et  Bill",,,,"Roba,","Bande dessinée;humeur",
-,"Petit Stuart",1945,"Fiction","Jeunesse",133,1,,,,,"White,E.B.","Souris;aventure",
-,"Les Pirates du Silence et le Quick Super",1958,"Fiction","Jeunesse",62,1,"Aventures de Spirou et Fantasio",,,,,"Bande dessinée;humeur;crime",
-,"Le Matin du Monde",1988,"Fiction","Jeunesse",46,1,"Yoko Tsuno",,,,"Leloup,Roger","Bande dessinée;aventure;dinosaurs;Indonésie",
-,"Racing Show",1985,"Fiction","Jeunesse",47,1,"Michel Vaillant",,,,"Graton,Jean","Bande dessinée;voitures;aventure",
-,"Un ours, un singe...et un side-car",1979,"Fiction","Jeunesse",46,1,"Julie Wood",,,,"Graton,Jean","Bande dessinée;motocyclette;voiture",
-,"Stripcockeer",1984,"Fiction","Jeunesse",46,1,"Boule et Bill",,,,"Roba,","Bande dessinée;humeur",
-,"Route de Nuit",1994,"Fiction","Jeunesse",64,1,"Michel Vaillant",,,,"Graton,Jean","Bande dessinée;aventure;voitures",
-,"Le galérien",1980,"Fiction","Jeunesse",48,1,"Michel Vaillant",,,,"Graton,Jean","Bande dessinée;aventure;voitures",
-,"Le 8ieme Pilote",1997,"Fiction","Jeunesse",64,1,"Michel Vaillant",,,,"Graton,Jean","Bande dessinée;aventure;voitures",
-,"Les Faiseurs de Silence",1984,"Fiction","Jeunesse",46,1,"Aventures de Spirou et Fantasio",,,,"NicCauvin","Bande dessinée;humeurm crime",
-,"Le Puits Aux Morts",1997,"Fiction","Jeunesse",46,1,"Le Roi Cyclope",,,,"Dethan,Isabelle","Bande dessinée;horreur",
-,"Globe Trotters",1982,"Fiction","Jeunesse",46,1,"Boule et  Bill",,,,"Roba,","Bande dessinée;humeur",
-,"Mystérieux ptérosaures",2007,"Documentaire","Jeunesse",57,1,"ImagesDoc",,,,,"Sciences;animaux;histoire;nature;géographie;sport;politique;mare;ptérosaures;Mexique;président",
-,"Comment ses amis délivrèrent la gazelle",2003,"Fiction","Jeunesse",24,1,,,,,"Solet,Bertrand","Conte traditionelle;Afghanistan;animaux,",
-,"Les Disparus de l'Aéropostale",1999,"Fiction","Jeunesse",37,1,,,,,"Grégroire,Fabaian","Histoire;Afrique;avions;compagnie générale aéropostale",
-,"Quartiers d'Orange",2005,"Fiction","Jeunesse",,1,,,,,"Legendre,Françoise;Fortier,Natali","Espagne;famille;le déces",
-,"Kirikou et la Sorcière",1998,"Fiction","Jeunesse",,1,,,,,"Ocelot,Michel","Conte traditionelle;Afrique;magique;sorcière",
-,"Everest L'incroyable conquête",2003,"Documentaire","Jeunesse",55,1,"Okapi ",,,,,"Sciences;géographie;musique;danse;télévision;Everest",
-,"Le jardin de mon enfance",2000,"Fiction","Jeunesse",55,1,"blaireau ",,,,"Bogacki,Tomek","Jardin;amitié;animaux",
-,"100 Dates de l'histoire de France racontées aux enfants",2000,"Documentaire","Jeunesse",32,1,,,,,"Buquet,Samuel;Volkman,Jean-Charles","Histoire;histoire française",
-,"c'est le printemps, réveille-toi!",2003,"Documentaire","Jeunesse",31,1,"Wakou",,,,,"Animaux;nature;sciences;jardin;hibernation;plantes",
-,"Australie: le pays des animaux bizarres",2006,"Documentaire","Jeunesse",40,1,"Wakou",,,,,"sciences;géographie;Australie;animaux;nature;cuisine;manchots;chat;rhume",
-,"Bravo Bravo",2001,"Fiction","Jeunesse",,1,,,,,"Guettier,Bénédicte","bébé;dormir",
-,"France: Canyons, déserts, cascades...Les prodiges de la nature",2001,"Documentaire","Adulte",162,1,"Geo: Un nouveau monde:la Terre",,,,,"Géographie;nature;Chili;Mapuches;France;Inde;Rajasthan;Nigeria;scarification",
-,"Vive les vacances!",,"Documentaire/Fiction","Jeunesse",35,1,"Tobogan",,,,,"Contes;Jeux;activités",
-,"Mon grand livre de chiffres",1989,"Documentaire","Jeunesse",45,1,,,,,"Michaut,Valérie","Chiffres;compter;vocabulaire",
-,"Ratus découvre les livres",1996,"Fiction","Jeunesse",192,1,,,,,"Guion,Jean","Contes;apprendre à lire",
-,"J'apprends à lire avec Pilou et Lalie",2001,"Documentaire/Fiction","Jeunesse",95,1,,,,,"Demars,Françoise","Apprendre à lire;alphabet;sons;jeux;loutres",
-,"Let's Sing and Learn in French",1996,"Ressources pour les Ensignants","Maitres",63,1,,,,,"Maxwell,Matt","Apprendre français;chansons;musique",
-,"Passeport (7-8ans)",,"Ressources pour les Ensignants","Maitres",61,1,"Passeport",,,,"Bessières ,Catherine;Knowles,Xavier","Cahier vacances;exercises toutes matières",
-,"Passeport (8-9ans)",,"Ressources pour les Ensignants","Maitres",56,1,"Passeport",,,,"Bacon,Michèle;Hérété ,Jean-Étienne","Cahier vacances;exercises toutes matières",
-,"DELF 1er Degré",1996,"Ressources pour les Ensignants","Maitres",253,1,"Objectif Réussite",,,,,"DELF;exercises français avec corrigés",
-,"les Personnages célèbres par les mots croisés",2001,"Ressources pour les Ensignants","Maitres",64,1,,,,,"Lamblin,Christian","Exercices amusantes pour reviser l'histoire",
-,"Français 7e année",2003,"Livre scolaire","Jeunesse",112,8,"République du Mali Français",,,,"Dembélé,Mamadou;Keïta,Balla Y","Poésie;Contes;Portraits;Enfance et Adolescence;Afrique;Grammaire;Orthographe;Conjugaison",
-,"Français 9e année",2003,"Livre scolaire","Jeunesse",216,10,"République du Mali Français",,,,"Dembélé,Mamadou;Keïta,Balla Y","Poésie;Épopée;Problèmes de notre temps;L'Homme et la Nature;Les Jeunes et la sociétee;Théâtre;Grammaire;Orthographe;Conjugaison",
-,"Mathématiques 8e année",1991,"Livre scolaire","Jeunesse",206,10,"République du Mali Mathématiques",,,,"Almouloud,Saddo Ag;Augé,Elie","Mathématiques",
-,"Mathématiques 9e année",1991,"Livre scolaire","Jeunesse",223,10,"République du Mali Mathématiques",,,,"Traoré,Dramane","Mathématiques",
-,"Chimie 9e année",2008,"Livre scolaire","Jeunesse",119,10,,,,,,"Chimie",
-,"Sciences Physiques 8ème année",2000,"Livre scolaire","Jeunesse",160,10,,,,,,"Physique;Chimie",
-,"Physique 9ème année",2008,"Livre scolaire","Jeunesse",141,10,,,,,"Tolofoudye,Adama","Physique ",
-,"Français 8e année",2003,"Livre scolaire","Jeunesse",166,10,"République du Mali Français",,,,"Dembélé,Mamadou;Keïta,Balla Y","Poésie;Théâtre;Contes;Le travail;Pays natal;Chasse et chasseurs;Grammaire;Orthographe;Conjugaison",
-,"I want to learn English 6e",1983,"Livre scolaire","Jeunesse",96,15,"English for French-speaking Africa",,,,"Mills,David;Doust,Tim","Anglais",
-,"Enjoy learning English 5e",1986,"Livre scolaire","Jeunesse",96,15,"English for French-speaking Africa",,,,"Mills,David;Doust,Tim","Anglais",
-,"Mathématiques 7e année",1990,"Livre scolaire","Jeunesse",191,10,"République du Mali Mathématiques",,,,"Almouloud,Saddo Ag;Augé,Elie","Mathématiques",
-,"7e année fondamentale Physique et Chimie",2001,"Livre scolaire","Jeunesse",60,10,,,,,"Pérou,Asséguérem;Sanogo,René T","Physique;Chimie",
-,"sous l'orage (suivi de La mort de Chaka)",1972,"Fiction","Adulte",253,11,,,,,"Badian,Seydou","Littérature;Afrique;Chaka;Théâtre",
-,"Le petit Larousse illustré",2009,"Reférence","Adulte",1812,1,,,,,,"Dictionnaire",
-,"Larousse Anglais",2008,"Reférence","Adulte",790,,,,,,,"Dictionnaire;Français-Anglais",
-,"Portland Oregon: City of Roses",,"Documentaire","Adulte",32,1,,,,,,"Portland;Oregon;Étas Unis;Images",
-,"Histoire Géographie 6e",1996,"Livre scolaire","Jeunesse",302,1,"Nouveau Programme",,,,"Ivernel,Martin;Bartoli,Jacques","Histoire;Géographie;Égypte;Hébreux;Grèce;Alexandre;Rome;Christianisme;Terre;Paysages;Inégalité",
-,"Histoire Géographie 5e",1997,"Livre scolaire","Jeunesse",335,1,"Nouveau Programme",,,,"Marseille,Jacques;Scheibling,Jacques","Histoire;Géographie;Moyen Age;Renaissance;Europe;Afrique;Asie;Amérique",
-,"Le Pagne Noir: Contes Africains",1955,"Fiction","Adulte",158,1,,,,,"Dadié,Bernard","Afrique;contes;nouvelles",
-,"Pages Africaines 1",1963,"Fiction","Adulte",79,3,"Pages Africaines",,,,"Vézinet,P;Désamais,R ","Afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;famille;école;amitié;jeux;chasse;pêche;travaux domestiques;eau;mer cleuves;rivières",
-,"Pages Africaines 2",1963,"Fiction","Adulte",79,3,"Pages Africaines",,,,"Vézinet,P;Désamais,R ","Afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;villages;commerces;marchés;travail;habitations;accidents;mort;anciens",
-,"Pages Africaines 3",1963,"Fiction","Adulte",71,3,"Pages Africaines",,,,"Vézinet,P;Désamais,R ","Afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;danse;fêtes;croyances;coutumes;traditions;actualités",
+"id","collection","titre","publication","genre","age","nombre_pages","nombre_copies","titre_serie","nombre_serie","langue","resume","notes","auters","sujets","nombre_retrir"
+62,"NEP","100 dates de l'histoire de france racontées aux enfants",2000,"Documentaire","Jeunesse",32,1,,,"Français",,,"Buquet,Samuel;Volkman,Jean-Charles","histoire;histoire française",0
+135,"NEP","7e année fondamentale physique et chimie",2001,"Livre scolaire","Jeunesse",60,10,,,"Français",,,"Pérou,Asséguérem;Sanogo,René T","physique;chimie",0
+21,"NEP","9 histoires pour mes 9 ans",2004,"fiction","Jeunesse",128,1,"Mes histoires d'anniversaire",,"Français",,,,"nouvelles",0
+81,"NEP","A la conquête de l'espace",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;sport;système solaire;rugby;saint louis;sénégal;organismes génétiquement modifiés;nature",0
+112,"NEP","Australie: le pays des animaux bizarres",2006,"Documentaire","Jeunesse",40,1,"Wakou",,"Français",,,,"sciences;géographie;australie;animaux;nature;cuisine;manchots;chat;rhume",0
+9,"NEP","Benjie ream",1971,"fiction","Jeunesse",218,1,,,"Français",,"fiction historique","Hodges,Carl G.","guerre civile;étas unis",0
+17,"NEP","Bien joué, clan des sept",1958,"fiction","Jeunesse",182,1,,,"Français",,,"Blyton,Enid","aventure",0
+42,"NEP","Bill es maboul",1980,"Fiction","Jeunesse",46,1,"Boule et Bill",,"Français",,,"Roba,","bande dessinée;humeur",0
+23,"NEP","Bouddah",2003,"fiction","Jeunesse",59,1,,,"Français",,,"Labbé,Brigitte;Puech,Michel","bouddha;religion;bouddhisme;inde",0
+65,"NEP","Bravo bravo",2001,"Fiction","Jeunesse",,1,,,"Français",,,"Guettier,Bénédicte","bébé;dormir",0
+111,"NEP","C'est le printemps, réveille-toi!",2003,"Documentaire","Jeunesse",31,1,"Wakou",,"Français",,,,"animaux;nature;sciences;jardin;hibernation;plantes",0
+128,"NEP","Chimie 9e année",2008,"Livre scolaire","Jeunesse",119,10,,,"Français",,,,"chimie",0
+4,"NEP","Cinq histoires vraies de chiens",1977,"fiction","Jeunesse",47,1,,,"Français",,"l'histoire court","Davidson,Margaret","chiens;animaux",0
+86,"NEP","Cinéma: le renard et l'enfant",2007,"Documentaire","Jeunesse",67,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;art;sport;matisse;renard;jumping;gandhi;inde;nature",0
+56,"NEP","Comment ses amis délivrèrent la gazelle",2003,"Fiction","Jeunesse",24,1,,,"Français",,,"Solet,Bertrand","conte traditionelle;afghanistan;animaux,",0
+8,"NEP","Contes choisis",1953,"fiction","Jeunesse",90,1,,,"Français",,"l'histoire court","Andersen,","contes",0
+18,"NEP","Contes et récits de la conquête de l'ouest",2000,"fiction","Jeunesse",178,1,,,"Français",,,"Lambert,Christophe","aventure;contes du sud-oest des étas unis",0
+22,"NEP","Coup de gigot et autres histoires à faire peur",1948,"fiction","Jeunesse",116,1,,,"Français",,"l'histoire court","Dahl,Roald","nouvelles",0
+14,"NEP","César, c'est qui?",2004,"fiction","Jeunesse",90,1,"Les enfants du nil",,"Français",,,"Surget,Alain;Parme,Fabrice","égypte;aventure",6
+74,"NEP","Delf 1er degré",1996,"Ressources pour les Ensignants","Maitres",253,1,"Objectif Réussite",,"Français",,,,"delf;exercises français avec corrigés",0
+76,"NEP","Dictio: mots et jeux",1992,"Documentaire","Jeunesse",123,1,"Dictio",,"Français",,,"Guilloret,Florence;Beaumont,Émilie","alphabet;jeux;apprendre à lire",0
+133,"NEP","Enjoy learning english 5e",1986,"Livre scolaire","Jeunesse",96,15,"English for French-speaking Africa",,"Français",,,"Mills,David;Doust,Tim","anglais",0
+108,"NEP","Everest l'incroyable conquête",2003,"Documentaire","Jeunesse",55,1,"Okapi ",,"Français",,,,"sciences;géographie;musique;danse;télévision;everest",0
+26,"NEP","Fantastique fantômette",1978,"fiction","Jeunesse",149,1,,,"Français",,,"Chaulet,Georges","aventure",0
+114,"NEP","France: canyons, déserts, cascades...les prodiges de la nature",2001,"Documentaire","Adulte",162,1,"Geo: Un nouveau monde:la Terre",,"Français",,,,"géographie;nature;chili;mapuches;france;inde;rajasthan;nigeria;scarification",0
+124,"NEP","Français 7e année",2003,"Livre scolaire","Jeunesse",112,8,"République du Mali Français",,"Français",,,"Dembélé,Mamadou;Keïta,Balla Y","poésie;contes;portraits;enfance et adolescence;afrique;grammaire;orthographe;conjugaison",0
+131,"NEP","Français 8e année",2003,"Livre scolaire","Jeunesse",166,10,"République du Mali Français",,"Français",,,"Dembélé,Mamadou;Keïta,Balla Y","poésie;théâtre;contes;le travail;pays natal;chasse et chasseurs;grammaire;orthographe;conjugaison",0
+125,"NEP","Français 9e année",2003,"Livre scolaire","Jeunesse",216,10,"République du Mali Français",,"Français",,,"Dembélé,Mamadou;Keïta,Balla Y","poésie;épopée;problèmes de notre temps;l'homme et la nature;les jeunes et la sociétee;théâtre;grammaire;orthographe;conjugaison",0
+54,"NEP","Globe trotters",1982,"Fiction","Jeunesse",46,1,"Boule et Bill",,"Français",,,"Roba,","bande dessinée;humeur",0
+10,"NEP","Harry potter à l'école des sorciers",1997,"fiction","Jeunesse",302,1,"Harry Potter",1,"Français",,,"Rowling,J.K.","fantasie;magique",0
+141,"NEP","Histoire géographie 5e",1997,"Livre scolaire","Jeunesse",335,1,"Nouveau Programme",,"Français",,,"Marseille,Jacques;Scheibling,Jacques","histoire;géographie;moyen age;renaissance;europe;afrique;asie;amérique",0
+140,"NEP","Histoire géographie 6e",1996,"Livre scolaire","Jeunesse",302,1,"Nouveau Programme",,"Français",,,"Ivernel,Martin;Bartoli,Jacques","histoire;géographie;égypte;hébreux;grèce;alexandre;rome;christianisme;terre;paysages;inégalité",0
+1,"NEP","Houni, bâtiseur de pyramide",2001,"fiction","Jeunesse",243,1,,,"Français",,,"Surget,Alain","égypte",0
+132,"NEP","I want to learn english 6e",1983,"Livre scolaire","Jeunesse",96,15,"English for French-speaking Africa",,"Français",,,"Mills,David;Doust,Tim","anglais",0
+70,"NEP","J'apprends à lire avec pilou et lalie",2001,"Documentaire/Fiction","Jeunesse",95,1,,,"Français",,,"Demars,Françoise","alphabet;jeux;apprendre à lire;sons;loutres",0
+59,"NEP","Kirikou et la sorcière",1998,"Fiction","Jeunesse",,1,,,"Français",,,"Ocelot,Michel","magique;conte traditionelle;afrique;sorcière",0
+16,"NEP","L'enfant qui parlait aux animaux",1949,"fiction","Jeunesse",86,1,,,"Français",,,"Dahl,Roald","animaux",0
+11,"NEP","L'or de pizarre",1986,"fiction","Jeunesse",187,1,,,"Français",,,"Dujovne-Ortiz,Alicia;Berline,Jean-Claude","aventure;incas;amérique du sud;exploration",0
+25,"NEP","La conspiration du harem",2005,"fiction","Jeunesse",180,1,"Hori: scribe et détective",,"Français",,,"Égémar,Béatrice","égypte;aventure",0
+138,"NEP","Larousse anglais",2008,"Reférence","Adulte",790,,,,"Français",,,,"dictionnaire;français-anglais",0
+51,"NEP","Le 8ieme pilote",1997,"Fiction","Jeunesse",64,1,"Michel Vaillant",,"Français",,,"Graton,Jean","aventure;bande dessinée;voitures",0
+50,"NEP","Le galérien",1980,"Fiction","Jeunesse",48,1,"Michel Vaillant",,"Français",,,"Graton,Jean","aventure;bande dessinée;voitures",0
+40,"NEP","Le gâteau",2001,"Fiction","Jeunesse",,1,,,"Français",,,"de Monfreid,Dorothée","animaux;gateau",0
+61,"NEP","Le jardin de mon enfance",2000,"Fiction","Jeunesse",55,1,"blaireau",,"Français",,,"Bogacki,Tomek","animaux;amitié;jardin",0
+45,"NEP","Le matin du monde",1988,"Fiction","Jeunesse",46,1,"Yoko Tsuno",,"Français",,,"Leloup,Roger","aventure;bande dessinée;dinosaurs;indonésie",0
+142,"NEP","Le pagne noir: contes africains",1955,"Fiction","Adulte",158,1,,,"Français",,,"Dadié,Bernard","afrique;contes;nouvelles",0
+27,"NEP","Le petit frère",2001,"fiction","Jeunesse",,1,,,"Français",,,"Ponti,Claude","livre d'enfants;livre d'images",0
+137,"NEP","Le petit larousse illustré",2009,"Reférence","Adulte",1812,1,,,"Français",,,,"dictionnaire",0
+53,"NEP","Le puits aux morts",1997,"Fiction","Jeunesse",46,1,"Le Roi Cyclope",,"Français",,,"Dethan,Isabelle","bande dessinée;horreur",0
+15,"NEP","Le scarabée du cœur",2005,"fiction","Jeunesse",179,1,"Hori: scribe et détective",,"Français",,,"Égémar,Béatrice","égypte;aventure",0
+3,"NEP","Les chats sacrés de bubastis",2005,"fiction","Jeunesse",186,1,"Hori: scribe et détective",,"Français",,,"Égémar,Béatrice","égypte;aventure",0
+57,"NEP","Les disparus de l'aéropostale",1999,"Fiction","Jeunesse",37,1,,,"Français",,,"Grégroire,Fabaian","histoire;afrique;avions;compagnie générale aéropostale",0
+52,"NEP","Les faiseurs de silence",1984,"Fiction","Jeunesse",46,1,"Aventures de Spirou et Fantasio",,"Français",,,"Nic,;Cauvin,","bande dessinée;humeurm crime",0
+31,"NEP","Les masques d'auguste soleil",1999,"Documentaire","Jeunesse",,1,,,"Français",,,"Falda,Dominique","art;masques;auguste soleil;photographie",0
+75,"NEP","Les personnages célèbres par les mots croisés",2001,"Ressources pour les Ensignants","Maitres",64,1,,,"Français",,"exercices amusantes pour reviser l'histoire","Lamblin,Christian","l'histoire;exercices",0
+44,"NEP","Les pirates du silence et le quick super",1958,"Fiction","Jeunesse",62,1,"Aventures de Spirou et Fantasio",,"Français",,,,"bande dessinée;humeur;crime",0
+71,"NEP","Let's sing and learn in french",1996,"Ressources pour les Ensignants","Maitres",63,1,,,"Français",,,"Maxwell,Matt","musique;apprendre français;chansons",0
+19,"NEP","Manuel de la pampa",1974,"fiction","Jeunesse",215,1,,,"Français",,"fiction historique","Gor,Le;Dooz,Jena-Marie","amérique du sud;argentine;fiction historique;amitié",0
+134,"NEP","Mathématiques 7e année",1990,"Livre scolaire","Jeunesse",191,10,"République du Mali Mathématiques",,"Français",,,"Almouloud,Saddo Ag;Augé,Elie","mathématiques",0
+126,"NEP","Mathématiques 8e année",1991,"Livre scolaire","Jeunesse",206,10,"République du Mali Mathématiques",,"Français",,,"Almouloud,Saddo Ag;Augé,Elie","mathématiques",0
+127,"NEP","Mathématiques 9e année",1991,"Livre scolaire","Jeunesse",223,10,"République du Mali Mathématiques",,"Français",,,"Traoré,Dramane","mathématiques",0
+30,"NEP","Maxou mignon",1993,"Fiction","Jeunesse",,1,,,"Français",,,"Nadja,","chien;rhyme",0
+24,"NEP","Minie malakoff direction port de la chapelle",1983,"fiction","Jeunesse",44,1,,,"Français",,,"Schwartz,Irène;Gay,Michel","aventure;animaux;souris",0
+29,"NEP","Moi aussi, je veux maman!",2001,"Fiction","Jeunesse",,1,,,"Français",,,"Dubois,Claude;Stibane,","famille;hiver;écreuil",0
+116,"NEP","Mon grand livre de chiffres",1989,"Documentaire","Jeunesse",45,1,,,"Français",,,"Michaut,Valérie","chiffres;compter;vocabulaire",0
+82,"NEP","Mustang: fils du vent",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;sport géographie;cheval;celtes;escrime;mondialisation;royaume-uni;nature",0
+103,"NEP","Mystérieux ptérosaures",2007,"Documentaire","Jeunesse",57,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;nature;géographie;sport;politique;mare;ptérosaures;mexique;président",0
+20,"NEP","Nés sous une mauvaise étoile",1999,"fiction","Jeunesse",142,1,"Le funeste destin des Baudelaire",1,"Français",,,"Snicket,Lemony","aventure",0
+143,"NEP","Pages africaines 1",1963,"Fiction","Adulte",79,3,"Pages Africaines",,"Français",,,"Vézinet,P;Désamais,R ","afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;famille;école;amitié;jeux;chasse;pêche;travaux domestiques;eau;mer cleuves;rivières",0
+144,"NEP","Pages africaines 2",1963,"Fiction","Adulte",79,3,"Pages Africaines",,"Français",,,"Vézinet,P;Désamais,R ","afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;villages;commerces;marchés;travail;habitations;accidents;mort;anciens",0
+145,"NEP","Pages africaines 3",1963,"Fiction","Adulte",71,3,"Pages Africaines",,"Français",,,"Vézinet,P;Désamais,R ","afrique;contes;poésie;nouvelles;français;vocabulaire;compréhension;littérature;danse;fêtes;croyances;coutumes;traditions;actualités",0
+72,"NEP","Passeport (7-8ans)",,"Ressources pour les Ensignants","Maitres",61,1,"Passeport",,"Français",,,"Bessières,Catherine;Knowles,Xavier","cahier vacances;exercises toutes matières",0
+120,"NEP","Passeport (7-8ans)",,"Ressources pour les Ensignants","Maitres",61,1,"Passeport",,"Français",,,"Knowles,Xavier;Bessières ,Catherine","cahier vacances;exercises toutes matières",0
+73,"NEP","Passeport (8-9ans)",,"Ressources pour les Ensignants","Maitres",56,1,"Passeport",,"Français",,,"Bacon,Michèle;Hérété,Jean-Étienne","cahier vacances;exercises toutes matières",0
+121,"NEP","Passeport (8-9ans)",,"Ressources pour les Ensignants","Maitres",56,1,"Passeport",,"Français",,,"Bacon,Michèle;Hérété ,Jean-Étienne","cahier vacances;exercises toutes matières",0
+43,"NEP","Petit stuart",1945,"Fiction","Jeunesse",133,1,,,"Français",,,"White,E.B.","aventure;souris",0
+130,"NEP","Physique 9ème année",2008,"Livre scolaire","Jeunesse",141,10,,,"Français",,,"Tolofoudye,Adama","physique ",0
+139,"NEP","Portland oregon: city of roses",,"Documentaire","Adulte",32,1,,,"Français",,,,"portland;oregon;étas unis;images",0
+13,"NEP","Prisonniers de la pyramide",2004,"fiction","Jeunesse",94,1,"Les enfants du nil",,"Français",,,"Surget,Alain;Parme,Fabrice","égypte;aventure",0
+84,"NEP","Protéger les animaux",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;sport;snowboard;migration;allemagne;hannibal;carthage;environment;biocarburant;wwf;nature",0
+80,"NEP","Pôle nord, pôle sud: un numéro pour tout comprendre",2007,"Documentaire","Jeunesse",57,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;manchots;arctique;anarctique;alaska;changement climatique;nature",0
+58,"NEP","Quartiers d'orange",2005,"Fiction","Jeunesse",,1,,,"Français",,,"Legendre,Françoise;Fortier,Natali","famille;espagne;le déces",0
+46,"NEP","Racing show",1985,"Fiction","Jeunesse",47,1,"Michel Vaillant",,"Français",,,"Graton,Jean","aventure;bande dessinée;voitures",0
+69,"NEP","Ratus découvre les livres",1996,"Fiction","Jeunesse",192,1,,,"Français",,,"Guion,Jean","contes;apprendre à lire",0
+49,"NEP","Route de nuit",1994,"Fiction","Jeunesse",64,1,"Michel Vaillant",,"Français",,,"Graton,Jean","aventure;bande dessinée;voitures",0
+5,"NEP","Réglisse",2005,"fiction","Jeunesse",69,1,"Mission: Adoption",,"Français",,,"Miles,Ellen","chiens;animaux",0
+6,"NEP","Sauvons les bébés lièvres",2004,"fiction","Jeunesse",76,1,,,"Français",,,"Hughes,Susan","animaux;lapins",0
+129,"NEP","Sciences physiques 8ème année",2000,"Livre scolaire","Jeunesse",160,10,,,"Français",,,,"physique;chimie",0
+7,"NEP","Segou: la terre en miettes",1985,"fiction","Adulte",415,1,,,"Français",,,"Condé,Maryse","segou;mali",0
+136,"NEP","Sous l'orage (suivi de la mort de chaka)",1972,"Fiction","Adulte",253,11,,,"Français",,,"Badian,Seydou","littérature;afrique;chaka;théâtre",0
+83,"NEP","Spécial: mer",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;sport;surf;pieuvre;pirates;île de la réunion;nature",0
+48,"NEP","Stripcockeer",1984,"Fiction","Jeunesse",46,1,"Boule et Bill",,"Français",,,"Roba,","bande dessinée;humeur",0
+87,"NEP","Sur la piste de l'ours",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;sport;politique;ours;égypte;tennis;italie;commerce équitable;pyramide;nature",0
+2,"NEP","Tamit, l'enfant du nil",2004,"fiction","Jeunesse",63,1,,,"Français",,,"Flores,Hervé","égypte",0
+41,"NEP","Un coquelicot pour se souvenir",2004,"Documentaire","Jeunesse",30,1,,,"Français",,,"Patterson,Heather;Lightburn,Ron","histoire;canada;premièrre guerre mondiale;histoire militaire",0
+47,"NEP","Un ours, un singe...et un side-car",1979,"Fiction","Jeunesse",46,1,"Julie Wood",,"Français",,,"Graton,Jean","bande dessinée;motocyclette;voiture",0
+67,"NEP","Vive les vacances!",,"Documentaire/Fiction","Jeunesse",35,1,"Tobogan",,"Français",,,,"contes;jeux;activités",0
+12,"NEP","Zorro: le complot des émeraudes",1998,"fiction","Jeunesse",59,,"Zorro",,"Français",,,"Flammarion,","aventure;amérique du sud",0
+85,"NEP","Étonnantes fourmis",2007,"Documentaire","Jeunesse",59,1,"ImagesDoc",,"Français",,,,"sciences;animaux;histoire;géographie;sport;fourmis;photographie;nouvelle-zélande;hélicoptère;escalade;nature",0
