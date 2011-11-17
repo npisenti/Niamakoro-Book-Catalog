@@ -1,21 +1,25 @@
+<%= javascript_include_tag 'search-bar' %>
 <div class="spacer"></div>
 <div class="span10">
   <h1 class="center-text">Cherchez un livre!</h1>
-  <input id="search" class="span10" data-source='<%= @test %>' value="<%= @search_query %>"/>
-  <div class="search-button-area">
-  <div id="search-button" class="btn primary">chercher</div>
-</div>
-<% if ! @books.nil? %>
-  <table class="zebra-striped">
-    <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
-      <tbody>
-        <% if @books.empty? %>
-          <tr><td></td><td>There were no results.</td><td></td></tr>
-        <% else %>
-          <%= render @books, :locals => { :search_query => @search_query } %>
-        <% end %>
+  <form action="/" method="get">
+    <input id="search" name="search" class="span10" value="<%= @search_query %>"/>
+    <div class="search-button-area">
+      <input id="search-button"  type="submit" value="chercher" class="btn primary">
+    </div>
+  </form>
 
-      </tbody>
-    </table>
-  <% end %>
-</div>
+  <% if ! @books.nil? %>
+    <table class="zebra-striped">
+      <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
+        <tbody>
+          <% if @books.empty? %>
+            <tr><td></td><td>There were no results.</td><td></td></tr>
+          <% else %>
+            <%= render @books, :locals => { :search_query => @search_query } %>
+          <% end %>
+
+        </tbody>
+      </table>
+    <% end %>
+  </div>

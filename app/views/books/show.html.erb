@@ -1,3 +1,5 @@
+<%= javascript_include_tag 'book-checkout' if current_user %>
+
 <ul class="breadcrumb">
   <li><%= link_to "← Chercher", :back %> <span class="divider">/</span></li>
   <li class="active"><%= @book.title %></li>
