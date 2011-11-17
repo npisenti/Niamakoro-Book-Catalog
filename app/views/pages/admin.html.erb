@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'admin' %>
 <h1>Tâches administratives</h1>
 <p><b>Gérer la collection:</b></p>
 <ul>
@@ -7,11 +8,11 @@
 </ul>
 <p><b>Examiner quel'que statistiques sur la collection:</b></p>
 <ul>
-  <li><a href="#" data-controls-modal="parent-currently-out">Liste de livre retirés</a></li>
+  <li><a href="#" data-controls-modal="parent-books-currently-out">Liste de livre retirés</a></li>
   <li><%= link_to "Statistiques general", stats_path %></li>
 </ul>
 <p>(Pour examiner les statistiques d'un livre particulier, il faut chercher ce livre et cliquer sur "Statistique" en bas de la page.)</p>
 
-<div id="parent-currently-out" class="modal hide fade">
+<div id="parent-books-currently-out" class="modal hide fade">
   <%= render :partial => 'checkout_items/currently_out' %>
 </div>

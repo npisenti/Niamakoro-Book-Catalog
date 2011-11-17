@@ -3,16 +3,16 @@
     <h3>Qui a cet livre?</h3>
   </div>
   <div class="modal-body">
-  <ul>
-    <% @book.checkout_items.out.each do |ci| %>
-      <li><%= ci.notes %></li>
-    <% end %>
-    <%= "Personne." if @book.checkout_items.out.empty? %>
-  </ul>
-</div>
+    <ul>
+      <% @book.checkout_items.out.each do |ci| %>
+        <li><%= ci.notes %></li>
+      <% end %>
+      <%= "Personne." if @book.checkout_items.out.empty? %>
+    </ul>
+  </div>
 
-<div class="modal-footer">
-  <a href="#" id="close-current-checkouts" class="btn primary">OK</a>
-</div>
+  <div class="modal-footer">
+    <a href="#" id="close-current-checkouts" class="btn primary">OK</a>
+  </div>
 </div>
 

@@ -1,25 +1,10 @@
-
+// hides checkout form
 $("#parent-checkout").modal('hide');
 
+// Renders the partials to update page...
 $("#full-book-container").html("<%= escape_javascript(render :partial => 'books/full_book') %>");
-
 $("#parent-checkout").html("<%= escape_javascript(render :partial => 'checkout_items/checkout_form') %>");
 $("#parent-checkin").html("<%= escape_javascript(render :partial => 'checkout_items/checkin_form') %>");
-
 $("#parent-current-checkouts").html("<%= escape_javascript(render :partial => 'books/checkout_items') %>");
 
-  $("#checkin-item-form").submit(function(){
-      $.post($(this).attr('action'), $(this).serialize(), null, "script");
-      return false;
-
-      });
-
-  $("#checkout-item-form").submit(function(){
-      $.post($(this).attr('action'), $(this).serialize(), null, "script");
-      return false;
-
-      });
-
-  $("#close-current-checkouts").click(function(){
-      $("#parent-current-checkouts").modal('hide');
-      });
+bind_modal_js();
