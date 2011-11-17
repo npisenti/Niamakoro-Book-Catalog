@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111116093352) do
+ActiveRecord::Schema.define(:version => 20111117090505) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -37,9 +37,13 @@ ActiveRecord::Schema.define(:version => 20111116093352) do
     t.datetime "updated_at"
     t.text     "notes"
     t.integer  "checkout_count", :default => 0
+    t.string   "language"
+    t.string   "collection",     :default => "NEP"
   end
 
   add_index "books", ["checkout_count"], :name => "index_books_on_checkout_count"
+  add_index "books", ["collection"], :name => "index_books_on_collection"
+  add_index "books", ["language"], :name => "index_books_on_language"
 
   create_table "checkout_items", :force => true do |t|
     t.integer  "book_id"

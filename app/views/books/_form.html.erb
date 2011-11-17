@@ -103,6 +103,33 @@
           <%= f.text_field :series_number,  {:class => "xlarge" } %>
         </div>
       </div>
+
+       <div class="clearfix">
+        <%= f.label :language, "Langue" %>
+        <div class="input">
+          <%= f.text_field :language,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label "Collection" %>
+        <div class="input">
+          <ul class="inputs-list">
+            <li>
+            <label>
+              <%= f.radio_button :collection, "NEP" %>
+              <span>Projet d'education de Niamakoro</span>
+            </label>
+            </li>
+            <li>
+            <label>
+              <%= f.radio_button :collection, "Diarra" %>
+              <span>L'Ecole Diarra</span>
+            </label>
+            </li>
+          </ul>
+        </div>
+      </div>
  
       <div class="clearfix">
         <%= f.label :summary, "Résumé" %>

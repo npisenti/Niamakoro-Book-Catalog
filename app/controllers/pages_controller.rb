@@ -19,6 +19,8 @@ class PagesController < ApplicationController
     @book_count = Book.count
     @checkout_count = CheckoutItem.count
     @popular = Book.popular(10)
+    @NEP_count = Book.owner('NEP').count
+    @Diarra_count = Book.owner('Diarra').count
   end
 
 end
