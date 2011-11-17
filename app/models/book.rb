@@ -64,21 +64,22 @@ class Book < ActiveRecord::Base
 
   def stats
     checkouts = self.checkout_items
-    offset = delta(checkouts[0].created_at, Time.now)
-    data = {} 
-    checkouts.each do |c|
-      time_ago = delta(c.created_at, Time.now) - offset
-      if data[time_ago] == nil
-        data[time_ago] = 1
-      else
-        data[time_ago] += 1
-      end
-    end
+    return [[]] if checkouts.empty?
 
+    offset = delta(Time.now, checkouts[0].created_at)
+
+    data = {} 
+    (0..offset).each do |i|
+      data[i] = self.checkout_tally(Time.now - i.days)
+    end
+    
     return data.to_a
       
   end
 
+  def checkout_tally(day)
+    self.checkout_items.count_date(day).length
+  end
 
   private
   def delta(d1, d2)

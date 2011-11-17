@@ -56,7 +56,7 @@ class BooksController < ApplicationController
   end
 
   def index
-    @books = Book.includes(:subjects).all
+    @books = Book.includes(:subjects).order('title ASC')
     @filename = 'toutes-livres.csv'
     @output_encoding = 'UTF-8'
 

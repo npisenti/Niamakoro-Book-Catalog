@@ -1,9 +1,9 @@
 <% if flash[:notice] %>
   <div class="alert-message error" data-alert="true"><a href="#" class="close">x</a><%= flash[:notice] %></div>
 <% end %>
-<h1>List of books:</h1>
-<table class="zebra-striped">
-  <thead><tr><th>#</th><th>Titre</th><th>Sujet</th></thead>
+<h1>Liste des livres:</h1>
+<table class="zebra-striped" id="tableSortTest">
+  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
     <tbody>
 
       <%= render @books %>
