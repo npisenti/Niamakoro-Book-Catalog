@@ -15,8 +15,8 @@ $(document).ready(function(){
         $("#search").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
-            var matcher = new RegExp("(?:^| )" + re, "gi");
             var a = $.grep(autoData, function(item, index){
+              var matcher = new RegExp("(?:^| )" + re, "gi");
               return matcher.test(item);
             });
             responseFn(a); 
@@ -43,8 +43,8 @@ $(document).ready(function(){
 $("#subjects_0_name").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
-            var matcher = new RegExp("(?:^| )" + re, "ig");
             var a = $.grep(subjectData, function(item, index){
+              var matcher = new RegExp("(?:^| )" + re, "ig");
               return matcher.test(item);
             });
             responseFn(a); 
@@ -63,8 +63,8 @@ $("#subjects_0_name").autocomplete({
     $("#subjects_" + i + "_name").autocomplete({
           source: function(req, responseFn){
             var re = $.ui.autocomplete.escapeRegex(req.term);
-            var matcher = new RegExp("^" + re, "i");
             var a = $.grep(subjectData, function(item, index){
+              var matcher = new RegExp("^" + re, "i");
               return matcher.test(item);
             });
             responseFn(a); 
