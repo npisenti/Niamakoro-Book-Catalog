@@ -18,8 +18,11 @@
   <tr><td>Genre: </td><td><%= @book.genre %></td></tr>
   <tr><td>Tranche d'âge: </td><td><%= @book.age_group %></td></tr>
   <tr><td>Nombre de pages: </td><td><%= @book.num_pages %></td></tr>
-  <tr><td>Nombre de copies: </td><td>  <span><%= @book.num_copies %> <span style="color: red; padding-right:10px;">-- <span id="copies-checked-out"><%= @book.checked_out %></span> copie(s) retiré(s) </span> </span>
-<a class="btn" data-controls-modal="parent-current-checkouts" data-backdrop="static">Voir liste</a>
+  <tr><td>Nombre de copies: </td><td>
+      <span><%= @book.num_copies %> <span style="color: red; padding-right:10px;">-- <span id="copies-checked-out"><%= @book.checked_out %></span> copie(s) retiré(s) </span> </span>
+      <% if @book.checked_out > 0 %>
+        <a class="btn" data-controls-modal="parent-current-checkouts" data-backdrop="static">Voir liste</a>
+      <% end %>
   </td></tr>
   <tr><td>Titre de série: </td><td><%= @book.series_title %></td></tr>
   <tr><td>Numéro de série: </td><td><%= @book.series_number %></td></tr>

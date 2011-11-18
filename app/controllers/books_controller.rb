@@ -47,7 +47,6 @@ class BooksController < ApplicationController
   end
 
   def show
-    @search_term = params[:search]
 
     @checkout = CheckoutItem.new
     @book = Book.find(params[:id])
