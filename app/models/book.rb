@@ -28,11 +28,21 @@ class Book < ActiveRecord::Base
   end
 
   def author_fields=(authors_hash)
-    self.authors = authors_hash.values.map { |a| Author.find_or_create_by_first_and_last(a) } 
+    author_arry = []
+    authors_hash.values.each do |a|
+      next if a['first'] == "" and a['last'] == ""
+      author_arry << Author.find_or_create_by_first_and_last(a) 
+    end
+    self.authors = author_arry
   end
 
   def subject_fields=(subjects_hash)
-    self.subjects = subjects_hash.values.map { |s| Subject.find_or_create_by_name(s["name"]) }
+    subject_arry = []
+    subjects_hash.values.each do |s|
+      next if s['name'] == ""
+      subject_arry << Subject.find_or_create_by_name(s)
+    end
+    self.subjects = subject_arry
   end
 
   def checked_out
