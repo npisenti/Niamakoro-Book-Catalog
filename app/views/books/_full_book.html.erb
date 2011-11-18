@@ -9,7 +9,7 @@
 <% end %>
 <% end %>
 </div>
-  <table class="zebra-striped">
+  <table class="zebra-striped sorted">
       <tbody>
   <tr><td>Titre: </td><td><%= @book.title %></td></tr>
 <tr><td>Auteur(s): </td><td><% @book.authors.each do |a| %><%= "#{a.last}, #{a.first}; "  %><% end %></td></tr>

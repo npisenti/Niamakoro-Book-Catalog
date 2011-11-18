@@ -4,7 +4,7 @@
 $(document).ready(function(){
     
      /// Get the source for this plugin!
-        $("table").tablesorter( { sortList: [[ 1, 0 ]] } )
+        $("table.sorted").tablesorter( { sortList: [[ 1, 0 ]] } )
     
  
 
