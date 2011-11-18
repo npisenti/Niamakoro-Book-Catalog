@@ -3,8 +3,11 @@
 
 $(document).ready(function(){
     
-     /// Get the source for this plugin!
-        $("table.sorted").tablesorter( { sortList: [[ 1, 0 ]] } )
+      // checks to see if sort column is specified in table
+      var sort_col = $("table.sorted").attr('data-sort-column');
+      sort_col = sort_col == undefined ? 1 : parseInt(sort_col);
+
+      $("table.sorted").tablesorter( { sortList: [[ sort_col, 0 ]] } )
     
  
 

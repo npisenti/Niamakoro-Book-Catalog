@@ -19,16 +19,16 @@
 
     <h3>Qui a retiré(e) cet livre?</h3>
     <br />
-  <table class="zebra-striped">
+    <table class="zebra-striped sorted" data-sort-column="0">
+        <thead><th>Date</th><th>Notes</th></thead>
       <tbody>
-    <thead><tr><th>Date</th><th>Notes</th></thead>
           <% @book.checkout_items.each do |ci| %>
             <tr><td><%= ci.created_at.to_date %></td><td><%= ci.notes %></td></tr>
           <% end %>
           <% if @book.checkout_items.empty? %>
             <tr><td>Personne.</td></tr>
           <% end %>
-      </tbody>
-    </table>
+        </tbody>
+      </table>
 
     <div id="edit-bar" class="pull-right"><%= link_to "Télécharger comme CSV", statistics_book_path(@book) + ".csv" %></div>

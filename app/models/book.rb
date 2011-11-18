@@ -70,7 +70,7 @@ class Book < ActiveRecord::Base
 
     data = {} 
     (0..offset).each do |i|
-      data[i] = self.checkout_tally(Time.now - i.days)
+      data[i - offset] = self.checkout_tally(Time.now - i.days)
     end
     
     return data.to_a

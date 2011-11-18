@@ -8,7 +8,7 @@ $(document).ready(function(){
       var plotData = [];
       $.get('#', function(data){
         plotData = $.makeArray(data);
-        $.plot($("#graph-container"), [plotData], { xaxis: { min: 0 }, yaxis: { min: 0 }});
+        $.plot($("#graph-container"), [plotData], { xaxis: { max: 1, tickDecimals: 0 }, yaxis: { min: 0, tickDecimals: 0 }, series: { bars: { show: true, align: "center"}}});
       }, 'json'); 
     };
 
