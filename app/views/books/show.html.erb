@@ -1,9 +1,12 @@
 <%= javascript_include_tag 'book-checkout' if current_user %>
 
-<ul class="breadcrumb">
-  <li><%= link_to "← Chercher", :back %> <span class="divider">/</span></li>
-  <li class="active"><%= @book.title %></li>
-</ul>
+<% if @from_search %>
+  <ul class="breadcrumb">
+    <li><%= link_to "← Chercher", :back %> <span class="divider">/</span></li>
+    <li class="active"><%= @book.title %></li>
+  </ul>
+<% end %>
+
 <div id="full-book-container">
   <%= render 'books/full_book' %>
 </div>

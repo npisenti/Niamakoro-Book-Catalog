@@ -2,6 +2,7 @@ class Book < ActiveRecord::Base
   require 'date'
   require 'date/delta'
 
+  after_initialize :init
 
 
   has_many :checkout_items, :dependent => :destroy, :dependent => :destroy
@@ -84,5 +85,9 @@ class Book < ActiveRecord::Base
   private
   def delta(d1, d2)
     Date::Delta.diff(d1.to_date, d2.to_date).days
+  end
+
+  def init
+    self.num_copies ||= 1
   end
 end

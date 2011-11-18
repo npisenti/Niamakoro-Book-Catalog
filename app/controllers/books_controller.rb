@@ -1,3 +1,4 @@
+# coding: utf-8
 class BooksController < ApplicationController
 
   before_filter :authenticate, :only => [:new, :create, :edit, :update, :destroy]
@@ -25,6 +26,8 @@ class BooksController < ApplicationController
     @book = Book.find(params[:id])
     @subject_list = @book.subjects
     @author_list = @book.authors
+    @author_list = [Author.new] if @author_list.empty?
+    @subject_list = [Subject.new] if @subject_list.empty?
   end
 
   def update
@@ -42,11 +45,16 @@ class BooksController < ApplicationController
   def destroy
     @book = Book.find(params[:id])
     @book.destroy
-    flash[:notice] = "Book deleted!"
+    flash[:notice] = "Le livre a été supprimé!"
     redirect_to books_path
   end
 
   def show
+
+    # I hope this is good enough...
+    #ref_url = request.referrer.split("/")[3]
+    #@from_search = ref_url[0..7] == "?search=" unless ref_url.nil?
+    
 
     @checkout = CheckoutItem.new
     @book = Book.find(params[:id])
