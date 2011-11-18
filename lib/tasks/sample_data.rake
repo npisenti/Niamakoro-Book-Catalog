@@ -41,7 +41,6 @@ namespace :db do
       @book.save
 
     end
-    @admin = User.create(:username => "admin", :password => "niamakoro", :password_confirmation => "niamakoro")
   end
 end
 
