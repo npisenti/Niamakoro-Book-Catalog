@@ -51,9 +51,12 @@ class BooksController < ApplicationController
 
   def show
 
-    # I hope this is good enough...
-    #ref_url = request.referrer.split("/")[3]
-    #@from_search = ref_url[0..7] == "?search=" unless ref_url.nil?
+    begin
+      ref_url = request.referrer
+      @from_search = ref_url.split("/")[3][0..7] == "?search=" 
+    rescue
+      @from_search = false
+    end
     
 
     @checkout = CheckoutItem.new
