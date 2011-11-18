@@ -31,3 +31,5 @@ This code is for a book catalog ("fiche") for use at the library. I've (perhaps 
 putting together a testing framework, etc. for this due to lack of time and intermitten internet
 access (which I've realized makes coding so much harder!). However, I've tried to test things manually, 
 and I'm about to release it into the wild. Hopefully any bugs will show up before we leave Mali.
+I can't imagine anyone else necessarily wanting to use the code, but here it is! Email/message me
+with questions, or if you see bugs I'm eager to fix them.
