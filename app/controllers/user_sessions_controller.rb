@@ -1,10 +1,10 @@
+# encoding: utf-8
 class UserSessionsController < ApplicationController
   def new
+    store_referring_page
     @user_session = UserSession.new
-
     respond_to do |format|
       format.html # new.html.erb
-      format.xml  { render :xml => @user_session }
     end
   end
 
@@ -13,22 +13,22 @@ class UserSessionsController < ApplicationController
 
     respond_to do |format|
       if @user_session.save
-        format.html { redirect_to(home_path, :notice => 'Login successful!') }
-        format.xml  { render :xml => @user_session, :status => :created, :location => @user_session }
+        format.html { 
+          flash[:notice] = "Vous êtes 'logged in'"
+          redirect_back_or(home_path) 
+        }
       else
         format.html { render :action => "new" }
-        format.xml  { render :xml => @user_session.errors, :status => :unprocessable_entity }
       end
     end
   end
 
   def destroy
+    store_referring_page
     @user_session = UserSession.find
     @user_session.destroy
-
     respond_to do |format|
-      format.html { redirect_to(home_path, :notice => "Goodbye!") }
-      format.xml  { head :ok }
+      format.html { redirect_back_or(home_path) }
     end
   end
 
