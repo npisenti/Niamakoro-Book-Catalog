@@ -4,6 +4,9 @@ class PagesController < ApplicationController
   def home
     @search_query = ""
     if params[:search]
+      @book = Book.includes(:subjects).where(:title => params[:search])[0]
+      redirect_to @book if @book
+
       @books = Book.includes(:subjects).search(params[:search])
       #@subject_books = Subject.search(params[:search]).map {|s| s.books }.flatten
       @subject_books = Book.includes(:subjects).subject_search(params[:search])
