@@ -14,6 +14,7 @@ class Book < ActiveRecord::Base
   has_many :subjects, :through => :subject_tags
 
   scope :subject, lambda {|subject| Book.joins(:subjects).where(:subjects => {:name => subject} ) }
+  scope :subject_search, lambda {|subject| Book.joins(:subjects).where('subjects.name LIKE ?', "%#{subject}%" ) }
   scope :owner, lambda {|collection| Book.where(:collection => collection) }
   
 

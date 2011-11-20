@@ -4,9 +4,10 @@ class PagesController < ApplicationController
   def home
     @search_query = ""
     if params[:search]
-      @books = Book.search(params[:search])
-      @subject_books = Subject.search(params[:search]).map {|s| s.books }.flatten.uniq
-      @books.concat(@subject_books)
+      @books = Book.includes(:subjects).search(params[:search])
+      #@subject_books = Subject.search(params[:search]).map {|s| s.books }.flatten
+      @subject_books = Book.includes(:subjects).subject_search(params[:search])
+      @books.concat(@subject_books).uniq!
       @search_query = params[:search]
     end
   end
