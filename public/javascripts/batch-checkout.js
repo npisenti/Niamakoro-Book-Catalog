@@ -19,6 +19,7 @@ var add_bindings = function(index, titleData){
 
       $("#checkout_notes_" + index).keypress(function(e){
           var nextIndex = parseInt($(this).attr('data-index')) + 1;
+          alert(e.charCode);
           if (e.charCode == 13){
             add_new_checkout(nextIndex); 
             add_bindings(nextIndex, titleData);
