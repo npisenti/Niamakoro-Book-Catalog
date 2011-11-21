@@ -60,7 +60,7 @@ class CheckoutItemsController < ApplicationController
     params[:checkout_item].each do |co|
       if co[1]['status'] == "1"
         checkin = CheckoutItem.find(co[0])
-        checkin.status = 0
+        checkin.status = false
         checkin.save!
       end
     end
@@ -76,4 +76,18 @@ class CheckoutItemsController < ApplicationController
       }
     end
   end
+
+
+
+  def batch_checkin
+    params[:checkout_item].each do |co|
+      if co[1]['status'] == "1"
+        checkin = CheckoutItem.find(co[0])
+        checkin.status = false
+        checkin.save!
+      end
+    end
+    redirect_to batch_checkin_path
+  end
+
 end

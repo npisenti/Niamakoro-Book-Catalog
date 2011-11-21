@@ -7,20 +7,20 @@
     <fieldset>
       <div class="clearfix">
         <label>Inscrire:</label>
-      <div class="input">
-      <ul class="inputs-list">
-        <% for @checkout_item in @checkout_items %>
-          <li>
-          <label>
-            <%= f.check_box :status, {:checked => false} %>
-            <%= f.hidden_field :book_id, { :value => @book.id } %>
-            <span><%= " Notes: #{@checkout_item.notes}" %></span>
-          </label>
-          </li>
-        <% end %>
-      </ul>
-    </div>
-    </div>
+        <div class="input">
+          <ul class="inputs-list">
+            <% for @checkout_item in @checkout_items %>
+              <li>
+              <label>
+                <%= f.check_box :status, {:checked => false} %>
+                <%= f.hidden_field :book_id, { :value => @book.id } %>
+                <span><%= " Notes: #{@checkout_item.notes}" %></span>
+              </label>
+              </li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
 
 
       <div class="actions">

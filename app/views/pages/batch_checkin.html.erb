@@ -1,0 +1,30 @@
+<div id="batch-checkin-form">
+  <% if @checkout_items.empty? %>
+    Il n'y a pas des livres rendus.
+  <% else %>
+    <%= form_for "checkout_item[]", :as => :checkout_item, :url => batch_checkin_checkout_items_path, :html => { :method => :post, :id => "batch-checkin-form", :class => "span10" }  do |f| %>
+      <fieldset>
+        <div class="clearfix">
+          <label>Inscrire:</label>
+          <div class="input">
+            <ul class="inputs-list">
+              <% for @checkout_item in @checkout_items %>
+                <li>
+                <label class="span8">
+                  <%= f.check_box :status, {:checked => false} %>
+                  <span><%= "#{@checkout_item.book.title} | #{@checkout_item.notes}" %></span>
+                </label>
+                </li>
+              <% end %>
+            </ul>
+          </div>
+        </div>
+
+
+        <div class="actions">
+          <%= f.submit("Inscrire", { :class => "btn primary" }) %>
+        </div>
+      </fieldset>
+    <% end %>
+  <% end %>
+  </div>

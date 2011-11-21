@@ -8,10 +8,12 @@ BookCatalogue::Application.routes.draw do
 
   resources :checkout_items do
     post 'checkin_many', :on => :collection
+    post 'batch_checkin', :on => :collection
   end
   
   resources :user_sessions, :only => [ :new, :create, :destroy ]
 
+  match '/batch-checkin', :to => 'pages#batch_checkin', :as => 'batch_checkin'
   match '/search_bar', :to => 'books#search_bar'
   match '/csv', :to => 'books#csv'
 

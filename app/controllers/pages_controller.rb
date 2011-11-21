@@ -27,4 +27,8 @@ class PagesController < ApplicationController
     @Diarra_count = Book.owner('Diarra').count
   end
 
+  def batch_checkin
+    @checkout_items = CheckoutItem.out
+    @checkout_item = CheckoutItem.new
+  end
 end
