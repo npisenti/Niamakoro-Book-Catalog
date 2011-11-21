@@ -31,4 +31,6 @@ class PagesController < ApplicationController
     @checkout_items = CheckoutItem.out
     @checkout_item = CheckoutItem.new
   end
+  def batch_checkout
+  end
 end

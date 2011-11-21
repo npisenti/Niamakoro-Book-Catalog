@@ -90,4 +90,15 @@ class CheckoutItemsController < ApplicationController
     redirect_to batch_checkin_path
   end
 
+  def batch_checkout
+    params[:book_title].each do |b|
+      book = Book.find_by_title(b[1])
+      if !book.nil?
+        CheckoutItem.create(:book => book , :notes => params[:checkout_notes][b[0]], :status => true)
+      end
+    end
+    redirect_to batch_checkin_path
+  end
+    
+
 end

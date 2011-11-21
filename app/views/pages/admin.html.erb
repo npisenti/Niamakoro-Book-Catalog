@@ -13,6 +13,11 @@
 </ul>
 <p>(Pour examiner les statistiques d'un livre particulier, il faut chercher ce livre et cliquer sur "Statistique" en bas de la page.)</p>
 
+<p><b>Retiré/Rendu avec vitesse!</b></p>
+<ul>
+  <li><%= link_to "Rendu beaucoup des livres", batch_checkin_path %></li>
+  <li>Checkout many</li>
+</ul>
 <div id="parent-books-currently-out" class="modal hide fade">
   <%= render :partial => 'checkout_items/currently_out' %>
 </div>

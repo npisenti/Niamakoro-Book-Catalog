@@ -1,0 +1,23 @@
+<%= javascript_include_tag 'batch-checkout' %>
+<div>
+
+  <%= form_for CheckoutItem.new, :url => batch_checkout_checkout_items_path, :html => { :method => :post, :id => "batch-checkout-form" } do |f| %> 
+
+    <table class="zebra-striped" id="batch-checkout-table">
+      <thead><th>Livre</th><th>Notes</th></thead>
+        <tbody id="checkout-table-body">
+          <tr>
+            <td><%= text_field "book_title", "1", {:class => "xlarge autocomplete_title" , "data-index" => "1"} %></td>
+            <td><%= text_field "checkout_notes", "1",  {:class => "xlarge", "data-index" => "1" } %></td>
+          </tr>
+        </tbody>
+      </table>
+
+    <% end %>
+    <div class="actions">
+      <input id="submit-batch-checkout" type="submit" value="Retirer toutes" class="btn primary">
+    </div>
+
+
+
+</div>

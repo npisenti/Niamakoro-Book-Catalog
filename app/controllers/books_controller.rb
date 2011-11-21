@@ -86,6 +86,11 @@ class BooksController < ApplicationController
     render :json => output.to_json
   end
 
+  def title_data
+    output = Book.order("title ASC").map { |bt| bt.title }
+    render :json => output.to_json
+  end
+
 
   def statistics
     @book = Book.find(params[:id])
