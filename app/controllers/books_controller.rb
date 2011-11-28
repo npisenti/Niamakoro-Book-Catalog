@@ -101,4 +101,14 @@ class BooksController < ApplicationController
       format.csv
     end
   end
+
+  def popular
+    @books = Book.order('checkout_count DESC')
+    @filename = 'livres-populaires.csv'
+    @output_encoding = 'UTF-8'
+    respond_to do |format|
+      format.csv
+    end
+  end
+
 end

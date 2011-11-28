@@ -6,7 +6,9 @@
             <tr><td>Nombre de livres de la collection NEP:</td><td><%= @NEP_count %></td></tr>
             <tr><td>Nombre de livres de la collection Diarra:</td><td><%= @Diarra_count %></td></tr>
             <tr><td>Nombre totale de livres retirés:</td><td><%= @checkout_count %></td></tr>
-            <tr><td>Livres populaires:</td><td>
+            <tr><td>Livres populaires: <br />
+                <%= link_to "(Telecharger les statistiques)", "/books/popular.csv" %>
+                </td><td>
                 <ol>
                   <% @popular.each do |b| %>
                     <li><%= link_to b.title, book_path(b) %></li>

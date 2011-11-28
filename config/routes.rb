@@ -5,6 +5,7 @@ BookCatalogue::Application.routes.draw do
   resources :books do
     get 'statistics', :on => :member
     get 'title_data', :on => :collection
+    get 'popular', :on => :collection
   end
 
   resources :checkout_items do

@@ -1,0 +1,4 @@
+csv << ["Titre", "Fois Retrait"] 
+@books.each do |b|
+    csv << [b.title, b.checkout_count]
+end
