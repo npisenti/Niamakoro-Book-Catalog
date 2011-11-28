@@ -1,6 +1,10 @@
 
 $(document).ready(function(){
   
+    //Set focus on first input field
+    $("#book_title").focus();
+
+
   //Subject AutoComplete setup...
   
   var subjectData = [];
