@@ -14,7 +14,7 @@
       <thead><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
         <tbody>
           <% if @books.empty? %>
-            <tr><td></td><td>There were no results.</td><td></td></tr>
+            <tr><td></td><td>Pas de resultats.</td><td></td></tr>
           <% else %>
             <%= render @books, :locals => { :search_query => @search_query } %>
           <% end %>

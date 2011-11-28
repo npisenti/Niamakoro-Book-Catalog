@@ -4,27 +4,26 @@
   <% else %>
     <%= form_for "checkout_item[]", :as => :checkout_item, :url => batch_checkin_checkout_items_path, :html => { :method => :post, :id => "batch-checkin-form", :class => "span10" }  do |f| %>
       <fieldset>
-        <div class="clearfix">
-          <label>Inscrire:</label>
-          <div class="input">
-            <ul class="inputs-list">
-              <% for @checkout_item in @checkout_items %>
-                <li>
-                <label class="span8">
-                  <%= f.check_box :status, {:checked => false} %>
-                  <span><%= "#{@checkout_item.book.title} | #{@checkout_item.notes}" %></span>
-                </label>
-                </li>
-              <% end %>
-            </ul>
-          </div>
-        </div>
-
-
+        <table class="zebra-striped sorted">
+          <thead><th>Inscrire</th><th>Titre</th><th>Notes</th></thead>
+          <tbody>
+            <% for @checkout_item in @checkout_items %>
+              <tr>
+                <td><%= f.check_box :status, {:checked => false} %></td>
+                <td><%= @checkout_item.book.title %></td>
+                <td><%= @checkout_item.notes %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
         <div class="actions">
           <%= f.submit("Inscrire", { :class => "btn primary" }) %>
         </div>
       </fieldset>
+
+
+
+
     <% end %>
   <% end %>
-  </div>
+</div>
