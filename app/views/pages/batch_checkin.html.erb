@@ -1,17 +1,19 @@
+<%= javascript_include_tag "batch-checkin" %>
 <div id="batch-checkin-form">
   <% if @checkout_items.empty? %>
     Il n'y a pas des livres rendus.
   <% else %>
-    <%= form_for "checkout_item[]", :as => :checkout_item, :url => batch_checkin_checkout_items_path, :html => { :method => :post, :id => "batch-checkin-form", :class => "span10" }  do |f| %>
+    <%= form_for "checkout_item[]", :as => :checkout_item, :url => batch_checkin_checkout_items_path, :html => { :method => :post, :id => "batch-checkin-form", :class => "span12" }  do |f| %>
       <fieldset>
         <table class="zebra-striped sorted">
-          <thead><th>Inscrire</th><th>Titre</th><th>Notes</th></thead>
+          <thead><th>Inscrire</th><th>Titre</th><th>Notes</th><th>Retrir un autre</th></thead>
           <tbody>
             <% for @checkout_item in @checkout_items %>
               <tr>
                 <td><%= f.check_box :status, {:checked => false} %></td>
                 <td><%= @checkout_item.book.title %></td>
                 <td><%= @checkout_item.notes %></td>
+                <td><%= text_field_tag "checkout_item[#{@checkout_item.id}][next]", nil, :class => "autocomplete_book_title span3" %></td>
               </tr>
             <% end %>
           </tbody>

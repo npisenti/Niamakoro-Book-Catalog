@@ -82,23 +82,41 @@ class CheckoutItemsController < ApplicationController
   def batch_checkin
     params[:checkout_item].each do |co|
       if co[1]['status'] == "1"
-        checkin = CheckoutItem.find(co[0])
-        checkin.status = false
-        checkin.save!
+        checkin = checkin_book(co[0])
+        checkout_book(co[1]['next'], checkin.notes) unless co[1]['next'].blank?
       end
+
     end
     redirect_to batch_checkin_path
   end
 
   def batch_checkout
     params[:book_title].each do |b|
-      book = Book.find_by_title(b[1])
-      if !book.nil?
-        CheckoutItem.create(:book => book , :notes => params[:checkout_notes][b[0]], :status => true)
-      end
+      checkout_book(b[1], params[:checkout_notes][b[0]])
     end
+
     redirect_to batch_checkin_path
   end
+
+
     
+  private
+  def checkout_book(title, notes)
+    book = Book.find_by_title(title)
+    if !book.nil?
+      CheckoutItem.create(:book => book , :notes => notes, :status => true)
+    end
+  end
+
+  def checkin_book(id)
+    checkin = CheckoutItem.find(id)
+    if !checkin.nil?
+      checkin.status = false
+      checkin.save!
+    end
+    return checkin
+  end
+
+
 
 end
