@@ -23,8 +23,8 @@ class PagesController < ApplicationController
     @book_count = Book.count
     @checkout_count = CheckoutItem.count
     @popular = Book.popular(10)
-    @NEP_count = Book.owner('NEP').count
-    @Diarra_count = Book.owner('Diarra').count
+    @NEP_count = Book.where('num_copies_nep > 0').count
+    @Diarra_count = Book.where('num_copies_emd > 0').count
   end
 
   def batch_checkin

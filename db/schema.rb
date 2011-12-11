@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111117090505) do
+ActiveRecord::Schema.define(:version => 20111211113422) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -29,7 +29,6 @@ ActiveRecord::Schema.define(:version => 20111117090505) do
     t.string   "genre"
     t.string   "age_group"
     t.integer  "num_pages"
-    t.integer  "num_copies"
     t.string   "series_title"
     t.integer  "series_number"
     t.text     "summary"
@@ -38,12 +37,14 @@ ActiveRecord::Schema.define(:version => 20111117090505) do
     t.text     "notes"
     t.integer  "checkout_count", :default => 0
     t.string   "language"
-    t.string   "collection",     :default => "NEP"
+    t.integer  "num_copies_nep"
+    t.integer  "num_copies_emd"
   end
 
   add_index "books", ["checkout_count"], :name => "index_books_on_checkout_count"
-  add_index "books", ["collection"], :name => "index_books_on_collection"
   add_index "books", ["language"], :name => "index_books_on_language"
+  add_index "books", ["num_copies_emd"], :name => "index_books_on_num_copies_emd"
+  add_index "books", ["num_copies_nep"], :name => "index_books_on_num_copies_nep"
 
   create_table "checkout_items", :force => true do |t|
     t.integer  "book_id"

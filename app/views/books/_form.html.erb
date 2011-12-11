@@ -86,9 +86,16 @@
 
 
       <div class="clearfix">
-        <%= f.label :num_copies, "Nombre de copies" %>
+        <%= f.label :num_copies_nep, "Nombre de copies NEP" %>
         <div class="input">
-          <%= f.text_field :num_copies,  {:class => "xlarge" } %>
+          <%= f.text_field :num_copies_nep,  {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :num_copies_emd, "Nombre de copies Maourou Diarra" %>
+        <div class="input">
+          <%= f.text_field :num_copies_emd,  {:class => "xlarge" } %>
         </div>
       </div>
 
@@ -113,26 +120,6 @@
         </div>
       </div>
 
-      <div class="clearfix">
-        <%= f.label "Collection" %>
-        <div class="input">
-          <ul class="inputs-list">
-            <li>
-            <label>
-              <%= f.radio_button :collection, "NEP" %>
-              <span>Projet d'education de Niamakoro</span>
-            </label>
-            </li>
-            <li>
-            <label>
-              <%= f.radio_button :collection, "Diarra" %>
-              <span>L'École Maourou Diarra</span>
-            </label>
-            </li>
-          </ul>
-        </div>
-      </div>
- 
       <div class="clearfix">
         <%= f.label :summary, "Résumé" %>
         <div class="input">

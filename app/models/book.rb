@@ -15,15 +15,31 @@ class Book < ActiveRecord::Base
 
   scope :subject, lambda {|subject| Book.joins(:subjects).where(:subjects => {:name => subject} ) }
   scope :subject_search, lambda {|subject| Book.joins(:subjects).where('subjects.name LIKE ?', "%#{subject}%" ) }
-  scope :owner, lambda {|collection| Book.where(:collection => collection) }
-  
 
   
+  def num_copies
+    nep = self.num_copies_nep.nil? ? 0 : self.num_copies_nep    # gotta be a better way...
+    emd = self.num_copies_emd.nil? ? 0 : self.num_copies_emd
+    nep + emd
+  end
 
-
+  def collection
+    if self.num_copies_nep == 0
+      coll = "Diarra"
+    elsif self.num_copies_emd == 0
+      coll = "NEP"
+    else
+      coll = "NEP / Diarra"
+    end
+    return coll
+  end
 
   def generate(params)
-    self.attributes=(params['book'])
+    data = params['book']
+    data['num_copies_nep'] = 0 if data['num_copies_nep'].blank?
+    data['num_copies_emd'] = 0 if data['num_copies_emd'].blank?
+
+    self.attributes=(data)
     self.subject_fields=(params['subjects'])
     self.author_fields=(params['authors'])
   end
@@ -60,7 +76,7 @@ class Book < ActiveRecord::Base
     authors_str = "" if authors_str.empty?
     subjects_str = "" if subjects_str.empty?
 
-    [self.id.to_s, self.collection.to_s, self.title.to_s, self.pub_year.to_s, self.genre.to_s, self.age_group.to_s, self.num_pages.to_s, self.num_copies.to_s, self.series_title.to_s, self.series_number.to_s, self.language, self.summary.to_s, self.notes.to_s, authors_str, subjects_str, self.checkout_items.count]
+    [self.id.to_s, self.title.to_s, self.pub_year.to_s, self.genre.to_s, self.age_group.to_s, self.num_pages.to_s, self.num_copies_nep.to_s, self.num_copies_emd.to_s, self.series_title.to_s, self.series_number.to_s, self.language, self.summary.to_s, self.notes.to_s, authors_str, subjects_str, self.checkout_items.count]
 
   end
 
@@ -99,6 +115,6 @@ class Book < ActiveRecord::Base
   end
 
   def init
-    self.num_copies ||= 1
+    self.num_copies_nep ||= 1
   end
 end
