@@ -1,4 +1,4 @@
-# encoding: utf-8
+# coding: utf-8
 class UserSessionsController < ApplicationController
   def new
     store_referring_page
