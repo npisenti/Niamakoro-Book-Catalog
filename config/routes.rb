@@ -1,6 +1,6 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :authors, :subjects, :grades
+  resources :authors, :subjects, :grades, :class_records
 
   resources :books do
     get 'statistics', :on => :member

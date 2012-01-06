@@ -1,0 +1,10 @@
+<h1>Class Record: <%= @class_record.grade.pretty_name %></h1>
+<ul>
+  <li>Date: <%= @class_record.arrival.strftime("%d/%m/%Y") %></li>
+  <li>Arrived: <%= @class_record.arrival.to_s(:time) %></li>
+  <li>Departure: <%= @class_record.departure.to_s(:time) %></li>
+  <li>Attendance: <%= @class_record.attendance %> élèves</li>
+  <li>The teacher WAS <%= "NOT" unless @class_record.teacher %> present.</li>
+</ul>
+<h3>Notes on classtime:</h3>
+<p><%= @class_record.notes %></p>

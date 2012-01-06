@@ -1,0 +1,64 @@
+<div class="span12">
+  <%= form_for(@class_record) do |f| %>
+    <% if @class_record.errors.any? %>
+      <div id="error_explanation">
+        <p><%= pluralize(@class_record.errors.count, "error") %> prohibited this class_record from being saved:</p>
+
+        <ul>
+          <% @class_record.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <fieldset>
+
+      <div class="clearfix">
+        <%= f.label :date, "Date", {:style => "padding-right: 20px;" } %>
+        <%= f.text_field :date, { :id => "datepicker" } %>
+
+        <%= f.hidden_field :date_son, {:id => "date_object" } %>
+
+      </div>
+      <div class="clearfix">
+        <%= f.label :time_in, "Heure d'arrivée", {:style => "padding-right: 20px;" } %>
+        <%= f.time_select :time_in, {:ignore_date => true}, {:class => "mini"} %>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :time_out, "Heure de sortie" , {:style => "padding-right: 20px;" }%>
+        <%= f.time_select :time_out, {:ignore_date => true}, { :class => "mini"}  %>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :grade_id, "Grade", {:style => "padding-right: 20px;" } %>
+        <%= f.select :grade_id, Grade.all.collect{ |g| [g.pretty_name, g.id]}, { :class => "span2"}  %>
+      </div>
+      <div class="clearfix">
+        <%= f.label :attendance, "Attendance", {:style => "padding-right: 20px;" } %>
+        <%= f.text_field :attendance %>
+
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :teacher_attendance, "Teacher was present", {:style => "padding-right: 20px;" } %>
+        <%= f.check_box :teacher_attendance %>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :notes, "Notes" %>
+        <div class="input">
+          <%= f.text_area :notes, {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit :class => "btn primary"  %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+
