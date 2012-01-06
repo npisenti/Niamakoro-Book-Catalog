@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  year: 1
+  number_students: 1
+  number_classes: 1
+  notes: MyText
+
+two:
+  year: 1
+  number_students: 1
+  number_classes: 1
+  notes: MyText
