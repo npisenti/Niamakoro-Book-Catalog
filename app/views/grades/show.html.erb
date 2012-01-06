@@ -1,0 +1,8 @@
+<h1>Summary of grade: <%= @grade.year %> année</h1>
+<ul>
+  <li>Year: <%= @grade.year %></li>
+  <li>Number of students: <%= @grade.number_students %></li>
+  <li>Number of classes: <%= @grade.number_classes %></li>
+</ul>
+<p><%= @grade.notes %></p>
+<p><%= link_to "Edit", edit_grade_path(@grade) %>

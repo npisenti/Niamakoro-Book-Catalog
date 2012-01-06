@@ -1,0 +1,51 @@
+<div class="span12">
+  <%= form_for(@grade) do |f| %>
+    <% if @grade.errors.any? %>
+      <div id="error_explanation">
+        <p><%= pluralize(@grade.errors.count, "error") %> prohibited this grade from being saved:</p>
+
+        <ul>
+          <% @grade.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <fieldset>
+      <div class="clearfix">
+        <%= f.label :year, "Grade Year" %>
+        <div class="input">
+          <%= f.text_field :year, {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="clearfix">
+        <%= f.label :number_students, "Number of Students" %>
+        <div class="input">
+          <%= f.text_field :number_students, {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :number_classes, "Number of Classes" %>
+        <div class="input">
+          <%= f.text_field :number_classes, {:class => "xlarge" } %>
+        </div>
+      </div>
+
+      <div class="clearfix">
+        <%= f.label :notes, "Notes" %>
+        <div class="input">
+          <%= f.text_area :notes, {:class => "xlarge" } %>
+        </div>
+      </div>
+
+
+      <div class="actions">
+        <%= f.submit :class => "btn primary"  %>
+      </div>
+    </fieldset>
+  <% end %>
+</div>
+
