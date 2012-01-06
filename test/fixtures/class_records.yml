@@ -1,0 +1,17 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  grade_id: 1
+  arrival: 2012-01-06 04:38:22
+  departure: 2012-01-06 04:38:22
+  teacher: false
+  attendance: 1
+  notes: MyText
+
+two:
+  grade_id: 1
+  arrival: 2012-01-06 04:38:22
+  departure: 2012-01-06 04:38:22
+  teacher: false
+  attendance: 1
+  notes: MyText
