@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120106123623) do
+ActiveRecord::Schema.define(:version => 20120106123822) do
 
   create_table "authors", :force => true do |t|
     t.string   "first"
@@ -56,6 +56,21 @@ ActiveRecord::Schema.define(:version => 20120106123623) do
 
   add_index "checkout_items", ["book_id"], :name => "index_checkout_items_on_book_id"
   add_index "checkout_items", ["status"], :name => "index_checkout_items_on_status"
+
+  create_table "class_records", :force => true do |t|
+    t.integer  "grade_id"
+    t.datetime "arrival"
+    t.datetime "departure"
+    t.boolean  "teacher"
+    t.integer  "attendance"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "class_records", ["attendance"], :name => "index_class_records_on_attendance"
+  add_index "class_records", ["grade_id"], :name => "index_class_records_on_grade_id"
+  add_index "class_records", ["teacher"], :name => "index_class_records_on_teacher"
 
   create_table "grades", :force => true do |t|
     t.integer  "year"
