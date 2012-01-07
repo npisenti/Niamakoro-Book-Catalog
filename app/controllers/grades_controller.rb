@@ -34,4 +34,14 @@ class GradesController < ApplicationController
   def index
     @grades = Grade.all
   end
+
+
+ def statistics
+    @grade = Grade.find(params[:id])
+
+    respond_to do |format|
+      format.js { render :json => @grade.stats.to_json }
+    end
+  end
+
 end

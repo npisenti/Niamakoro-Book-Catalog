@@ -1,0 +1,15 @@
+<h1>Class Usage statistics</h1>
+    <table class="zebra-striped sorted" data-sort-column="0">
+      <thead><th>Class</th><th>Number of times come</th><th>Teacher attendance</th><th>average attendance</th></thead>
+        <tbody>
+          <% @grades.each do |g| %>
+            <tr>
+              <td><%= g.pretty_name %></td>
+              <td><%= g.class_records.count %></td>
+              <td><%= g.teacher_present_count %> present;  <%= g.teacher_absent_count %> absent = <%= g.teacher_attendance %></td>
+              <td><%= g.average_attendance %></td>
+            </tr>
+          <% end %>
+
+        </tbody>
+      </table>

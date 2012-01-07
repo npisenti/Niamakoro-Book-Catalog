@@ -12,15 +12,14 @@ class ClassRecord < ActiveRecord::Base
     arrival || Time.now.utc - (Time.now.utc.min).minutes
   end
 
-  def time_in=(date, time)
-
-
-  end
 
   def time_out
     departure || time_in + 1.hour
   end
 
+  def delta
+    ((departure - arrival)/3600).round(1)
+  end
 
   def teacher_attendance
     teacher ? 1 : 0
@@ -57,8 +56,6 @@ class ClassRecord < ActiveRecord::Base
       :arrival => Time.utc(date["year"], date["month"], date["day"], hour_in, minute_in),
       :departure => Time.utc(date["year"], date["month"], date["day"], hour_out, minute_out)
     )
-
-    logger.debug(params)
     return params
   end
 

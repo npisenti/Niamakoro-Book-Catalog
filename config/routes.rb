@@ -1,6 +1,10 @@
 BookCatalogue::Application.routes.draw do
 
-  resources :authors, :subjects, :grades, :class_records
+  resources :authors, :subjects, :class_records
+
+  resources :grades do
+    get 'statistics', :on => :member
+  end
 
   resources :books do
     get 'statistics', :on => :member
@@ -27,6 +31,7 @@ BookCatalogue::Application.routes.draw do
   
   match 'admin' => 'pages#admin', :as => "admin"
   match 'stats' => 'pages#stats', :as => "stats"
+  match 'class_stats' => 'pages#class_stats', :as => "class_stats"
   match 'login' => 'user_sessions#new', :as => :login
   match 'logout' => 'user_sessions#destroy', :as => :logout
 

@@ -27,6 +27,10 @@ class PagesController < ApplicationController
     @Diarra_count = Book.where('num_copies_emd > 0').count
   end
 
+  def class_stats
+    @grades = Grade.all
+  end
+
   def batch_checkin
     @checkout_items = CheckoutItem.out
     @checkout_item = CheckoutItem.new

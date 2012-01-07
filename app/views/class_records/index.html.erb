@@ -1,4 +1,8 @@
 <h1>All class registrations!</h1>
-<ul>
-  <%= render @class_records %>
-</ul>
+<p>Click on the date to see the notes associated with this session.</p>
+<table class="zebra-striped sorted" data-sort-column="0">
+  <thead><th>Date</th><th>Grade</th><th>Time spent</th><th>Attendance</th><th>Teacher present?</th></thead>
+  <tbody>
+    <%= render @class_records %>
+  </tbody>
+</table>

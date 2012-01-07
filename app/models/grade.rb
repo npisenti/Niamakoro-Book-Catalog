@@ -16,4 +16,38 @@ class Grade < ActiveRecord::Base
       "#{year}ème année"
     end
   end
+
+
+  # Some statistic functions...
+
+  def teacher_present_count
+    class_records.where(:teacher => true).count
+  end
+
+  def teacher_absent_count
+    class_records.where(:teacher => false).count
+  end
+
+  def teacher_attendance
+    present = teacher_present_count
+    absent = teacher_absent_count
+    if present + absent == 0
+      "N/A"
+    else
+      "#{(present * 100.0 / (present + absent)).round} %"
+    end
+  end
+
+  def average_attendance
+    ClassRecord.where(:grade_id => id).average('attendance')
+  end
+
+  def stats
+    return [[]] if class_records.empty?
+    data = {}
+    class_records.each_with_index do |r, i|
+      data[i] = r.attendance || 0
+    end
+    return data.to_a
+  end
 end
