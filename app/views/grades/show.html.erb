@@ -9,7 +9,16 @@
   <li>Teacher attendance: <%= @grade.teacher_attendance %></li>
 </ul>
 <p><%= @grade.notes %></p>
-<p><%= link_to "Edit", edit_grade_path(@grade) %>
-<p><%= link_to "Download", statistics_grade_path(@grade) + ".csv" %>
+<p><%= link_to "Edit", edit_grade_path(@grade) %>  
+<%= link_to "Download", statistics_grade_path(@grade) + ".csv" %></p>
 <h2>Statistics...</h2>
-<div id="graph-container" data-grade-id="<%= @grade.id %>" style="width:400px; height:300px;"></div>
+<div id="graph-container" data-grade-id="<%= @grade.id %>" style="width:400px; height:300px; margin:25px;"></div>
+
+<p>Click on the date to see the notes associated with this session.</p>
+<table class="zebra-striped sorted" data-sort-column="0">
+  <thead><th>Date</th><th>Grade</th><th>Time spent</th><th>Attendance</th><th>Teacher present?</th></thead>
+  <tbody>
+    <%= render @grade.class_records %>
+  </tbody>
+</table>
+

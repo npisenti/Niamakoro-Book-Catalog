@@ -1,4 +1,15 @@
+
+csv << ["grade_year", "grade_name", "number_of_classes", "teacher_present_count", "teacher_absent_count", "teacher_attendance", "average_attendance"]
+
+
+  csv << [@grade.year, @grade.name, @grade.class_records.count, @grade.teacher_present_count, @grade.teacher_absent_count, @grade.teacher_attendance, @grade.average_attendance]
+
+csv << []
+csv << []
+
 csv << ["class_date", "recorded_date", "arrival_time", "departure_time", "total_time", "attendance", "teacher_present", "notes"] 
 @grade.class_records.each do |r|
     csv << [r.arrival.to_date, r.created_at.to_date, r.arrival.strftime("%H:%M"), r.departure.strftime("%H:%M"), r.delta, r.attendance, r.teacher, r.notes]
 end
+
+
