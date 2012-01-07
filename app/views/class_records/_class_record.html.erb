@@ -1,6 +1,6 @@
 <tr>
   <td><%= link_to "#{class_record.arrival.strftime("%d/%m/%Y")}", class_record %></td>
-  <td><%= class_record.grade.pretty_name %></td>
+  <td><%= class_record.grade.name %></td>
   <td><%= class_record.delta %> h</td>
   <td><%= class_record.attendance %></td>
   <td <%= "style='background-color:red;'" unless class_record.teacher %>><%= class_record.teacher %></td>

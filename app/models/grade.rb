@@ -7,7 +7,7 @@ class Grade < ActiveRecord::Base
   default_scope :order => 'year'
 
 
-  def pretty_name
+  def pretty_year
     if year == 0
       "Jardin"
     elsif year == 1

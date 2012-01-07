@@ -1,0 +1,5 @@
+csv << ["grade_year", "grade_name", "number_of_classes", "teacher_present_count", "teacher_absent_count", "teacher_attendance", "average_attendance"]
+
+@grades.each do |g|
+  csv << [g.year, g.name, g.class_records.count, g.teacher_present_count, g.teacher_absent_count, g.teacher_attendance, g.average_attendance]
+end

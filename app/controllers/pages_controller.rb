@@ -29,6 +29,10 @@ class PagesController < ApplicationController
 
   def class_stats
     @grades = Grade.all
+    respond_to do |format|
+      format.html
+      format.csv
+    end
   end
 
   def batch_checkin

@@ -33,7 +33,7 @@
 
       <div class="clearfix">
         <%= f.label :grade_id, "Grade", {:style => "padding-right: 20px;" } %>
-        <%= f.select :grade_id, Grade.all.collect{ |g| [g.pretty_name, g.id]}, { :class => "span2"}  %>
+        <%= f.select :grade_id, Grade.all.collect{ |g| [g.name, g.id]}, { :class => "span2"}  %>
       </div>
       <div class="clearfix">
         <%= f.label :attendance, "Attendance", {:style => "padding-right: 20px;" } %>

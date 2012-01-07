@@ -1,4 +1,4 @@
-<h1>Class Record: <%= @class_record.grade.pretty_name %></h1>
+<h1>Class Record: <%= @class_record.grade.name %></h1>
 <ul>
   <li>Date: <%= @class_record.arrival.strftime("%d/%m/%Y") %></li>
   <li>Arrived: <%= @class_record.arrival.to_s(:time) %></li>

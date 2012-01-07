@@ -38,9 +38,12 @@ class GradesController < ApplicationController
 
  def statistics
     @grade = Grade.find(params[:id])
+    @filename = "gr-#{@grade.year}-statistics.csv"
+    @output_encoding = 'UTF-8'
 
     respond_to do |format|
       format.js { render :json => @grade.stats.to_json }
+      format.csv 
     end
   end
 

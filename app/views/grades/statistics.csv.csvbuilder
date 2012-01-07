@@ -1,0 +1,4 @@
+csv << ["class_date", "recorded_date", "arrival_time", "departure_time", "total_time", "attendance", "teacher_present", "notes"] 
+@grade.class_records.each do |r|
+    csv << [r.arrival.to_date, r.created_at.to_date, r.arrival.strftime("%H:%M"), r.departure.strftime("%H:%M"), r.delta, r.attendance, r.teacher, r.notes]
+end
