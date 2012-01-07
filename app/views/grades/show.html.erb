@@ -1,9 +1,11 @@
 <%= javascript_include_tag 'class_stats' %>
+<p><%= link_to "Return to list of grades", grades_path %></p>
 <h1>Summary of grade: <%= @grade.pretty_name %></h1>
 <ul>
-  <li>Year: <%= @grade.pretty_name %></li>
   <li>Number of students: <%= @grade.number_students %></li>
   <li>Number of classes: <%= @grade.number_classes %></li>
+  <li>Average student attendance: <%= @grade.average_attendance %></li>
+  <li>Teacher attendance: <%= @grade.teacher_attendance %></li>
 </ul>
 <p><%= @grade.notes %></p>
 <p><%= link_to "Edit", edit_grade_path(@grade) %>
