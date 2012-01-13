@@ -2,6 +2,7 @@ class ClassRecord < ActiveRecord::Base
   belongs_to :grade
 
   validates_presence_of :grade
+  validates_format_of :attendance, :with => /\d+/, :message => "Il faut utiliser un nombre"
 
 
   def date

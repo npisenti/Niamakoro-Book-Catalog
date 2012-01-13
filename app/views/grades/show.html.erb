@@ -1,5 +1,5 @@
 <%= javascript_include_tag 'class_stats' %>
-<p><%= link_to "Return to list of grades", grades_path %></p>
+<p><%= link_to "Return to list of classes", grades_path %></p>
 <h1>Summary of Class: <%= @grade.name %></h1>
 <ul>
   <li>Grade: <%= @grade.year %></li>
@@ -8,6 +8,7 @@
   <li>Average student attendance: <%= @grade.average_attendance %></li>
   <li>Teacher attendance: <%= @grade.teacher_attendance %></li>
 </ul>
+<h3>General Notes:</h3>
 <p><%= @grade.notes %></p>
 <p><%= link_to "Edit", edit_grade_path(@grade) %>  
 <%= link_to "Download", statistics_grade_path(@grade) + ".csv" %></p>
