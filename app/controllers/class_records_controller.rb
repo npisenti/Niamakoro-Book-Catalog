@@ -16,7 +16,7 @@ class ClassRecordsController < ApplicationController
                       :notes => data[:class_record][:notes])
 
     if @class_record.save
-      redirect_to @class_record
+      redirect_to grade #@class_record
     else
       render 'new'
     end
