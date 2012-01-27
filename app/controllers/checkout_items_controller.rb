@@ -81,7 +81,7 @@ class CheckoutItemsController < ApplicationController
 
   def batch_checkin
     params[:checkout_item].each do |co|
-      if co[1]['status'] == "1"
+      if co[1]['status'] == "1" || !co[1]['next'].blank?
         checkin = checkin_book(co[0])
         checkout_book(co[1]['next'], checkin.notes) unless co[1]['next'].blank?
       end
