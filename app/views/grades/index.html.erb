@@ -1,6 +1,8 @@
-<h1>Donc, regard the classes!</h1>
+<p><%= link_to "← Retourner à les tâches administratives", admin_path %></p>
+<h1>Selectionnez une classe</h1>
 <ul>
 <%= render @grades %>
+<li><%= link_to "Voir toutes les visites récentes", class_records_path %></li>
 </ul>
-
-<p><%= link_to "Add new class", new_grade_path %> |  <%= link_to "See all classes together", class_records_path %></p>
+<p>-------------------</p>
+<p><%= link_to "Ajouter une nouvelle classe", new_grade_path %> </p> 

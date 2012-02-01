@@ -39,13 +39,14 @@ class Grade < ActiveRecord::Base
   end
 
   def average_attendance
-    ClassRecord.where(:grade_id => id).average('attendance')
+    students = ClassRecord.where(:grade_id => id).average('attendance')
+    students.nil? ? 0 : students.round(1)
   end
 
   def stats
     return [[]] if class_records.empty?
     data = {}
-    class_records.each_with_index do |r, i|
+    class_records.reverse.each_with_index do |r, i|
       data[i] = r.attendance || 0
     end
     return data.to_a

@@ -3,6 +3,7 @@ class ClassRecord < ActiveRecord::Base
 
   validates_presence_of :grade
   validates_format_of :attendance, :with => /\d+/, :message => "Il faut utiliser un nombre"
+  default_scope :order => 'arrival DESC'
 
 
   def date
