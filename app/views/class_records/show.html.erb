@@ -1,10 +1,12 @@
+<p><%= link_to "← Retourner à la liste de #{@class_record.grade.name}", grade_path(@class_record.grade) %></p>
 <h1>Class Record: <%= @class_record.grade.name %></h1>
 <ul>
   <li>Date: <%= @class_record.arrival.strftime("%d/%m/%Y") %></li>
-  <li>Arrived: <%= @class_record.arrival.to_s(:time) %></li>
-  <li>Departure: <%= @class_record.departure.to_s(:time) %></li>
-  <li>Attendance: <%= @class_record.attendance %> élèves</li>
-  <li>The teacher WAS <%= "NOT" unless @class_record.teacher %> present.</li>
+  <li>Heure d'arrivée: <%= @class_record.arrival.to_s(:time) %></li>
+  <li>Heure de sortie: <%= @class_record.departure.to_s(:time) %></li>
+  <li>Assistance: <%= @class_record.attendance %> élèves</li>
+  <li>Le maître <%= @class_record.teacher ?  "étais" : "n'étais pas" %> présent.</li>
 </ul>
 <h3>Notes on classtime:</h3>
 <p><%= @class_record.notes %></p>
+<%= link_to "edit", edit_class_record_path(@class_record) %>

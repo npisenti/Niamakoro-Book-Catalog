@@ -1,15 +1,53 @@
 <%= javascript_include_tag 'class_stats' %>
-<p><%= link_to "Return to list of grades", grades_path %></p>
-<h1>Summary of Class: <%= @grade.name %></h1>
+<p><%= link_to "← Retourner à la liste des classes", grades_path %></p>
+<p><%= link_to "← Retourner à les taches adminastratives", admin_path %></p>
+<h1>Classe: <%= @grade.name %></h1>
 <ul>
-  <li>Grade: <%= @grade.year %></li>
-  <li>Number of students: <%= @grade.number_students %></li>
-  <li>Number of classes: <%= @grade.name %></li>
-  <li>Average student attendance: <%= @grade.average_attendance %></li>
-  <li>Teacher attendance: <%= @grade.teacher_attendance %></li>
+  <li>Effectif: <%= @grade.number_students %></li>
+  <li>Assistance moyen par visite: <%= @grade.average_attendance %> élèves par visite</li>
+  <li>Assistance du maître: <%= @grade.teacher_attendance %></li>
 </ul>
+<p style="text-align: right; padding-right: 100px;">(<%= link_to "Modifier la classe", edit_grade_path(@grade) %> | 
+<%= link_to "Télécharger les statistiques", statistics_grade_path(@grade) + ".csv" %>)</p>
+<h3>Notes Générales:</h3>
 <p><%= @grade.notes %></p>
-<p><%= link_to "Edit", edit_grade_path(@grade) %>
-<p><%= link_to "Download", statistics_grade_path(@grade) + ".csv" %>
-<h2>Statistics...</h2>
-<div id="graph-container" data-grade-id="<%= @grade.id %>" style="width:400px; height:300px;"></div>
+<ul class="tabs" data-tabs="tabs" style="margin-top: 30px">
+  <li class="active"><a href="#notes">Notes</a></li>
+  <li><a href="#summary">Summary</a></li>
+</ul>
+<div id="tab-content" class="tab-content" >
+  <div id="summary">
+    <p><strong>Cliquez sur la date pour voir les notes de cette visite:</strong></p>
+    <table class="zebra-striped sorted" data-sort-column="0" data-sort-order="0">
+      <thead><th>Date</th><th>Temps passé dans la bibliothèque</th><th>Assistance</th><th>Maître présent?</th></thead>
+      <tbody>
+        <% @grade.class_records.each do |class_record| %>
+          <tr>
+            <td><%= link_to "#{class_record.arrival.strftime("%Y-%m-%d")}", class_record %></td>
+            <td><%= class_record.delta %> h</td>
+            <td><%= class_record.attendance %></td>
+            <td <%= "style='background-color:red;'" unless class_record.teacher %>><%= class_record.teacher %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+
+    <h2>Statistiques d'assistance:</h2>
+    <div id="graph-container" data-grade-id="<%= @grade.id %>" style="width:400px; height:300px; margin:25px;"></div>
+  </div>
+
+  <div id="notes" class="active">
+    <p><strong>Cliquez sur la date pour voir les detailles de cette visite:</strong></p>
+    <table class="zebra-striped sorted" data-sort-column="0" data-sort-order="1" >
+      <thead><th>Date</th><th>Notes</th></thead>
+      <tbody>
+        <% @grade.class_records.each do |class_record| %>
+          <tr>
+            <td><%= link_to "#{class_record.arrival.strftime("%Y-%m-%d")}", class_record %></td>
+            <td><%= class_record.notes %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>

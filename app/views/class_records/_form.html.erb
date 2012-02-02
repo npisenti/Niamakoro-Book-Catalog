@@ -22,27 +22,27 @@
       </div>
       <div class="clearfix">
         <%= f.label :time_in, "Heure d'arrivée", {:style => "padding-right: 20px;" } %>
-        <%= f.time_select :time_in, {:ignore_date => true}, {:class => "mini"} %>
+        <%= f.time_select :time_in, {:ignore_date => true, :minute_step => 15}, {:class => "mini"} %>
       </div>
 
       <div class="clearfix">
         <%= f.label :time_out, "Heure de sortie" , {:style => "padding-right: 20px;" }%>
-        <%= f.time_select :time_out, {:ignore_date => true}, { :class => "mini"}  %>
+        <%= f.time_select :time_out, {:ignore_date => true, :minute_step => 15}, { :class => "mini"}  %>
       </div>
 
 
       <div class="clearfix">
-        <%= f.label :grade_id, "Grade", {:style => "padding-right: 20px;" } %>
+        <%= f.label :grade_id, "Classe", {:style => "padding-right: 20px;" } %>
         <%= f.select :grade_id, Grade.all.collect{ |g| [g.name, g.id]}, { :class => "span2"}  %>
       </div>
       <div class="clearfix">
-        <%= f.label :attendance, "Attendance", {:style => "padding-right: 20px;" } %>
+        <%= f.label :attendance, "Effectif", {:style => "padding-right: 20px;" } %>
         <%= f.text_field :attendance %>
 
       </div>
 
       <div class="clearfix">
-        <%= f.label :teacher_attendance, "Teacher was present", {:style => "padding-right: 20px;" } %>
+        <%= f.label :teacher_attendance, "Le Maître était présent?", {:style => "padding-right: 20px;" } %>
         <%= f.check_box :teacher_attendance %>
       </div>
 
