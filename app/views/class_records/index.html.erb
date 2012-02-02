@@ -1,7 +1,8 @@
-<h1>All class registrations!</h1>
-<p>Click on the date to see the notes associated with this session.</p>
-<table class="zebra-striped sorted" data-sort-column="0">
-  <thead><th>Date</th><th>Grade</th><th>Time spent</th><th>Attendance</th><th>Teacher present?</th></thead>
+<p><%= link_to "← Retourner à la liste", grades_path %></p>
+<h1>Toutes les visites</h1>
+<p>Cliquez sur la date pour voir les notes de cette visite.</p>
+<table class="zebra-striped sorted" data-sort-column="0" data-sort-order="1">
+  <thead><th>Date</th><th>Classe</th><th>Temps passé dans la bibliothéque</th><th>Assistance</th><th>Maître présent??</th></thead>
   <tbody>
     <%= render @class_records %>
   </tbody>

@@ -4,10 +4,19 @@
 $(document).ready(function(){
     
       // checks to see if sort column is specified in table
-      var sort_col = $("table.sorted").attr('data-sort-column');
-      sort_col = sort_col == undefined ? 1 : parseInt(sort_col);
+      //var sort_col = $("table.sorted").attr('data-sort-column');
+      //sort_col = sort_col == undefined ? 1 : parseInt(sort_col);
+      //var sort_order = $("table.sorted").attr('data-sort-order');
+      //sort_order = sort_order == undefined ? 0 : parseInt(sort_order);
 
-      $("table.sorted").tablesorter( { sortList: [[ sort_col, 0 ]] } )
+      //console.log(sort_order);
+      $("table.sorted").each(function(){
+        var sort_col = $(this).attr('data-sort-column');
+        sort_col = sort_col == undefined ? 1 : parseInt(sort_col);
+        var sort_order = $(this).attr('data-sort-order');
+        sort_order = sort_order == undefined ? 0 : parseInt(sort_order);
+        $(this).tablesorter( { sortList: [[ sort_col, sort_order ]] } )
+        });
 
       // FOR DATEPICKER... 
       $("#datepicker").datepicker({ 

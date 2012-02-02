@@ -22,12 +22,12 @@
       </div>
       <div class="clearfix">
         <%= f.label :time_in, "Heure d'arrivée", {:style => "padding-right: 20px;" } %>
-        <%= f.time_select :time_in, {:ignore_date => true}, {:class => "mini"} %>
+        <%= f.time_select :time_in, {:ignore_date => true, :minute_step => 15}, {:class => "mini"} %>
       </div>
 
       <div class="clearfix">
         <%= f.label :time_out, "Heure de sortie" , {:style => "padding-right: 20px;" }%>
-        <%= f.time_select :time_out, {:ignore_date => true}, { :class => "mini"}  %>
+        <%= f.time_select :time_out, {:ignore_date => true, :minute_step => 15}, { :class => "mini"}  %>
       </div>
 
 
