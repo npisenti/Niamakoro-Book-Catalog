@@ -1,4 +1,5 @@
 class AuditsController < ApplicationController
+  before_filter :authenticate
 
   def new
     @audit = Audit.new
