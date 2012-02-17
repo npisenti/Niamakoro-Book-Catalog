@@ -10,7 +10,21 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120107105322) do
+ActiveRecord::Schema.define(:version => 20120217134926) do
+
+  create_table "audits", :force => true do |t|
+    t.datetime "date_completed"
+    t.text     "notes"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "audits", ["date_completed"], :name => "index_audits_on_date_completed"
+
+  create_table "audits_books", :id => false, :force => true do |t|
+    t.integer "book_id"
+    t.integer "audit_id"
+  end
 
   create_table "authors", :force => true do |t|
     t.string   "first"
