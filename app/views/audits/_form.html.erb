@@ -1,0 +1,39 @@
+<%= form_for @audit do |f| %>
+    <% if @audit.errors.any? %>
+      <div id="error_explanation">
+        <p><%= pluralize(@audit.errors.count, "error") %> prohibited this audit from being saved:</p>
+
+        <ul>
+          <% @audit.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+      <div class="clearfix">
+        <%= f.label :notes, "Notes", {:style => "padding-right: 20px; width: 50px;" } %>
+        <%= f.text_area :notes, {:style => "width: 450px; height: 100px;"} %>
+
+      </div>
+
+
+  
+<table class="zebra-striped sorted" >
+  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th><th>Present?</th></thead>
+    <tbody>
+      <% for @book in @books %>
+      <tr>
+        <td><%= @book.collection %></td>
+        <td width="50%"><%= link_to @book.title, book_path(@book) %></td>
+      <td><% @book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == @book.subjects.last %><% end %></td>
+        <td> <%= f.check_box "in_collection[#{@book.id}]", {:checked => false} %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
+        <div class="actions">
+          <%= f.submit("Inscrire..?", { :class => "btn primary" }) %>
+        </div>
+
+<% end %>

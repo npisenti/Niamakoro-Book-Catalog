@@ -1,0 +1,6 @@
+<h2>Audit list</h1>
+<ul>
+<% @audits.each do |audit| %>
+  <li><%= link_to "Audit: #{audit.date_completed}", audit_path(audit) %></li>
+<% end %>
+</ul>
