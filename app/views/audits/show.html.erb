@@ -3,16 +3,19 @@
 
 <h2>Books present</h2>
 <table class="zebra-striped sorted" >
-  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
+  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th><th>Présent</th><th>Absent</th></thead>
     <tbody>
-      <%= render @audit.books %>
+
+      <% @books.each do |book| %>
+        <% missing = @audit.books[book.id.to_s][:missing] %>
+        <tr>
+          <td><%= book.collection %></td>
+          <td width="30%"><%= link_to book.title, book_path(book) %></td>
+        <td width="30%"><% book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == book.subjects.last %><% end %></td>
+        <td><%= @audit.books[book.id.to_s][:present] %></td>
+        <td <%= "style='background-color: red;'" if missing != 0 %>><%= missing %></td>
+        </tr>
+      <% end %>
     </tbody>
   </table>
-  
-<h2>Books Missing</h2>
-<table class="zebra-striped sorted" >
-  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th></thead>
-    <tbody>
-      <%= render @audit.missing %>
-    </tbody>
-  </table>
+

@@ -20,20 +20,20 @@
 
   
 <table class="zebra-striped sorted" >
-  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th><th>Present?</th></thead>
+  <thead><tr><th>Collection</th><th>Titre</th><th>Sujet</th><th>Copies Présentes?</th></thead>
     <tbody>
       <% for @book in @books %>
       <tr>
         <td><%= @book.collection %></td>
         <td width="50%"><%= link_to @book.title, book_path(@book) %></td>
       <td><% @book.subjects.each do |s| %><%= "#{s.name}" %><%= ", " unless s == @book.subjects.last %><% end %></td>
-        <td> <%= f.check_box "in_collection[#{@book.id}]", {:checked => false} %></td>
+        <td width="15%"><%= text_field_tag "in_collection[#{@book.id}]", nil, :style => 'width: 30px;' %> / <%= @book.num_copies %></td>
       </tr>
     <% end %>
     </tbody>
   </table>
         <div class="actions">
-          <%= f.submit("Inscrire..?", { :class => "btn primary" }) %>
+          <%= f.submit("Audit Terminé", { :class => "btn primary" }) %>
         </div>
 
 <% end %>
