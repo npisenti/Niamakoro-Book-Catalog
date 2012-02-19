@@ -1,5 +1,19 @@
 class Audit < ActiveRecord::Base
-  has_and_belongs_to_many :books
+
+  serialize :books, Hash
+
+  def books
+    read_attribute(:books) || write_attribute(:books, {})
+  end
+
+  def books=(hash)
+    hash.each do |key, value|
+      present = value.to_i
+      missing = Book.find(key).num_copies - present
+      hash[key] = { :present => present, :missing => missing }
+    end
+    write_attribute(:books, hash)
+  end
 
   def in_collection
     output = {}

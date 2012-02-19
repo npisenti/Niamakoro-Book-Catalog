@@ -6,7 +6,7 @@ class AuditsController < ApplicationController
   end
 
   def create
-    @audit = Audit.new(:in_collection => params[:audit][:in_collection], :date_completed => Time.now, :notes => params[:audit][:notes])
+    @audit = Audit.new(:books => params[:in_collection], :date_completed => Time.now, :notes => params[:audit][:notes])
     if @audit.save
       redirect_to @audit
     else
@@ -23,7 +23,8 @@ class AuditsController < ApplicationController
   end
 
   def show
-    @audit = Audit.includes(:books => [:subjects, :authors]).find(params[:id])
+    @audit = Audit.find(params[:id])
+    @books = Book.includes(:subjects, :authors).find(@audit.books.keys)
   end
 
   def index
